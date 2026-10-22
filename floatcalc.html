@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - FloatCalc</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">← All Privacy Policies</a>
+    </div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English Version (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h1>Privacy Policy for FloatCalc</h1>
+      <p class="app-tag">Application: <strong>FloatCalc - Floating Calculator &amp; Smart Snippets</strong></p>
+      <p class="app-tag">Package: <code>jp.tpp.t9s.floatcalc</code> | Last updated: October 22, 2026</p>
+
+      <h2>1. Overview</h2>
+      <p>FloatCalc ("we", "our", or "the App") is developed to provide a seamless floating calculator and clipboard snippet tool over other applications. We respect your privacy and are committed to protecting it. This Privacy Policy outlines our practices regarding data collection and usage.</p>
+
+      <h2>2. Information Collection and Storage</h2>
+      <p><strong>We do NOT collect, transmit, or share your personal data.</strong></p>
+      <ul>
+        <li><strong>Calculation Data &amp; Snippets:</strong> All calculations, history, and custom text snippets are stored strictly and locally on your device using Android's private internal storage. They are never transmitted to external servers.</li>
+        <li><strong>Clipboard Access:</strong> Clipboard reading and copying features operate exclusively on-demand when you explicitly tap a calculation result or snippet card.</li>
+      </ul>
+
+      <h2>3. Device Permissions Used</h2>
+      <ul>
+        <li><strong>Display over other apps (SYSTEM_ALERT_WINDOW):</strong> Required to show the floating calculator and snippet bubble over other applications for multitasking.</li>
+        <li><strong>Foreground Service (FOREGROUND_SERVICE_SPECIAL_USE):</strong> Used to maintain the persistent overlay window reliably while multitasking.</li>
+        <li><strong>In-app Billing (BILLING):</strong> Handled securely through Google Play Billing for one-time Pro feature purchases. We do not process or store credit card details.</li>
+        <li><strong>Vibration (VIBRATE):</strong> Used solely to provide tactile feedback when tapping calculator keys.</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>The App may utilize standard Google Play Services for in-app purchases (Google Play Billing). Please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for their data processing details.</p>
+
+      <h2>5. Contact Us</h2>
+      <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at:</p>
+      <p>Email: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <!-- Japanese Version -->
+    <div id="content-ja" class="lang-content">
+      <h1>プライバシーポリシー - FloatCalc</h1>
+      <p class="app-tag">対象アプリ: <strong>FloatCalc - 浮かぶ電卓 &amp; スマート定型文</strong></p>
+      <p class="app-tag">パッケージ名: <code>jp.tpp.t9s.floatcalc</code> | 最終更新日: 2026年10月22日</p>
+
+      <h2>1. はじめに</h2>
+      <p>『FloatCalc』（以下「本アプリ」）は、他のアプリの上に重ねて使用できる便利なフローティング電卓および定型文クリップボードツールです。開発者はお客様のプライバシーを尊重し、個人情報の保護に努めています。</p>
+
+      <h2>2. 収集する情報とその保管</h2>
+      <p><strong>本アプリはお客様の個人情報を外部サーバーに収集・送信・共有することは一切ありません。</strong></p>
+      <ul>
+        <li><strong>計算履歴・定型文データ:</strong> 作成された定型文や計算履歴は、すべてお客様の端末内（ローカルストレージ）のみに安全に保存されます。</li>
+        <li><strong>クリップボードの利用:</strong> コピー機能はお客様が計算結果や定型文カードをタップした瞬間にのみ動作します。</li>
+      </ul>
+
+      <h2>3. 使用する権限について</h2>
+      <ul>
+        <li><strong>他のアプリの上に重ねて表示 (SYSTEM_ALERT_WINDOW):</strong> 他のアプリを開いたまま電卓や定型文を小窓で利用するために使用します。</li>
+        <li><strong>フォアグラウンドサービス (FOREGROUND_SERVICE):</strong> マルチタスク中にオーバーレイ表示を安定維持するために使用します。</li>
+        <li><strong>アプリ内請求 (BILLING):</strong> Google Playの公式決済システムを通じたPro機能（買い切りアイテム）の購入に使用されます。</li>
+        <li><strong>バイブレーション (VIBRATE):</strong> 電卓タップ時の心地よい触覚フィードバックにのみ使用します。</li>
+      </ul>
+
+      <h2>4. お問い合わせ</h2>
+      <p>本ポリシーに関するご質問やお問い合わせは、以下までお願いいたします：</p>
+      <p>メール: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      
+      const content = document.getElementById('content-' + lang);
+      if (content) content.classList.add('active');
+      
+      const btn = event.target;
+      if (btn) btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
