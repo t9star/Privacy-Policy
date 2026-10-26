@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - PocketBlack</title>
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-dark: #d97706;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #0b0f17;
+      --card-bg: #111827;
+      --border: #1f2937;
+      --content-text: #e2e8f0;
+      --content-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--content-text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #1f2937;
+      color: var(--content-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #0b0f17;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--content-muted);
+      margin-bottom: 0.4rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin: 1.75rem 0 0.5rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: var(--content-muted);
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: #f1f5f9; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: #0f172a;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #38bdf8;
+    }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--content-muted);
+      text-align: center;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">← All Privacy Policies</a>
+    </div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English Version (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h1>Privacy Policy for PocketBlack</h1>
+      <p class="app-tag">Application: <strong>PocketBlack - OLED Screen Lock &amp; Battery Saver</strong></p>
+      <p class="app-tag">Package: <code>jp.tpp.t9s.pocketblack</code> | Last updated: October 26, 2026</p>
+
+      <h2>1. Overview</h2>
+      <p>PocketBlack ("we", "our", or "the App") is developed to provide a seamless touch-guard overlay, OLED pure black battery saver, and accidental touch prevention for Android devices while audio, video, or navigation apps are running. We deeply value your privacy and are committed to maintaining the highest privacy standards. This policy outlines our data handling practices.</p>
+
+      <h2>2. Information Collection and Storage</h2>
+      <p><strong>We do NOT collect, transmit, or store any personal or sensitive user data on external servers.</strong></p>
+      <ul>
+        <li><strong>On-Device Preferences:</strong> All user settings (such as selected screen mode, PIN code hash, dimming level, and unlock gesture choices) are stored strictly on your local device via Android's secure DataStore storage. They never leave your device.</li>
+        <li><strong>Sensors &amp; Gestures:</strong> Proximity, accelerometer, and touch gestures are processed in real-time in memory solely for pocket detection and unlocking. No sensor or gesture data is ever recorded, logged, or uploaded.</li>
+      </ul>
+
+      <h2>3. Device Permissions Used</h2>
+      <p>The App requests only the minimum permissions necessary to deliver its core functionality:</p>
+      <ul>
+        <li><strong>Display over other apps (<code>SYSTEM_ALERT_WINDOW</code>):</strong> Required to draw the full-screen pure black screen curtain, transparent touch lock, and floating trigger widget over other active applications.</li>
+        <li><strong>Foreground Service (<code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong> Required on Android 14+ to maintain reliable touch guard protection and emergency unlock detectors while you interact with other apps or keep your device in a pocket.</li>
+        <li><strong>In-app Billing (<code>com.android.vending.BILLING</code>):</strong> Enables secure in-app purchases of the lifetime PRO unlock via Google Play's official billing system. We never process or have access to your financial or payment details.</li>
+        <li><strong>Vibration (<code>VIBRATE</code>):</strong> Provides subtle haptic feedback upon unlocking or curtain activation.</li>
+        <li><strong>Network &amp; Internet (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Used solely to load banner advertisements in the free tier via Google AdMob and to obtain privacy consent through Google UMP.</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>The App utilizes standard, verified Google Play services:</p>
+      <ul>
+        <li><strong>Google Play Billing:</strong> For secure in-app purchase handling. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+        <li><strong>Google AdMob &amp; UMP (Free Tier only):</strong> For displaying non-intrusive advertisements and managing user consent in compliant regions.</li>
+      </ul>
+
+      <h2>5. Children's Privacy</h2>
+      <p>The App does not knowingly collect or solicit any personal information from children under the age of 13. The PIN lock feature is designed to prevent accidental touches by children without tracking child identity.</p>
+
+      <h2>6. Contact Us</h2>
+      <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at:</p>
+      <p>Email: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <!-- Japanese Version -->
+    <div id="content-ja" class="lang-content">
+      <h1>プライバシーポリシー - PocketBlack</h1>
+      <p class="app-tag">対象アプリ: <strong>PocketBlack - 画面OFF風タッチガード &amp; 有機EL節電</strong></p>
+      <p class="app-tag">パッケージ名: <code>jp.tpp.t9s.pocketblack</code> | 最終更新日: 2026年10月26日</p>
+
+      <h2>1. はじめに</h2>
+      <p>『PocketBlack』（以下「本アプリ」）は、動画視聴・音楽再生・地図ナビゲーション等の動作中に、画面を擬似的に消灯（完全な漆黒表示）または透明ロックすることで、有機ELの節電・画面焼き付き防止・ポケット内での誤操作を防止するユーティリティアプリです。開発者はお客様のプライバシーを最重要視し、個人情報の保護を徹底しています。</p>
+
+      <h2>2. 収集する情報とその保管</h2>
+      <p><strong>本アプリはお客様の個人情報やプライバシーに関するデータを外部サーバーに収集・送信・保存することは一切ありません。</strong></p>
+      <ul>
+        <li><strong>アプリ設定データ:</strong> 選択された画面モード、解除ジェスチャー、暗証番号（PINコードのハッシュ値）等の設定情報は、端末内の安全なローカルストレージ（Jetpack DataStore）にのみ保存されます。外部への送信は行われません。</li>
+        <li><strong>センサーおよびタッチ入力:</strong> 近接センサー、加速度センサー、解除操作のタッチ入力は、画面の自動ロックや解除判定のために端末メモリ内でリアルタイム処理されるのみであり、外部に記録・送信されることはありません。</li>
+      </ul>
+
+      <h2>3. 使用する端末権限について</h2>
+      <p>本アプリは機能提供に必要な最小限の権限のみを要求します：</p>
+      <ul>
+        <li><strong>他のアプリの上に重ねて表示 (<code>SYSTEM_ALERT_WINDOW</code>):</strong> 他のアプリを起動したまま全画面の黒画面カーテンや透明タッチロック、フローティング起動ボタンを表示するために必要です。</li>
+        <li><strong>フォアグラウンドサービス (<code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong> Android 14以降において、他のアプリの背面でも画面保護や緊急解除機能を安定して動作させるために使用します。</li>
+        <li><strong>アプリ内請求 (<code>com.android.vending.BILLING</code>):</strong> Google Play公式の決済システムを通じて、PRO版（買い切り機能）の購入処理を行うために使用します。開発者がクレジットカード番号等の決済情報を保持・閲覧することはありません。</li>
+        <li><strong>バイブレーション (<code>VIBRATE</code>):</strong> 画面ロック・解除時の触覚フィードバックにのみ使用します。</li>
+        <li><strong>ネットワーク通信 (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> 無料版におけるGoogle AdMob広告の配信およびGoogle UMP同意管理プラットフォームの通信にのみ使用されます。</li>
+      </ul>
+
+      <h2>4. 第三者モジュールについて</h2>
+      <p>本アプリでは以下の信頼されたGoogle社提供サービスを使用しています：</p>
+      <ul>
+        <li><strong>Google Play Billing:</strong> PRO機能の安全な決済処理 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>)</li>
+        <li><strong>Google AdMob &amp; UMP (無料版のみ):</strong> 広告配信および同意管理</li>
+      </ul>
+
+      <h2>5. お問い合わせ</h2>
+      <p>本ポリシーに関するご質問やご不明点がございましたら、下記までお気軽にお問い合わせください：</p>
+      <p>メール: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      
+      const content = document.getElementById('content-' + lang);
+      if (content) content.classList.add('active');
+      
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(btn => {
+        if ((lang === 'en' && btn.textContent.includes('English')) ||
+            (lang === 'ja' && btn.textContent.includes('日本語'))) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
