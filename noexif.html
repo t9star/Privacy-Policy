@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - NoExif: Photo Location Remover</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    .highlight-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0 1.5rem;
+      color: #1e40af;
+      font-size: 0.95rem;
+    }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">← All Privacy Policies</a>
+    </div>
+
+    <div class="lang-switcher">
+      <button id="btn-en" class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button id="btn-ja" class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English Version (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h1>Privacy Policy for NoExif: Photo Location Remover</h1>
+      <p class="app-tag">Application: <strong>NoExif: Photo Location Remover</strong></p>
+      <p class="app-tag">Package: <code>jp.tpp.t9s.noexif</code> | Last updated: October 26, 2026</p>
+
+      <div class="highlight-box">
+        <strong>Privacy Commitment:</strong> NoExif is designed with a 100% offline, privacy-first architecture. It does not request internet network permissions and never transmits or collects your photos, videos, or personal data.
+      </div>
+
+      <h2>1. Overview</h2>
+      <p>NoExif: Photo Location Remover ("we", "our", or "the App") is developed to protect your personal privacy by stripping sensitive GPS location tags and Exif metadata from your photos and videos before sharing. We respect your privacy and are committed to maintaining the highest standards of data security.</p>
+
+      <h2>2. Core Privacy Principles &amp; Offline Operation</h2>
+      <ul>
+        <li><strong>100% Offline by Design:</strong> The App does not request the <code>android.permission.INTERNET</code> permission. It has zero capability to connect to the internet, upload files, or communicate with remote servers.</li>
+        <li><strong>Zero Data Collection &amp; Tracking:</strong> We do NOT collect, monitor, store, or share your personal data, media content, or usage analytics.</li>
+        <li><strong>Strictly Local On-Device Processing:</strong> When you select photos or videos, all metadata inspection and removal tasks are executed strictly within your device's local memory and temporary app cache. No media or metadata ever leaves your device.</li>
+      </ul>
+
+      <h2>3. Device Permissions &amp; Data Access</h2>
+      <p>The App requests only the permissions strictly necessary to process your media files locally on your device:</p>
+      <ul>
+        <li><strong>Photos &amp; Videos Access (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO / Storage Access):</strong> Required exclusively to allow you to select photos and videos from your local device library for metadata inspection and scrubbing. Access occurs solely upon your explicit user interaction.</li>
+        <li><strong>Media Storage (Write/Save Access):</strong> Required to save the sanitized, metadata-free copies back to your local storage or gallery.</li>
+        <li><strong>No Background Scanning:</strong> The App does not perform background scans of your photo library and accesses files only when you directly select them.</li>
+      </ul>
+
+      <h2>4. Google Play In-App Purchases</h2>
+      <p>The App may offer optional premium features or licenses via Google Play's In-App Billing service (<code>com.android.vending.BILLING</code>):</p>
+      <ul>
+        <li>All payment transactions are handled directly and securely by Google Play.</li>
+        <li>We do not receive, process, or store your credit card numbers, bank account information, or billing address.</li>
+        <li>For details on how Google processes transaction and payment data, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>5. Third-Party Services &amp; Advertising</h2>
+      <p>The App does not contain third-party advertising SDKs, tracking libraries, or analytics tools. We do not sell, rent, or trade any user information to third parties.</p>
+
+      <h2>6. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect functional improvements or legal requirements. Any modifications will be posted to this page with an updated revision date.</p>
+
+      <h2>7. Contact Information</h2>
+      <p>If you have any questions, concerns, or inquiries regarding this Privacy Policy or NoExif, please contact us at:</p>
+      <p>Email: <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a> / <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <!-- Japanese Version -->
+    <div id="content-ja" class="lang-content">
+      <h1>プライバシーポリシー - NoExif: 写真の位置情報・Exif削除</h1>
+      <p class="app-tag">対象アプリ: <strong>NoExif: 写真の位置情報・Exif削除 (NoExif: Photo Location Remover)</strong></p>
+      <p class="app-tag">パッケージ名: <code>jp.tpp.t9s.noexif</code> | 最終更新日: 2026年10月26日</p>
+
+      <div class="highlight-box">
+        <strong>プライバシー保護方針:</strong> 『NoExif』はプライバシー最優先・完全オフライン設計です。インターネット通信権限を一切持たず、写真・動画データや個人情報を外部に送信・収集することは一切ありません。
+      </div>
+
+      <h2>1. はじめに</h2>
+      <p>『NoExif: 写真の位置情報・Exif削除』（以下「本アプリ」）は、写真や動画に含まれる詳細なGPS位置情報や撮影メタデータ（Exif）を簡単・確実に消去し、SNSやメッセージアプリ等で安心して共有できるように開発されたプライバシー保護ユーティリティです。開発者はお客様のプライバシーを最重要視し、安全な利用環境を提供します。</p>
+
+      <h2>2. 完全オフライン動作とデータの非収集</h2>
+      <ul>
+        <li><strong>100% 完全オフライン動作:</strong> 本アプリはインターネット通信権限（<code>android.permission.INTERNET</code>）を一切宣言・要求していません。技術的・構造的に外部サーバーへの接続や写真データの送信を行う機能を持っていません。</li>
+        <li><strong>個人情報・メディアの収集ゼロ:</strong> 当開発者がお客様の写真、動画、撮影日時、位置情報ログ、端末の識別情報などを収集・追跡・蓄積することは一切ありません。</li>
+        <li><strong>ローカル端末内での完結処理:</strong> 写真や動画のExif解析・削除処理は、すべてお使いのスマートフォン端末内のローカルメモリおよび一時キャッシュ領域でのみ実行されます。処理中および処理後のデータが外部へ漏洩・送信されることはありません。</li>
+      </ul>
+
+      <h2>3. 使用する端末の権限について</h2>
+      <p>本アプリが要求する権限は、位置情報・Exifの削除機能を端末上で実行するために必要最小限のものに限定されています：</p>
+      <ul>
+        <li><strong>画像および動画へのアクセス権限 (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO / ストレージ権限):</strong> お客様ご自身が端末内のギャラリーから位置情報を削除したい写真・動画を選択するためにのみ使用します。</li>
+        <li><strong>ストレージへの保存権限:</strong> 位置情報を消去した安全なコピー画像を端末内に保存するためにのみ使用します。</li>
+        <li><strong>バックグラウンドアクセスの禁止:</strong> 本アプリはお客様が明示的に選択したファイル以外を自動スキャンしたり、バックグラウンドで収集したりすることはありません。</li>
+      </ul>
+
+      <h2>4. Google Play アプリ内課金（In-App Purchases）について</h2>
+      <p>本アプリでは、オプションとなるPro機能（買い切りアイテム等）の購入手続きのために Google Play アプリ内請求（<code>com.android.vending.BILLING</code>）を利用しています：</p>
+      <ul>
+        <li>すべての取引および決済手続きは、Google Play のセキュアな公式決済基盤を通じて安全に処理されます。</li>
+        <li>当開発者がお客様のクレジットカード番号、金融口座情報、請求先住所などの機密決済情報を直接取得・保持・閲覧することは一切ありません。</li>
+        <li>決済情報の取り扱いに関する詳細は、<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご参照ください。</li>
+      </ul>
+
+      <h2>5. 外部SDK・広告・解析ツールについて</h2>
+      <p>本アプリには、サードパーティ製の広告配信SDKや行動トラッキング解析ライブラリ（Google Analytics、Firebase Analytics等）は一切含まれていません。お客様のメディアやメタデータが第三者に提供されることはありません。</p>
+
+      <h2>6. プライバシーポリシーの改定</h2>
+      <p>機能改善や法令等の変更に伴い、本プライバシーポリシーを改定することがあります。改定された内容は、本ウェブページに掲載された時点で即時効力を生じるものとします。</p>
+
+      <h2>7. お問い合わせ窓口</h2>
+      <p>本プライバシーポリシーまたは本アプリにおけるデータの取り扱いに関するご質問・ご意見は、以下までお問い合わせください：</p>
+      <p>メール: <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a> / <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(el) {
+        el.classList.remove('active');
+      });
+
+      var targetContent = document.getElementById('content-' + lang);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+      var targetBtn = document.getElementById('btn-' + lang);
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+      }
+
+      try {
+        localStorage.setItem('t9star_policy_lang', lang);
+      } catch (e) {
+        // Safe fallback for restricted storage environments
+      }
+    }
+
+    function init() {
+      try {
+        var savedLang = localStorage.getItem('t9star_policy_lang');
+        if (savedLang === 'ja' || savedLang === 'en') {
+          switchLang(savedLang);
+        }
+      } catch (e) {
+        // Fallback to default (English)
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
