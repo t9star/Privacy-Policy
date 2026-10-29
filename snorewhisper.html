@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - SnoreWhisper</title>
+  <style>
+    :root {
+      --primary: #00E5FF;
+      --primary-dark: #6C63FF;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #0B0E14;
+      --card-bg: #151922;
+      --border: #2C3242;
+      --content-text: #e2e8f0;
+      --content-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--content-text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #1f2430;
+      color: var(--content-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #0B0E14;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--content-muted);
+      margin-bottom: 0.4rem;
+    }
+    .effective-date {
+      font-size: 0.85rem;
+      color: var(--content-muted);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.8rem 0 0.6rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      color: var(--content-muted);
+      font-size: 0.95rem;
+    }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: var(--content-text); }
+    .badge-local {
+      display: inline-block;
+      background: rgba(0, 229, 255, 0.12);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .callout {
+      background: rgba(108, 99, 255, 0.12);
+      border-left: 4px solid var(--primary-dark);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    .callout p { color: var(--content-text); margin: 0; font-size: 0.9rem; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--content-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="./">&#8592; Back to Portal</a>
+    </div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+      <button class="lang-btn" id="btn-ja" onclick="setLang('ja')">日本語</button>
+    </div>
+
+    <!-- ENGLISH -->
+    <div id="content-en">
+      <div class="app-tag">Android App: jp.tpp.t9s.snorewhisper</div>
+      <h1>Privacy Policy <span class="badge-local">100% On-Device</span></h1>
+      <p class="effective-date">Effective Date: October 29, 2026</p>
+
+      <div class="callout">
+        <p><strong>Core Promise:</strong> SnoreWhisper is built with a strict <strong>Privacy-First, On-Device Local Processing</strong> philosophy. We never transmit, upload, or store your microphone audio or sleep records on any external cloud server. Everything remains solely on your personal device.</p>
+      </div>
+
+      <h2>1. Information We Process</h2>
+      <p>SnoreWhisper monitors nighttime sounds to detect snoring, sleep talking, and coughing. All sound recognition, decibel analysis, and clip generation occur entirely within your device's local memory and processor:</p>
+      <ul>
+        <li><strong>Microphone Audio:</strong> Used exclusively for real-time acoustic analysis while recording is active. Detected audio clips are saved exclusively in your app's private sandbox storage on the device.</li>
+        <li><strong>Sleep Session Records:</strong> Timestamps, sleep tags, detected event counts, and calm scores are stored solely in your local SQLite database on the device.</li>
+      </ul>
+
+      <h2>2. What We DO NOT Collect</h2>
+      <ul>
+        <li>No user accounts, email addresses, or personal identity required.</li>
+        <li>No audio uploads to remote servers or cloud databases.</li>
+        <li>No third-party tracking, profiling, or behavioral advertising SDKs.</li>
+      </ul>
+
+      <h2>3. Device Permissions & Purpose</h2>
+      <ul>
+        <li><strong>Microphone (RECORD_AUDIO):</strong> Required to analyze nighttime sound levels, snoring, and sleep talking. Audio is processed locally.</li>
+        <li><strong>Foreground Service (FOREGROUND_SERVICE_MICROPHONE):</strong> Required to maintain uninterrupted sleep sound analysis overnight while the screen is turned off.</li>
+        <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used solely to display the persistent sleep tracking status and provide a quick-stop action.</li>
+        <li><strong>Billing (BILLING):</strong> Managed securely through Google Play Billing for one-time Pro purchases.</li>
+      </ul>
+
+      <h2>4. Medical Disclaimer</h2>
+      <p>SnoreWhisper is designed solely for general wellness, sleep habit reflection, and self-awareness. It is <strong>NOT a medical device</strong> and is not intended to diagnose, treat, cure, or prevent any medical disease or sleep disorder, including Obstructive Sleep Apnea (OSA). Always consult a licensed physician or medical professional for health concerns.</p>
+
+      <h2>5. Data Retention & Deletion</h2>
+      <p>You have total control over your data. Deleting an audio clip or session in the app permanently erases the files from your device. Uninstalling the app completely wipes all stored recordings and database entries.</p>
+
+      <h2>6. Contact Us</h2>
+      <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at:</p>
+      <p><strong>Developer:</strong> t9star<br>
+      <strong>Email:</strong> frog9@users.noreply.github.com</p>
+
+      <div class="footer">
+        &copy; 2026 SnoreWhisper. All rights reserved.
+      </div>
+    </div>
+
+    <!-- JAPANESE -->
+    <div id="content-ja" style="display: none;">
+      <div class="app-tag">Androidアプリ: jp.tpp.t9s.snorewhisper</div>
+      <h1>プライバシーポリシー <span class="badge-local">100% 完全ローカル</span></h1>
+      <p class="effective-date">制定日: 2026年10月29日</p>
+
+      <div class="callout">
+        <p><strong>基本方針:</strong> SnoreWhisperは徹底した<strong>「プライバシーファースト（完全オンデバイス処理）」</strong>設計を採用しています。マイク音声データや睡眠ログを外部サーバーやクラウドへ送信・アップロードすることは一切ありません。すべてのデータはお手元の端末内のみに安全に保管されます。</p>
+      </div>
+
+      <h2>1. 処理する情報</h2>
+      <p>SnoreWhisperはいびき、寝言、咳などの夜間音を検知・分析します。すべての音響解析、デシベル計算、クリップ切り出しは端末内部でのみ行われます：</p>
+      <ul>
+        <li><strong>マイク音声:</strong> 計測中にリアルタイムで音響特徴を解析する目的にのみ使用されます。切り出された音声クリップは端末内のアプリ専用保護領域にのみ保存されます。</li>
+        <li><strong>睡眠セッションデータ:</strong> 計測日時、タグ、検知回数、スコアはお手元の端末内ローカルデータベース（Room/SQLite）にのみ保存されます。</li>
+      </ul>
+
+      <h2>2. 収集しない情報</h2>
+      <ul>
+        <li>ユーザー登録、メールアドレス、個人情報の収集は一切行いません。</li>
+        <li>音声データのクラウドや外部サーバーへの送信・アップロードは一切行いません。</li>
+        <li>行動追跡や外部トラッキングSDKは一切組み込まれていません。</li>
+      </ul>
+
+      <h2>3. 利用する権限と目的</h2>
+      <ul>
+        <li><strong>マイク権限 (RECORD_AUDIO):</strong> 睡眠中のいびきや寝言をローカルで分析・記録するために使用します。</li>
+        <li><strong>フォアグラウンドサービス (FOREGROUND_SERVICE_MICROPHONE):</strong> 画面消灯中も一晩中安定して睡眠音を見守るために使用します。</li>
+        <li><strong>通知権限 (POST_NOTIFICATIONS):</strong> 計測中の常駐通知およびワンタップ停止ボタンを表示するために使用します。</li>
+        <li><strong>アプリ内請求 (BILLING):</strong> Google Play Billing を通じた安全なPro版（買い切り）購入処理に使用します。</li>
+      </ul>
+
+      <h2>4. 医療上の免責事項</h2>
+      <p>SnoreWhisperは一般的なウェルネスおよび生活習慣の自己把握を目的としたアプリです。本アプリは<strong>医療機器ではなく</strong>、睡眠時無呼吸症候群（SAS）等のいかなる病気・疾患の診断、治療、予防を目的とするものではありません。健康上の懸念がある場合は、必ず医師または専門医療機関にご相談ください。</p>
+
+      <h2>5. データの削除・管理</h2>
+      <p>データはお客様自身で完全に管理できます。アプリ内で音声クリップやセッションを削除すると端末内から完全に消去されます。また、アプリをアンインストールすることで、すべての録音データおよび設定が端末から完全に削除されます。</p>
+
+      <h2>6. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問・お問い合わせは、下記までお願いいたします：</p>
+      <p><strong>開発者:</strong> t9star<br>
+      <strong>連絡先:</strong> frog9@users.noreply.github.com</p>
+
+      <div class="footer">
+        &copy; 2026 SnoreWhisper. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('content-ja').style.display = lang === 'ja' ? 'block' : 'none';
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+      try {
+        localStorage.setItem('privacy_policy_lang', lang);
+      } catch (e) {}
+    }
+
+    // Initialize with stored lang or default en
+    (function() {
+      var saved = null;
+      try {
+        saved = localStorage.getItem('privacy_policy_lang');
+      } catch (e) {}
+      if (saved === 'ja' || saved === 'en') {
+        setLang(saved);
+      } else {
+        setLang('en');
+      }
+    })();
+  </script>
+</body>
+</html>
