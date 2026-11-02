@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ReBell</title>
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg: #0B1324;
+      --card-bg: #151f38;
+      --border: #233554;
+      --badge-bg: rgba(56, 189, 248, 0.15);
+      --badge-text: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #1c2a4a;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #0B1324;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .badge-local {
+      font-size: 0.8rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      border: 1px solid var(--primary);
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .effective-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.8rem 0 0.6rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: var(--text); }
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .callout p { margin: 0; color: #e2e8f0; font-size: 0.92rem; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">&larr; Back to App Policy List</a>
+    </div>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- ENGLISH (DEFAULT) -->
+    <div id="content-en">
+      <div class="app-tag">Android Application: jp.tpp.t9s.rebell</div>
+      <h1>Privacy Policy <span class="badge-local">100% On-Device Storage</span></h1>
+      <p class="effective-date">Effective Date: November 3, 2026</p>
+
+      <div class="callout">
+        <p><strong>Core Privacy Principle:</strong> <strong>ReBell</strong> is designed with a strict privacy-first architecture. All your task titles, alarm schedules, habit routines, and reminder preferences are processed and stored <strong>entirely on your local device</strong>. We never transmit your personal reminders to any external cloud server.</p>
+      </div>
+
+      <h2>1. Information We Do NOT Collect</h2>
+      <p>ReBell does not require user registration or account creation. We do NOT collect, store, or transmit:</p>
+      <ul>
+        <li>Your name, email address, phone number, or contact details</li>
+        <li>Your reminder titles, notes, schedules, or chore habits</li>
+        <li>Your device location or GPS coordinates</li>
+        <li>Your photos, audio recordings, or media files</li>
+      </ul>
+
+      <h2>2. Information Stored Locally on Your Device</h2>
+      <p>The following operational data is saved exclusively inside the application's private, encrypted local sandbox database (Android Room and Preferences DataStore):</p>
+      <ul>
+        <li><strong>Reminder Tasks:</strong> Title, target time, nagging interval, repetition frequency, delay count, and completion timestamps.</li>
+        <li><strong>User Preferences:</strong> Character mode on/off, chosen character ID (Clocky, Pastel, Mint, Ao), quiet hours schedule, and Pro unlock status.</li>
+      </ul>
+      <p>This data never leaves your device and is permanently removed when you delete tasks or uninstall the app.</p>
+
+      <h2>3. Third-Party Services & SDKs</h2>
+      <p>To provide core application functions and support ongoing development, ReBell uses the following industry-standard third-party services:</p>
+      <ul>
+        <li><strong>Google AdMob (Google LLC):</strong> Used to display banner advertisements in the free version. AdMob may collect pseudonymous identifiers (such as Google Advertising ID), IP addresses, and app diagnostics to deliver non-personalized or personalized ads in accordance with your consent and Google's policies. For more information, please visit <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Google Privacy & Terms</a>.</li>
+        <li><strong>Google Play In-App Billing (Google LLC):</strong> Used to handle the one-time Pro purchase. All transaction processing is securely handled directly by Google Play. We never receive or store your credit card or billing details.</li>
+      </ul>
+
+      <h2>4. Permissions Used by the App</h2>
+      <p>ReBell requests only the minimum Android system permissions necessary for recurring alarm functionality:</p>
+      <ul>
+        <li><strong>POST_NOTIFICATIONS:</strong> Required to display timely reminder notifications and actions in your status bar.</li>
+        <li><strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM:</strong> Required to trigger your reminders precisely at the scheduled second.</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED:</strong> Required to restore active alarms automatically after your device reboots.</li>
+        <li><strong>VIBRATE:</strong> Required to provide haptic feedback when an alarm fires.</li>
+      </ul>
+
+      <h2>5. Data Retention & Deletion</h2>
+      <p>You retain full control over your data. Completing or deleting a task immediately removes it from active storage. Clearing the app storage or uninstalling ReBell completely and irreversibly deletes all stored task data from your device.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>ReBell does not knowingly collect or solicit personal information from children under the age of 13. The application is a general-purpose productivity utility suitable for all ages.</p>
+
+      <h2>7. Contact Us</h2>
+      <p>If you have any questions or inquiries regarding this Privacy Policy, please contact us at:</p>
+      <p><strong>Developer:</strong> T9Star (t9star)<br>
+      <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--primary);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 ReBell / T9Star. All rights reserved.
+      </div>
+    </div>
+
+    <!-- JAPANESE -->
+    <div id="content-ja" style="display: none;">
+      <div class="app-tag">Androidアプリ: jp.tpp.t9s.rebell</div>
+      <h1>プライバシーポリシー <span class="badge-local">100% 完全ローカル保存</span></h1>
+      <p class="effective-date">制定日: 2026年11月3日</p>
+
+      <div class="callout">
+        <p><strong>基本方針:</strong> <strong>ReBell（リベル）</strong>は、ユーザーのプライバシーを最優先に設計されたオフライン完結型リマインダーアプリです。タスク内容、アラーム設定、ルーティン履歴などのすべてのデータは<strong>お手元の端末内のみに安全に保存</strong>され、外部サーバーへ送信されることは一切ありません。</p>
+      </div>
+
+      <h2>1. 収集しない情報</h2>
+      <p>本アプリはユーザー登録やログインを必要としません。以下の個人情報を収集・保存・送信することは一切ありません：</p>
+      <ul>
+        <li>氏名、メールアドレス、電話番号などの個人識別情報</li>
+        <li>登録されたリマインダーのタイトル、メモ、実行履歴、ルーティン内容</li>
+        <li>端末の位置情報（GPS）</li>
+        <li>写真、連絡先、マイク音声などのメディアデータ</li>
+      </ul>
+
+      <h2>2. 端末内にのみローカル保存される情報</h2>
+      <p>アプリの正常な動作のため、以下の情報をお使いの端末内の暗号化ローカル領域（RoomデータベースおよびPreferences DataStore）にのみ保存します：</p>
+      <ul>
+        <li><strong>タスクデータ:</strong> タイトル、通知予定時刻、催促リピート間隔、繰り返し周期、放置回数、完了履歴</li>
+        <li><strong>アプリ設定情報:</strong> キャラクター煽りモードのON/OFF、選択キャラクター（クロッキー、パステル、ミント、アオ）、おやすみ時間帯設定、Pro版購入フラグ</li>
+      </ul>
+      <p>これらのデータはお使いの端末から外部へ送信されることはなく、タスクの削除やアプリのアンインストールによって完全に消去されます。</p>
+
+      <h2>3. 外部送信および第三者SDKの利用</h2>
+      <p>本アプリでは、無料版の広告表示およびPro版の安全な決済処理のために以下の信頼できる第三者サービスを利用しています：</p>
+      <ul>
+        <li><strong>Google AdMob (Google LLC):</strong> 無料版においてバナー広告を表示するために利用しています。AdMobは広告配信、不正防止、効果測定のために広告識別子（Google Advertising ID）や診断データを収集する場合があります。詳細は <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Googleのプライバシーと規約</a> をご確認ください。</li>
+        <li><strong>Google Play Billing (Google LLC):</strong> 買い切りPro版の決済処理に利用しています。すべての決済はGoogle Playシステムを通じて安全に行われ、開発者がクレジットカード情報等を取得・保持することはありません。</li>
+      </ul>
+
+      <h2>4. アプリが要求する権限</h2>
+      <p>本アプリはリマインダーおよびアラームの正常な作動に必要な最小限の権限のみを要求します：</p>
+      <ul>
+        <li><strong>通知の送信 (POST_NOTIFICATIONS):</strong> 指定時刻にしつこいリピート通知やスヌーズボタンを表示するために使用します。</li>
+        <li><strong>正確なアラームの設定 (SCHEDULE_EXACT_ALARM):</strong> 指定した分・秒に遅延なく正確にアラームを作動させるために使用します。</li>
+        <li><strong>端末起動時の自動再設定 (RECEIVE_BOOT_COMPLETED):</strong> スマホの再起動後も設定済みのアラームを自動的に復元・再登録するために使用します。</li>
+        <li><strong>バイブレーション (VIBRATE):</strong> 通知時に振動でお知らせするために使用します。</li>
+      </ul>
+
+      <h2>5. データの削除と管理</h2>
+      <p>ユーザーはいつでもアプリ内でタスクを完了・削除できます。また、端末の「設定」からアプリのデータを消去するか、アプリをアンインストールすることで、すべての保存データが即座に完全消去されます。</p>
+
+      <h2>6. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問やお問い合わせは、下記窓口までご連絡ください：</p>
+      <p><strong>開発者:</strong> T9Star (t9star)<br>
+      <strong>メールアドレス:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--primary);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 ReBell / T9Star. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      const en = document.getElementById('content-en');
+      const ja = document.getElementById('content-ja');
+      const btns = document.querySelectorAll('.lang-btn');
+      if (lang === 'ja') {
+        en.style.display = 'none';
+        ja.style.display = 'block';
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+      } else {
+        ja.style.display = 'none';
+        en.style.display = 'block';
+        btns[1].classList.remove('active');
+        btns[0].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
