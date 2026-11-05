@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Ink Slider: Physics Puzzle</title>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg: #0b0f19;
+      --card-bg: #131a2e;
+      --border: #232f48;
+      --badge-bg: rgba(99, 102, 241, 0.15);
+      --badge-text: #818cf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--badge-text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #1a233d;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .badge-local {
+      font-size: 0.8rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      margin: 1.75rem 0 0.75rem;
+    }
+    p, ul {
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">← All Privacy Policies</a>
+    </div>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en">
+      <h1>Privacy Policy for Ink Slider</h1>
+      <span class="badge-local">Privacy-First • Secure Community Sharing</span>
+      <p><strong>Effective Date:</strong> November 5, 2026<br>
+      <strong>Application Name:</strong> Ink Slider: Physics Puzzle<br>
+      <strong>Package Name:</strong> <code>jp.tpp.t9s.inkslider</code><br>
+      <strong>Developer:</strong> T9Star</p>
+
+      <h2>1. Overview</h2>
+      <p>Ink Slider: Physics Puzzle ("the Application", "we", "our") is committed to respecting and protecting user privacy. This Privacy Policy explains how data is handled when you use the Application.</p>
+
+      <h2>2. On-Device Storage and Gameplay Data</h2>
+      <p>Your single-player game progress, unlocked levels, in-game achievements, settings, and local draft stages are saved strictly on your local device. This data is not uploaded to our servers and remains completely private on your device.</p>
+
+      <h2>3. Community Stages Sharing (Firebase)</h2>
+      <p>The Application includes an optional feature that lets players create and publish custom stages to the community ("Community Stages").</p>
+      <ul>
+        <li><strong>Data Uploaded:</strong> When you voluntarily submit a stage to the public community, the Application uploads the stage configuration (line coordinates, start/goal positions, physics properties), a stage title provided by you, your chosen author nickname, and timestamp to Google Firebase Realtime Database.</li>
+        <li><strong>Zero Sensitive Personal Data:</strong> We do NOT collect, transmit, or store real names, email addresses, phone numbers, contacts, device hardware identifiers, or precise GPS locations.</li>
+        <li><strong>Public Availability:</strong> Any stage published to Community Stages becomes visible and playable by other users of the Application.</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>The Application utilizes trusted third-party services to provide backend functionality and monetization:</p>
+      <ul>
+        <li><strong>Google Firebase Realtime Database:</strong> Used to store and distribute community-created stages and likes count. For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--badge-text);">Google Privacy Policy</a>.</li>
+        <li><strong>Google AdMob:</strong> May display non-intrusive advertisements in the free version. AdMob may process non-personalized technical identifiers and diagnostics.</li>
+        <li><strong>Google Play Billing:</strong> Handles secure transactions for in-app purchases. All payment details are processed directly and securely by Google Play.</li>
+      </ul>
+
+      <h2>5. Device Permissions</h2>
+      <ul>
+        <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Required to fetch and share community stages and load advertisements.</li>
+        <li><strong>VIBRATE:</strong> Used to provide subtle haptic feedback during interactive physics gameplay.</li>
+      </ul>
+
+      <h2>6. Data Deletion and Retention</h2>
+      <p>Uninstalling the Application will permanently erase all local game progress and settings stored on your device. For requests regarding community stages submitted under your nickname, please contact the developer.</p>
+
+      <h2>7. Children's Privacy</h2>
+      <p>The Application does not knowingly collect personally identifiable information from children under the age of 13.</p>
+
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:<br>
+      <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--badge-text);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 Ink Slider / T9Star. All rights reserved.
+      </div>
+    </div>
+
+    <!-- Japanese Content -->
+    <div id="content-ja" style="display: none;">
+      <h1>プライバシーポリシー - Ink Slider</h1>
+      <span class="badge-local">プライバシー保護重視 • 安心のステージ共有</span>
+      <p><strong>制定日:</strong> 2026年11月5日<br>
+      <strong>アプリ名:</strong> インクスライダー：ひらめき物理パズル (Ink Slider: Physics Puzzle)<br>
+      <strong>パッケージ名:</strong> <code>jp.tpp.t9s.inkslider</code><br>
+      <strong>開発者:</strong> T9Star</p>
+
+      <h2>1. 基本方針</h2>
+      <p>「インクスライダー：ひらめき物理パズル」（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限配慮して設計されています。本方針では、本アプリにおけるデータの取り扱いについて説明します。</p>
+
+      <h2>2. ローカル保存とプレイデータ</h2>
+      <p>通常ステージのクリア状況、ハイスコア、各種ゲーム設定、および自作ステージの下書きデータは、すべてユーザーの端末内（オンデバイス）にのみ保存されます。これらが許可なく外部へ送信されることは一切ありません。</p>
+
+      <h2>3. みんなのステージ共有機能 (Firebase)</h2>
+      <p>本アプリには、ユーザーが作成したオリジナルステージを他のプレイヤーと共有できる「みんなのステージ」機能が搭載されています。</p>
+      <ul>
+        <li><strong>送信されるデータ:</strong> ユーザーが自発的に「公開」を選択した場合に限り、ステージ構成データ（線の座標・ゴール位置等）、ユーザーが入力したステージ名および作者ニックネーム、作成日時が Google Firebase Realtime Database に保存・公開されます。</li>
+        <li><strong>個人情報の非収集:</strong> 実名、メールアドレス、電話番号、連絡先、端末固有の識別情報（IMEI等）、位置情報などの個人を特定できる情報は一切収集・保存しません。</li>
+        <li><strong>公開範囲:</strong> 公開されたステージデータは、本アプリを利用するすべてのユーザーが閲覧・プレイできます。</li>
+      </ul>
+
+      <h2>4. 外部サービス・ライブラリの利用</h2>
+      <p>本アプリは機能提供および運用のために以下の信頼できるサードパーティサービスを利用しています：</p>
+      <ul>
+        <li><strong>Google Firebase Realtime Database:</strong> 共有ステージの保存・配信および「いいね」カウント管理に使用しています。<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener" style="color: var(--badge-text);">Google プライバシーポリシー</a>をご確認ください。</li>
+        <li><strong>Google AdMob:</strong> アプリの無料提供を維持するため、広告配信を行う場合があります。</li>
+        <li><strong>Google Play Billing:</strong> アプリ内アイテム購入や広告非表示の安全な決済処理に使用されます。決済情報はGoogle Playにより安全に保護されます。</li>
+      </ul>
+
+      <h2>5. アプリが利用する権限</h2>
+      <ul>
+        <li><strong>ネットワークアクセス (INTERNET, ACCESS_NETWORK_STATE):</strong> 共有ステージの送受信および広告配信のために使用します。</li>
+        <li><strong>バイブレーション (VIBRATE):</strong> ゲームプレイ中の触覚フィードバック（振動演出）に使用します。</li>
+      </ul>
+
+      <h2>6. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問やお問い合わせは、下記窓口までご連絡ください：<br>
+      <strong>開発者:</strong> T9Star<br>
+      <strong>メールアドレス:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--badge-text);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 Ink Slider / T9Star. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      const en = document.getElementById('content-en');
+      const ja = document.getElementById('content-ja');
+      const btns = document.querySelectorAll('.lang-btn');
+      if (lang === 'ja') {
+        en.style.display = 'none';
+        ja.style.display = 'block';
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+      } else {
+        ja.style.display = 'none';
+        en.style.display = 'block';
+        btns[1].classList.remove('active');
+        btns[0].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

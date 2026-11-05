@@ -27,7 +27,7 @@
       padding: 2.5rem 1rem 4rem;
     }
     .container {
-      max-width: 800px;
+      max-width: 960px;
       margin: 0 auto;
     }
     .header {
@@ -53,11 +53,12 @@
     .subtitle {
       font-size: 1rem;
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
     .app-grid {
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 1.25rem;
       margin-bottom: 3rem;
     }
@@ -82,11 +83,13 @@
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 0.5rem;
+      gap: 0.5rem;
     }
     .app-title {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #111827;
+      line-height: 1.4;
     }
     .app-tag {
       font-size: 0.75rem;
@@ -95,9 +98,14 @@
       padding: 0.2rem 0.6rem;
       border-radius: 6px;
       font-weight: 500;
+      white-space: nowrap;
+    }
+    .app-tag-game {
+      background: #fdf2f8;
+      color: #db2777;
     }
     .app-desc {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       margin-bottom: 1.25rem;
       flex-grow: 1;
@@ -111,11 +119,12 @@
       color: #ffffff;
       padding: 0.65rem 1.25rem;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       text-decoration: none;
       transition: background-color 0.15s ease;
       align-self: flex-start;
+      width: 100%;
     }
     .btn:hover {
       background: var(--primary-hover);
@@ -157,8 +166,8 @@
       h1 {
         font-size: 1.6rem;
       }
-      .btn {
-        width: 100%;
+      .app-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -169,7 +178,7 @@
       <span class="badge">Privacy Policies</span>
       <h1>アプリケーション プライバシーポリシー</h1>
       <p class="subtitle">
-        個人開発者 <strong>jp.app.t9s / T9Star</strong> が提供する各アプリケーションのプライバシーポリシーです。アプリごとの詳細は以下のリンクよりご確認ください。
+        個人開発者 <strong>jp.app.t9s / jp.tpp.t9s / T9Star</strong> が提供する各アプリケーションのプライバシーポリシーです。アプリごとの詳細は以下のリンクよりご確認ください。
       </p>
     </header>
 
@@ -250,6 +259,150 @@
           </p>
         </div>
         <a href="floatcalc.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- NoSaveCrop -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">NoSaveCrop (保存しない画像切り抜き &amp; 一時共有)</h2>
+            <span class="app-tag">Android</span>
+          </div>
+          <p class="app-desc">
+            写真や画像を一時的にトリミング・切り抜きしてアプリ間共有。端末ストレージへの不要な保存を行わない完全オフライン・ゼロデータ保持設計（多言語対応）。
+          </p>
+        </div>
+        <a href="nosavecrop.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- Offline Photo Shrink -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">Offline Photo Shrink (オフライン画像リサイズ・圧縮)</h2>
+            <span class="app-tag">Android</span>
+          </div>
+          <p class="app-desc">
+            端末内完結の高速画像リサイズ・容量軽量化ユーティリティ。通信一切不要・完全オンデバイス処理によるプライバシー保護規定です（多言語対応）。
+          </p>
+        </div>
+        <a href="photoshrink.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- SonicFix -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">SonicFix (スピーカー水抜き &amp; 音波クリーナー)</h2>
+            <span class="app-tag">Android</span>
+          </div>
+          <p class="app-desc">
+            特殊周波数スイープ音と微細バイブレーションによりスマホのスピーカーに侵入した水滴やホコリを排出。録音音声の保存・送信一切なしの安心設計（英語）。
+          </p>
+        </div>
+        <a href="sonicfix.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- LedgerPad -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">LedgerPad (個人商店・店舗向けオフライン売掛帳・出納帳)</h2>
+            <span class="app-tag">Android</span>
+          </div>
+          <p class="app-desc">
+            小規模事業者・個人商店向けの完全オフライン信用台帳・出納帳。顧客情報や財務記録の外部送信一切なし、完全ローカル管理によるプライバシー保護規定です（英語）。
+          </p>
+        </div>
+        <a href="ledgerpad.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- 禅禅 (Zen Zen) -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">禅禅 (Zen Zen - 集中・瞑想・デジタルデトックス)</h2>
+            <span class="app-tag">Android</span>
+          </div>
+          <p class="app-desc">
+            心を静め集中力を高める瞑想・フォーカス支援アプリ。完全ローカル処理による100%オフライン動作、プライバシー保護規定です（日英対応）。
+          </p>
+        </div>
+        <a href="zenzen.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- Ink Slider -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">Ink Slider: Physics Puzzle (インクスライダー)</h2>
+            <span class="app-tag app-tag-game">Game</span>
+          </div>
+          <p class="app-desc">
+            描いたインクの線で球をゴールに導く物理パズル。ローカルプレイおよび「みんなのステージ」共有機能におけるデータ取り扱いとプライバシー保護規定です（多言語対応）。
+          </p>
+        </div>
+        <a href="inkslider.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- NetBash: Idle Terminal -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">NetBash: Idle Terminal (ハッカー風放置シミュレーション)</h2>
+            <span class="app-tag app-tag-game">Game</span>
+          </div>
+          <p class="app-desc">
+            ターミナル風のレトロサイバーUIで進める放置系ハッキングシミュレーター。進行データはローカル完結、プライバシー保護に関する規定です。
+          </p>
+        </div>
+        <a href="netbash.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- Singularity Spin -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">Singularity Spin (SFサイバーパンク・リールゲーム)</h2>
+            <span class="app-tag app-tag-game">Game</span>
+          </div>
+          <p class="app-desc">
+            近未来SFの世界観でスピンを楽しむカジュアルゲーム。ゲームデータは端末内完結、プライバシー保護と公正な乱数生成に関する規定です。
+          </p>
+        </div>
+        <a href="singularity-spin.html" class="btn">
+          プライバシーポリシーを見る →
+        </a>
+      </div>
+
+      <!-- DopaClicker -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <h2 class="app-title">DopaClicker (爽快タップ・クリッカーゲーム)</h2>
+            <span class="app-tag app-tag-game">Game</span>
+          </div>
+          <p class="app-desc">
+            タップするたびにドーパミンが溢れ出る爽快クリッカーゲーム。プレイ実績やセーブデータは安全に端末ローカル保存。
+          </p>
+        </div>
+        <a href="dopaclicker.html" class="btn">
           プライバシーポリシーを見る →
         </a>
       </div>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoSaveCrop - Privacy Policy</title>
+  <meta name="description" content="NoSaveCrop Android app privacy policy. 日本語・English・中文対応のプライバシーポリシー。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #111118;
+      --bg-card: rgba(255,255,255,0.04);
+      --bg-card-hover: rgba(255,255,255,0.07);
+      --accent-1: #7c6aff;
+      --accent-2: #a855f7;
+      --accent-3: #06b6d4;
+      --text-primary: #f0f0f8;
+      --text-secondary: #9090b0;
+      --text-muted: #5a5a7a;
+      --border: rgba(255,255,255,0.08);
+      --border-accent: rgba(124,106,255,0.3);
+      --gradient-1: linear-gradient(135deg, #7c6aff 0%, #a855f7 50%, #06b6d4 100%);
+      --gradient-2: linear-gradient(135deg, rgba(124,106,255,0.15) 0%, rgba(168,85,247,0.10) 100%);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Animated background ── */
+    .bg-orbs {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      animation: floatOrb 12s ease-in-out infinite alternate;
+    }
+    .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, #7c6aff, transparent); top: -150px; left: -150px; animation-delay: 0s; }
+    .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, #a855f7, transparent); top: 30%; right: -100px; animation-delay: -4s; }
+    .orb-3 { width: 350px; height: 350px; background: radial-gradient(circle, #06b6d4, transparent); bottom: -100px; left: 30%; animation-delay: -8s; }
+
+    @keyframes floatOrb {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, 30px) scale(1.1); }
+    }
+
+    /* ── Layout ── */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Language switcher ── */
+    .lang-switcher {
+      display: flex;
+      gap: 6px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      background: transparent;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+    }
+    .lang-btn:hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.06);
+    }
+    .lang-btn.active {
+      background: var(--gradient-1);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(124,106,255,0.4);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 0 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(124,106,255,0.12);
+      border: 1px solid rgba(124,106,255,0.25);
+      border-radius: 999px;
+      font-size: 13px;
+      color: #a78bfa;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #7c6aff;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 30%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 12px;
+    }
+    .hero-date {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+      margin: 8px 0 48px;
+    }
+
+    /* ── Section cards ── */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 20px;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-2);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .section-card:hover::before { opacity: 1; }
+    .section-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--gradient-1);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .subsection {
+      margin-bottom: 24px;
+      padding-left: 16px;
+      border-left: 2px solid rgba(124,106,255,0.3);
+    }
+    .subsection:last-child { margin-bottom: 0; }
+
+    .subsection-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #c4b5fd;
+      margin-bottom: 12px;
+    }
+
+    .info-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .info-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      min-width: 80px;
+      padding-top: 1px;
+    }
+    .info-value {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Permission items */
+    .perm-list {
+      display: grid;
+      gap: 12px;
+    }
+    .perm-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .perm-item:hover {
+      background: rgba(124,106,255,0.06);
+      border-color: rgba(124,106,255,0.2);
+    }
+    .perm-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .perm-icon-1 { background: rgba(124,106,255,0.15); }
+    .perm-icon-2 { background: rgba(6,182,212,0.15); }
+    .perm-icon-3 { background: rgba(168,85,247,0.15); }
+    .perm-icon-4 { background: rgba(251,191,36,0.15); }
+    .perm-icon-5 { background: rgba(34,197,94,0.15); }
+    .perm-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .perm-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Bullet list */
+    .bullet-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .bullet-list li::before {
+      content: '›';
+      color: var(--accent-1);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    /* Contact */
+    .contact-card {
+      background: var(--gradient-2);
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(124,106,255,0.15);
+      border: 1px solid rgba(124,106,255,0.3);
+      border-radius: 10px;
+      color: #a78bfa;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .contact-email:hover {
+      background: rgba(124,106,255,0.25);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+
+    /* Language sections */
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section-card { padding: 24px 20px; }
+      .hero { padding: 60px 0 36px; }
+      .lang-btn { padding: 5px 10px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- ── Header ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">✂️</div>
+      <span class="logo-text">NoSaveCrop</span>
+    </div>
+    <nav class="lang-switcher" role="navigation" aria-label="Language selector">
+      <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')" aria-label="日本語">日本語</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">English</button>
+      <button class="lang-btn" id="btn-zh" onclick="setLang('zh')" aria-label="中文">中文</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+<div style="margin-bottom: 1.5rem;"><a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; color: #38bdf8; text-decoration: none; font-weight: 500;">← 一覧に戻る / All Policies</a></div>
+
+
+  <!-- ───────────────── JAPANESE ───────────────── -->
+  <div id="lang-ja" class="lang-content active">
+    <section class="hero">
+      <div class="hero-badge">プライバシーポリシー</div>
+      <h1>NoSaveCrop<br>プライバシーポリシー</h1>
+      <p class="hero-subtitle">あなたのプライバシーを尊重し、透明性のある情報管理を行います。</p>
+      <p class="hero-date">制定日：2026年6月25日</p>
+    </section>
+    <div class="divider"></div>
+
+    <p style="font-size:14px;color:var(--text-secondary);margin-bottom:32px;line-height:1.8;">
+      jp.app.t9s.nosavecrop（以下、「当方」といいます。）は、Android用アプリケーション「NoSaveCrop」（以下、「本アプリ」といいます。）における、利用者情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
+    </p>
+
+    <!-- Section 1 -->
+    <div class="section-card">
+      <div class="section-num">1</div>
+      <h2 class="section-title">収集する情報および収集方法</h2>
+
+      <div class="subsection">
+        <div class="subsection-title">(1) 画面キャプチャデータ</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">本アプリは、ユーザーがボタンをタップした際に画面のスクリーンショットをキャプチャします。</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">収集方法</span><span class="info-value">Android の MediaProjection API を使用します。</span></div>
+          <div class="info-row"><span class="info-label">利用目的</span><span class="info-value">キャプチャした画像をクリップボードにコピーするため。</span></div>
+          <div class="info-row"><span class="info-label">保存</span><span class="info-value">キャプチャした画像データはメモリ上でのみ処理され、当方のサーバーや端末内の永続的なストレージに保存されることはありません。</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(2) アプリの設定情報</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">ユーザーが選択したボタンの色、サイズ、透明度、およびPro版の購入状態などの設定情報を取得します。</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">収集方法</span><span class="info-value">アプリ内の設定操作時に端末内に保存されます。</span></div>
+          <div class="info-row"><span class="info-label">利用目的</span><span class="info-value">次回起動時にもユーザーのカスタマイズ設定を維持するため。</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(3) クリップボードへのアクセス</div>
+        <p style="font-size:14px;color:var(--text-secondary);">本アプリは、キャプチャした画像をクリップボードに書き込みます。</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card">
+      <div class="section-num">2</div>
+      <h2 class="section-title">権限の利用目的</h2>
+      <div class="perm-list">
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-1">🔲</div>
+          <div><div class="perm-name">他のアプリの上に重ねて表示 (SYSTEM_ALERT_WINDOW)</div><div class="perm-desc">キャプチャ用のフローティングボタンを表示するために使用します。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-2">📹</div>
+          <div><div class="perm-name">画面の録画またはキャスト (MediaProjection)</div><div class="perm-desc">ユーザーの操作に応じて画面をキャプチャするために使用します。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-3">⚙️</div>
+          <div><div class="perm-name">フォアグラウンドサービス (FOREGROUND_SERVICE)</div><div class="perm-desc">アプリがバックグラウンドにある間もキャプチャ機能を維持するために使用します。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-4">🔔</div>
+          <div><div class="perm-name">通知の送信 (POST_NOTIFICATIONS)</div><div class="perm-desc">サービスの動作状況を表示するために使用します。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-5">💳</div>
+          <div><div class="perm-name">Google Play 請求サービス (BILLING)</div><div class="perm-desc">Pro版（アプリ内購入）の決済処理に使用します。</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card">
+      <div class="section-num">3</div>
+      <h2 class="section-title">第三者への提供および外部送信</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">本アプリは、個人を特定できる情報を収集せず、また収集した画像データを外部のサーバーに送信することはありません。ただし、以下の場合は除きます。</p>
+      <ul class="bullet-list">
+        <li>法令に基づく場合。</li>
+        <li>利用者の同意がある場合。</li>
+        <li>Google Play 請求サービスなどの決済プラットフォームにおいて、決済処理に必要な情報が当該プラットフォームに提供される場合。</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card">
+      <div class="section-num">4</div>
+      <h2 class="section-title">プライバシーポリシーの変更</h2>
+      <p style="font-size:14px;color:var(--text-secondary);">当方は、法令の制定、改正等により、本ポリシーを適宜見直し、予告なく変更する場合があります。本ポリシーの変更は、本アプリ内または適切な場所に掲載された時点で有効になるものとします。</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="contact-card">
+      <h2 class="contact-title">お問い合わせ窓口</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">本ポリシーに関するお問い合わせは、以下のメールアドレスまでお願いいたします。</p>
+      <a href="mailto:poopoofrog9@gmail.com" class="contact-email">✉️ poopoofrog9@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ───────────────── ENGLISH ───────────────── -->
+  <div id="lang-en" class="lang-content">
+    <section class="hero">
+      <div class="hero-badge">Privacy Policy</div>
+      <h1>NoSaveCrop<br>Privacy Policy</h1>
+      <p class="hero-subtitle">We respect your privacy and handle your information with full transparency.</p>
+      <p class="hero-date">Effective Date: June 25, 2026</p>
+    </section>
+    <div class="divider"></div>
+
+    <p style="font-size:14px;color:var(--text-secondary);margin-bottom:32px;line-height:1.8;">
+      jp.app.t9s.nosavecrop ("we" or "us") establishes this Privacy Policy ("Policy") regarding the handling of user information in the Android application "NoSaveCrop" ("the App").
+    </p>
+
+    <!-- Section 1 -->
+    <div class="section-card">
+      <div class="section-num">1</div>
+      <h2 class="section-title">Information We Collect and How We Collect It</h2>
+
+      <div class="subsection">
+        <div class="subsection-title">(1) Screen Capture Data</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">The App captures a screenshot of the screen when the user taps the button.</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">Method</span><span class="info-value">Using Android's MediaProjection API.</span></div>
+          <div class="info-row"><span class="info-label">Purpose</span><span class="info-value">To copy the captured image to the clipboard.</span></div>
+          <div class="info-row"><span class="info-label">Storage</span><span class="info-value">Captured image data is processed in memory only and is never saved to our servers or persistent device storage.</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(2) App Settings</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">We collect settings such as button color, size, transparency, and Pro version purchase status selected by the user.</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">Method</span><span class="info-value">Stored on the device when the user changes settings within the App.</span></div>
+          <div class="info-row"><span class="info-label">Purpose</span><span class="info-value">To retain user customization settings across app sessions.</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(3) Clipboard Access</div>
+        <p style="font-size:14px;color:var(--text-secondary);">The App writes captured images to the device clipboard.</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card">
+      <div class="section-num">2</div>
+      <h2 class="section-title">Purpose of Permissions</h2>
+      <div class="perm-list">
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-1">🔲</div>
+          <div><div class="perm-name">Display Over Other Apps (SYSTEM_ALERT_WINDOW)</div><div class="perm-desc">Used to display a floating capture button over other apps.</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-2">📹</div>
+          <div><div class="perm-name">Screen Recording / Cast (MediaProjection)</div><div class="perm-desc">Used to capture the screen in response to user actions.</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-3">⚙️</div>
+          <div><div class="perm-name">Foreground Service (FOREGROUND_SERVICE)</div><div class="perm-desc">Used to maintain capture functionality while the app is in the background.</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-4">🔔</div>
+          <div><div class="perm-name">Post Notifications (POST_NOTIFICATIONS)</div><div class="perm-desc">Used to display the service's operating status.</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-5">💳</div>
+          <div><div class="perm-name">Google Play Billing (BILLING)</div><div class="perm-desc">Used for in-app purchase payment processing for the Pro version.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card">
+      <div class="section-num">3</div>
+      <h2 class="section-title">Third-Party Sharing and External Transmission</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">The App does not collect personally identifiable information, nor does it transmit any captured image data to external servers. Exceptions include the following cases:</p>
+      <ul class="bullet-list">
+        <li>When required by law.</li>
+        <li>When the user has given consent.</li>
+        <li>When information necessary for payment processing is provided to a payment platform such as Google Play Billing.</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card">
+      <div class="section-num">4</div>
+      <h2 class="section-title">Changes to This Privacy Policy</h2>
+      <p style="font-size:14px;color:var(--text-secondary);">We may revise this Policy as necessary in response to changes in laws or regulations, and may do so without prior notice. Changes to this Policy become effective upon publication within the App or at an appropriate location.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="contact-card">
+      <h2 class="contact-title">Contact Us</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">For inquiries regarding this Policy, please contact us at the email address below.</p>
+      <a href="mailto:poopoofrog9@gmail.com" class="contact-email">✉️ poopoofrog9@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ───────────────── CHINESE ───────────────── -->
+  <div id="lang-zh" class="lang-content">
+    <section class="hero">
+      <div class="hero-badge">隐私政策</div>
+      <h1>NoSaveCrop<br>隐私政策</h1>
+      <p class="hero-subtitle">我们尊重您的隐私，并以透明的方式管理您的信息。</p>
+      <p class="hero-date">制定日期：2026年6月25日</p>
+    </section>
+    <div class="divider"></div>
+
+    <p style="font-size:14px;color:var(--text-secondary);margin-bottom:32px;line-height:1.8;">
+      jp.app.t9s.nosavecrop（以下简称"本方"）就Android应用程序"NoSaveCrop"（以下简称"本应用"）中用户信息的处理方式，制定如下隐私政策（以下简称"本政策"）。
+    </p>
+
+    <!-- Section 1 -->
+    <div class="section-card">
+      <div class="section-num">1</div>
+      <h2 class="section-title">收集的信息及收集方式</h2>
+
+      <div class="subsection">
+        <div class="subsection-title">(1) 屏幕截图数据</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">本应用在用户点击按钮时截取屏幕截图。</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">收集方式</span><span class="info-value">使用Android的MediaProjection API。</span></div>
+          <div class="info-row"><span class="info-label">使用目的</span><span class="info-value">将截取的图像复制到剪贴板。</span></div>
+          <div class="info-row"><span class="info-label">存储</span><span class="info-value">截取的图像数据仅在内存中处理，不会保存到本方服务器或设备的持久存储中。</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(2) 应用设置信息</div>
+        <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px;">获取用户选择的按钮颜色、大小、透明度以及Pro版购买状态等设置信息。</p>
+        <div class="info-grid">
+          <div class="info-row"><span class="info-label">收集方式</span><span class="info-value">在应用内进行设置操作时保存到设备中。</span></div>
+          <div class="info-row"><span class="info-label">使用目的</span><span class="info-value">在下次启动时保留用户的自定义设置。</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">(3) 剪贴板访问</div>
+        <p style="font-size:14px;color:var(--text-secondary);">本应用将截取的图像写入剪贴板。</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card">
+      <div class="section-num">2</div>
+      <h2 class="section-title">权限的使用目的</h2>
+      <div class="perm-list">
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-1">🔲</div>
+          <div><div class="perm-name">显示在其他应用上方 (SYSTEM_ALERT_WINDOW)</div><div class="perm-desc">用于在其他应用上方显示截图用的悬浮按钮。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-2">📹</div>
+          <div><div class="perm-name">屏幕录制或投屏 (MediaProjection)</div><div class="perm-desc">用于根据用户操作截取屏幕。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-3">⚙️</div>
+          <div><div class="perm-name">前台服务 (FOREGROUND_SERVICE)</div><div class="perm-desc">用于在应用处于后台时维持截图功能。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-4">🔔</div>
+          <div><div class="perm-name">发送通知 (POST_NOTIFICATIONS)</div><div class="perm-desc">用于显示服务的运行状态。</div></div>
+        </div>
+        <div class="perm-item">
+          <div class="perm-icon perm-icon-5">💳</div>
+          <div><div class="perm-name">Google Play 结算服务 (BILLING)</div><div class="perm-desc">用于Pro版（应用内购买）的支付处理。</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card">
+      <div class="section-num">3</div>
+      <h2 class="section-title">向第三方提供及对外传输</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">本应用不收集可识别个人身份的信息，也不会将截取的图像数据传输到外部服务器。但以下情况除外：</p>
+      <ul class="bullet-list">
+        <li>依据法律法规要求时。</li>
+        <li>经用户同意时。</li>
+        <li>在Google Play结算服务等支付平台中，为进行支付处理而向该平台提供必要信息时。</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card">
+      <div class="section-num">4</div>
+      <h2 class="section-title">隐私政策的变更</h2>
+      <p style="font-size:14px;color:var(--text-secondary);">本方可能因法律法规的制定、修改等原因适时修订本政策，且可能不作事先通知。本政策的变更自在本应用内或适当位置公布之时起生效。</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="contact-card">
+      <h2 class="contact-title">联系方式</h2>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">如对本政策有任何疑问，请通过以下电子邮件地址与我们联系。</p>
+      <a href="mailto:poopoofrog9@gmail.com" class="contact-email">✉️ poopoofrog9@gmail.com</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+</main>
+
+<footer>
+  <p>© 2026 NoSaveCrop — jp.app.t9s.nosavecrop</p>
+</footer>
+
+<script>
+  function init() {
+    // Language switching
+    window.setLang = function(lang) {
+      ['ja', 'en', 'zh'].forEach(function(l) {
+        var content = document.getElementById('lang-' + l);
+        var btn = document.getElementById('btn-' + l);
+        if (content) content.classList.toggle('active', l === lang);
+        if (btn) btn.classList.toggle('active', l === lang);
+      });
+      // Update html lang attribute
+      document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : lang;
+      // Persist preference
+      try { localStorage.setItem('nosavecrop-lang', lang); } catch(e) {}
+    };
+
+    // Restore saved preference
+    var savedLang = 'ja';
+    try { savedLang = localStorage.getItem('nosavecrop-lang') || 'ja'; } catch(e) {}
+    if (['ja', 'en', 'zh'].indexOf(savedLang) !== -1) {
+      setLang(savedLang);
+    }
+
+    // Scroll-based fade-in animation
+    var cards = document.querySelectorAll('.section-card, .contact-card');
+    cards.forEach(function(card) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(24px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, background 0.3s ease, border-color 0.3s ease';
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    cards.forEach(function(card) { observer.observe(card); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
+</body>
+</html>
