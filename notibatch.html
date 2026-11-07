@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - NotiBatch</title>
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg: #0B1324;
+      --card-bg: #151f38;
+      --border: #233554;
+      --badge-bg: rgba(56, 189, 248, 0.15);
+      --badge-text: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .nav { margin-bottom: 1.5rem; }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #1c2a4a;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #0B1324;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    .badge-local {
+      font-size: 0.8rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+      border: 1px solid var(--primary);
+    }
+    .app-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .effective-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.8rem 0 0.6rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: var(--text); }
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .callout p { margin: 0; color: #e2e8f0; font-size: 0.92rem; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">&larr; Back to App Policy List</a>
+    </div>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- ENGLISH (DEFAULT) -->
+    <div id="content-en">
+      <div class="app-tag">Android Application: jp.tpp.t9s.notibatch</div>
+      <h1>Privacy Policy <span class="badge-local">100% Offline &amp; On-Device Storage</span></h1>
+      <p class="effective-date">Effective Date: November 7, 2026</p>
+
+      <div class="callout">
+        <p><strong>Core Privacy Principle:</strong> <strong>NotiBatch</strong> is engineered with an uncompromising privacy-first and zero-cloud architecture. All notification contents, app selection rules, batching schedules, and history logs are processed and stored <strong>entirely on your local device</strong>. NotiBatch contains <strong>zero third-party tracking, zero advertising SDKs, and zero cloud uploads</strong>. We never transmit or share your personal notification data.</p>
+      </div>
+
+      <h2>1. Information We Do NOT Collect</h2>
+      <p>NotiBatch does not require any account creation, login, or personal profile. We strictly do NOT collect, transmit, sell, or rent any of the following:</p>
+      <ul>
+        <li>Personally Identifiable Information (name, email address, phone number, physical address)</li>
+        <li>Notification contents (messages, sender details, email bodies, social media alerts)</li>
+        <li>Installed application lists or device usage statistics to any remote server</li>
+        <li>Precise or approximate GPS location data</li>
+        <li>Financial, biometric, or contact data</li>
+      </ul>
+
+      <h2>2. On-Device Local Data Processing</h2>
+      <p>To deliver its core notification batching and scheduled digest features, NotiBatch temporarily stores the following data exclusively in your device's private sandbox storage (Android Room database and encrypted SharedPreferences):</p>
+      <ul>
+        <li><strong>Pending &amp; History Notifications:</strong> App package name, notification title, summary text, and timestamp of batched notifications, so they can be presented to you as a scheduled digest.</li>
+        <li><strong>User Configuration:</strong> Your selected batched apps, scheduled digest times (e.g., Morning, Lunch, Evening), focus mode status, and notification history retention preferences.</li>
+        <li><strong>PRO Purchase Status:</strong> A local boolean cache indicating whether the one-time PRO lifetime upgrade has been purchased via Google Play.</li>
+      </ul>
+      <p>All stored notification logs can be deleted at any time from within the app. Uninstalling the app permanently purges all local databases immediately.</p>
+
+      <h2>3. Third-Party Services and In-App Purchases</h2>
+      <p>NotiBatch is completely ad-free. The only external integration utilized is:</p>
+      <ul>
+        <li><strong>Google Play Billing (Google LLC):</strong> Used solely to process the optional one-time Lifetime PRO in-app purchase. Transactions are handled directly and securely by Google Play Services. NotiBatch developers never receive, see, or store your credit card or billing credentials. For more information, please visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Google Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>4. Android System Permissions and Purpose</h2>
+      <p>NotiBatch requests only the essential system permissions necessary to intercept and deliver scheduled notification digests locally:</p>
+      <ul>
+        <li><strong>Notification Access (BIND_NOTIFICATION_LISTENER_SERVICE):</strong> Required to detect incoming notifications from apps you choose to batch, temporarily silence them from your status bar, and queue them for your scheduled digest. Processed strictly in-memory and in local database.</li>
+        <li><strong>Post Notifications (POST_NOTIFICATIONS):</strong> Required on Android 13+ to post scheduled summary digest notifications and alerts.</li>
+        <li><strong>Exact Alarms (USE_EXACT_ALARM):</strong> Required to trigger your scheduled digest deliveries precisely at the minutes you configured (e.g., exactly at 12:30 PM).</li>
+        <li><strong>Run at Startup (RECEIVE_BOOT_COMPLETED):</strong> Required to automatically restore your digest alarm schedules whenever your device reboots.</li>
+        <li><strong>Vibration (VIBRATE):</strong> Used to provide subtle haptic feedback when a digest is delivered.</li>
+      </ul>
+
+      <h2>5. Data Retention and User Control</h2>
+      <p>You have full ownership and control over your data at all times:</p>
+      <ul>
+        <li><strong>Clear History:</strong> You can delete all pending and delivered notification logs instantly with a single tap in the History screen.</li>
+        <li><strong>Settings Export/Import:</strong> You can export your configuration rules to a local JSON file and restore them whenever needed.</li>
+        <li><strong>Complete Erasure:</strong> Clearing app data in Android system settings or uninstalling NotiBatch irrevocably wipes all stored data from your device.</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>NotiBatch is a productivity tool intended for general audiences (students and working professionals). It does not target children under the age of 13, nor does it knowingly collect any personal information from children.</p>
+
+      <h2>7. Contact Us</h2>
+      <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or NotiBatch, please contact:</p>
+      <p><strong>Developer:</strong> T9Star<br>
+      <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--primary);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 NotiBatch / T9Star. All rights reserved.
+      </div>
+    </div>
+
+    <!-- JAPANESE -->
+    <div id="content-ja" style="display: none;">
+      <div class="app-tag">Androidアプリ: jp.tpp.t9s.notibatch</div>
+      <h1>プライバシーポリシー <span class="badge-local">100% 完全オフライン・端末内保存</span></h1>
+      <p class="effective-date">制定日: 2026年11月7日</p>
+
+      <div class="callout">
+        <p><strong>基本方針:</strong> <strong>NotiBatch（ノティバッチ）</strong>は、ユーザーのプライバシー保護を最優先に設計された完全オフライン型の通知管理・ダイジェストアプリです。受信した通知内容、対象アプリ設定、配信スケジュール、履歴などの全データは<strong>お手元の端末内のみに安全に保存・処理</strong>されます。外部クラウドサーバーへのデータ送信、トラッキング、広告配信SDKは一切含まれていません。</p>
+      </div>
+
+      <h2>1. 収集しない情報</h2>
+      <p>本アプリはアカウント登録やログインを必要とせず、以下の個人情報を収集・送信・第三者提供することは一切ありません：</p>
+      <ul>
+        <li>氏名、メールアドレス、電話番号などの個人を特定できる情報</li>
+        <li>保留・まとめ対象となった通知の本文、送信者名、メッセージ詳細</li>
+        <li>端末内のインストール済みアプリ一覧や端末利用統計の外部送信</li>
+        <li>GPS等の位置情報データ</li>
+        <li>連絡先、写真、マイク音声などのメディアデータ</li>
+      </ul>
+
+      <h2>2. 端末内にのみローカル保存される情報</h2>
+      <p>通知の保留および指定時刻のまとめ配信を実現するため、以下の情報をお使いの端末内のサンドボックス領域（Roomデータベースおよび暗号化SharedPreferences）にのみ保存します：</p>
+      <ul>
+        <li><strong>保留中および過去の通知ログ:</strong> 指定時刻にまとめてダイジェスト配信するため、アプリ名、通知タイトル、テキスト概要、受信日時を端末内ローカルに一時保持します。</li>
+        <li><strong>アプリ設定データ:</strong> まとめ対象に指定したアプリ、配信スケジュール（朝・昼・夜等の時刻）、集中モードのON/OFF状態、履歴保持設定。</li>
+        <li><strong>Pro版購入フラグ:</strong> Google Playを通じて買い切りPro版が購入済みであるかどうかのローカル検証情報。</li>
+      </ul>
+      <p>これらのデータは外部へ送信されることはなく、アプリ内の履歴削除機能またはアンインストールによって端末から完全に消去されます。</p>
+
+      <h2>3. 外部送信および第三者サービスの利用</h2>
+      <p>本アプリは完全広告なし（AdMob等を含みません）で動作します。利用している外部システムは以下のみです：</p>
+      <ul>
+        <li><strong>Google Play Billing (Google LLC):</strong> 買い切りのPRO版アップグレード処理に利用しています。すべての決済はGoogle Playの安全な決済基盤を通じて行われ、開発者がクレジットカード番号等の支払い情報を取得・保持することはありません。詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Google プライバシーポリシー</a> をご確認ください。</li>
+      </ul>
+
+      <h2>4. アプリが要求する権限と利用目的</h2>
+      <p>NotiBatchは、通知の保留と正確な定時配信に必要な最小限の権限のみを要求します：</p>
+      <ul>
+        <li><strong>通知へのアクセス (BIND_NOTIFICATION_LISTENER_SERVICE):</strong> 指定したアプリの通知を受信し、ステータスバーを散らかさないよう一時保留してダイジェストにまとめるために必須の権限です。処理はすべて端末ローカルで行われます。</li>
+        <li><strong>通知の送信 (POST_NOTIFICATIONS):</strong> 指定時刻にまとめたダイジェスト通知をお知らせするために使用します。</li>
+        <li><strong>正確なアラームの設定 (USE_EXACT_ALARM):</strong> 設定した配信時刻（例: 12:30ちょうど）に遅延なくダイジェストを生成・通知するために使用します。</li>
+        <li><strong>端末起動時の自動再設定 (RECEIVE_BOOT_COMPLETED):</strong> スマートフォンの再起動後も、設定済みの配信アラームを自動的に再スケジュールするために使用します。</li>
+        <li><strong>バイブレーション (VIBRATE):</strong> ダイジェスト通知時に振動でお知らせするために使用します。</li>
+      </ul>
+
+      <h2>5. データの管理と削除</h2>
+      <p>ユーザーは保存されたデータをいつでも完全に制御できます：</p>
+      <ul>
+        <li><strong>履歴の削除:</strong> 履歴画面のゴミ箱アイコンから、保留中および配信済みの通知ログをいつでも一括消去できます。</li>
+        <li><strong>設定のエクスポート/インポート:</strong> スケジュールや対象アプリの設定をJSONファイルとして端末内に安全にバックアップ・復元できます。</li>
+        <li><strong>完全消去:</strong> 端末の「設定」からアプリのデータを消去するか、アプリをアンインストールすることで、すべての保存データが即座に完全消去されます。</li>
+      </ul>
+
+      <h2>6. お問い合わせ</h2>
+      <p>本プライバシーポリシーまたは本アプリに関するご質問・ご要望は、下記窓口までご連絡ください：</p>
+      <p><strong>開発者:</strong> T9Star (t9star)<br>
+      <strong>メールアドレス:</strong> <a href="mailto:poopoofrog9@gmail.com" style="color: var(--primary);">poopoofrog9@gmail.com</a></p>
+
+      <div class="footer">
+        &copy; 2026 NotiBatch / T9Star. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      const en = document.getElementById('content-en');
+      const ja = document.getElementById('content-ja');
+      const btns = document.querySelectorAll('.lang-btn');
+      if (lang === 'ja') {
+        en.style.display = 'none';
+        ja.style.display = 'block';
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+      } else {
+        ja.style.display = 'none';
+        en.style.display = 'block';
+        btns[1].classList.remove('active');
+        btns[0].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
