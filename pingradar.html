@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - PingRadar</title>
+  <style>
+    :root {
+      --primary: #00e5ff;
+      --primary-dark: #00b0ff;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #0b111e;
+      --card-bg: #131d31;
+      --border: #1e2c48;
+      --content-text: #f1f5f9;
+      --content-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--content-text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+    }
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--content-muted);
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-btn {
+      background: var(--border);
+      color: var(--content-muted);
+      border: none;
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--primary);
+      color: #0b111e;
+    }
+    .lang-content {
+      display: none;
+    }
+    .lang-content.active {
+      display: block;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: var(--content-text);
+      margin: 1.8rem 0 0.8rem;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.6rem;
+    }
+    p, ul {
+      margin-bottom: 1rem;
+      color: var(--content-muted);
+      font-size: 0.95rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    strong {
+      color: var(--content-text);
+    }
+    code {
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--primary);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--content-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>PingRadar</h1>
+        <div class="last-updated">Effective Date: November 8, 2026</div>
+      </div>
+    </div>
+
+    <!-- Language Switcher Tabs -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en')">English</button>
+      <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+    </div>
+
+    <!-- English Version (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h2>1. Introduction</h2>
+      <p>Thank you for using <strong>PingRadar</strong> ("we", "our", or "the App"), developed by <strong>T9Star</strong>. We take your privacy very seriously. PingRadar is designed as a standalone, client-side utility tool to help you locate misplaced Bluetooth devices. <strong>We do not collect, transmit, or sell any personal or identifying information.</strong></p>
+
+      <h2>2. Bluetooth Signal &amp; On-Device Processing</h2>
+      <p>PingRadar scans for nearby Bluetooth Low Energy (BLE) advertisements and measures Received Signal Strength Indication (RSSI) purely in real-time on your device:</p>
+      <ul>
+        <li><strong>No Cloud Tracking:</strong> All device scanning, signal calculations, distance estimations, and audio ping synthesis occur entirely locally on your phone.</li>
+        <li><strong>No Location Logging:</strong> The App does not record, log, or track your physical GPS coordinates or location history.</li>
+        <li><strong>Device Identifiers:</strong> MAC addresses and Bluetooth device names are used strictly in real-time within the active UI and are never sent to any external servers.</li>
+      </ul>
+
+      <h2>3. Device Permissions Used</h2>
+      <p>The App requests only the permissions necessary to provide device radar and haptic feedback:</p>
+      <ul>
+        <li><strong>Bluetooth Scan &amp; Connect (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Required on Android 12+ to detect nearby Bluetooth accessories (e.g., AirPods, smartwatches) and display their broadcasted signal strength.</li>
+        <li><strong>Location Permission (<code>ACCESS_FINE_LOCATION</code>):</strong> Required on older Android systems (Android 11 and lower) solely because the Android operating system classifies Bluetooth beacon scanning under location hardware. PingRadar never uses or stores your GPS position.</li>
+        <li><strong>Vibration (<code>VIBRATE</code>):</strong> Used exclusively to deliver tactile proximity pulses when approaching a tracked device.</li>
+        <li><strong>Google Play Billing (<code>BILLING</code>):</strong> Used to securely manage optional one-time Pro purchases through Google Play's official billing system.</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>The App integrates solely with official, certified Google services:</p>
+      <ul>
+        <li><strong>Google Play In-App Billing:</strong> Processes Pro license purchases securely without sharing payment details with us (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</li>
+      </ul>
+
+      <h2>5. Contact Us</h2>
+      <p>If you have any questions or feedback regarding this Privacy Policy, please contact us at:</p>
+      <p>Email: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <!-- Japanese Version -->
+    <div id="content-ja" class="lang-content">
+      <h2>1. はじめに</h2>
+      <p><strong>PingRadar</strong>（以下「本アプリ」）をご利用いただきありがとうございます。開発者（<strong>T9Star</strong>）はユーザーのプライバシー保護を最重要事項と考えています。本アプリは紛失したBluetooth機器を探すためのスタンドアロン型ツールであり、<strong>個人情報や識別情報の収集・外部送信・第三者提供は一切行いません。</strong></p>
+
+      <h2>2. Bluetooth電波と端末内処理について</h2>
+      <p>本アプリは周囲のBluetooth Low Energy (BLE) 電波強度（RSSI）をリアルタイムで測定し、端末ローカル内のみで探査レーダーを処理します：</p>
+      <ul>
+        <li><strong>完全ローカル処理:</strong> デバイスのスキャン、シグナル強度の計算、距離推定、ガイガー音の生成はすべてお使いの端末内でのみ完結します。</li>
+        <li><strong>位置情報の非追跡:</strong> GPS座標や移動履歴の収集・追跡は一切行いません。</li>
+        <li><strong>デバイス識別情報:</strong> 検出されたMACアドレスや機器名は、アプリ画面上の表示および探査のためにのみ一時的に使用され、外部サーバーに送信されることはありません。</li>
+      </ul>
+
+      <h2>3. 使用する権限について</h2>
+      <p>本アプリは機器探知および触覚フィードバックに必要な最小限の権限のみを使用します：</p>
+      <ul>
+        <li><strong>Bluetooth権限 (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Android 12以降において、付近のイヤホンやスマートウォッチの電波強度を検知・測定するために使用します。</li>
+        <li><strong>位置情報権限 (<code>ACCESS_FINE_LOCATION</code>):</strong> Android 11以下の端末において、OSの仕様上Bluetoothスキャンを行うために要求されます。GPS位置情報を収集することはありません。</li>
+        <li><strong>バイブレーション (<code>VIBRATE</code>):</strong> 探査対象に近づいた際の触覚パルス通知にのみ使用します。</li>
+        <li><strong>Google Play Billing (<code>BILLING</code>):</strong> Pro版（買い切り）の安全な決済処理にのみ使用します。</li>
+      </ul>
+
+      <h2>4. 第三者サービスについて</h2>
+      <p>本アプリではGoogle社提供の公式サービスのみを使用しています：</p>
+      <ul>
+        <li><strong>Google Play In-App Billing:</strong> 安全な決済処理 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>)</li>
+      </ul>
+
+      <h2>5. お問い合わせ</h2>
+      <p>本ポリシーに関するご質問やご不明点がございましたら、下記までお気軽にお問い合わせください：</p>
+      <p>メール: <a href="mailto:support@t9star.com">support@t9star.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      try {
+        localStorage.setItem('pingradar_pref_lang', lang);
+      } catch (e) {}
+
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      
+      var target = document.getElementById('content-' + lang);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        if ((lang === 'en' && btn.textContent.indexOf('English') !== -1) ||
+            (lang === 'ja' && btn.textContent.indexOf('日本語') !== -1)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function init() {
+      var saved = 'en';
+      try {
+        saved = localStorage.getItem('pingradar_pref_lang') || 'en';
+      } catch (e) {}
+      switchLang(saved);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
