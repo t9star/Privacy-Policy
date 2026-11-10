@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - NotchTone</title>
+  <style>
+    :root {
+      --primary: #00f0ff;
+      --primary-teal: #14b8a6;
+      --primary-hover: #38bdf8;
+      --bg: #0a0c10;
+      --card-bg: #131720;
+      --border: #1e2433;
+      --border-accent: rgba(0, 240, 255, 0.25);
+      --content-text: #f1f5f9;
+      --content-muted: #94a3b8;
+      --badge-bg: rgba(0, 240, 255, 0.1);
+      --badge-border: rgba(0, 240, 255, 0.25);
+      --disclaimer-bg: rgba(20, 184, 166, 0.08);
+      --disclaimer-border: rgba(20, 184, 166, 0.35);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--content-text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3.5rem;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+    }
+    .nav {
+      margin-bottom: 1.75rem;
+    }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .title-group {
+      flex: 1;
+      min-width: 260px;
+    }
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--primary);
+      border: 1px solid var(--badge-border);
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+    .app-meta {
+      font-size: 0.88rem;
+      color: var(--content-muted);
+    }
+    .lang-switcher-wrapper {
+      margin-bottom: 2rem;
+    }
+    .lang-switcher-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--content-muted);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .lang-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .lang-btn {
+      background: #171d2b;
+      color: var(--content-muted);
+      border: 1px solid var(--border);
+      padding: 0.42rem 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .lang-btn:hover {
+      background: #1e2638;
+      color: var(--content-text);
+      border-color: var(--border-accent);
+    }
+    .lang-btn.active {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.2) 0%, rgba(20, 184, 166, 0.25) 100%);
+      color: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+    }
+    .lang-content {
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+    .lang-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 2rem 0 0.85rem;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    p, ul {
+      margin-bottom: 1.05rem;
+      color: var(--content-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+    ul {
+      padding-left: 1.35rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    code {
+      background: rgba(0, 240, 255, 0.1);
+      color: var(--primary);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.86em;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .disclaimer-card {
+      background: var(--disclaimer-bg);
+      border: 1px solid var(--disclaimer-border);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .disclaimer-card h3 {
+      font-size: 1.05rem;
+      color: var(--primary-teal);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .disclaimer-card p {
+      margin-bottom: 0.5rem;
+      color: #cbd5e1;
+    }
+    .disclaimer-card p:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--content-muted);
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.75rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="https://t9star.github.io/Privacy-Policy/">← All Apps / 全アプリ一覧</a>
+    </div>
+
+    <div class="header">
+      <div class="title-group">
+        <div class="badge-bar">
+          <span class="badge">Privacy Policy</span>
+          <span class="badge">100% On-Device DSP</span>
+          <span class="badge">Zero Data Collection</span>
+        </div>
+        <h1>NotchTone</h1>
+        <div class="app-meta">Package: <code>jp.tpp.t9s.notchtone</code> &bull; Effective Date: November 10, 2026</div>
+      </div>
+    </div>
+
+    <!-- Language Switcher Tabs (11 Languages) -->
+    <div class="lang-switcher-wrapper">
+      <div class="lang-switcher-title">Select Language / 表示言語の選択</div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" data-lang="ja" onclick="switchLang('ja')">日本語</button>
+        <button class="lang-btn" data-lang="zh-CN" onclick="switchLang('zh-CN')">简体中文</button>
+        <button class="lang-btn" data-lang="zh-TW" onclick="switchLang('zh-TW')">繁體中文</button>
+        <button class="lang-btn" data-lang="ko" onclick="switchLang('ko')">한국어</button>
+        <button class="lang-btn" data-lang="es" onclick="switchLang('es')">Español</button>
+        <button class="lang-btn" data-lang="pt-BR" onclick="switchLang('pt-BR')">Português</button>
+        <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">Français</button>
+        <button class="lang-btn" data-lang="de" onclick="switchLang('de')">Deutsch</button>
+        <button class="lang-btn" data-lang="id" onclick="switchLang('id')">Bahasa Indonesia</button>
+        <button class="lang-btn" data-lang="hi" onclick="switchLang('hi')">हिन्दी</button>
+      </div>
+    </div>
+
+    <!-- 1. English (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h2>1. Overview &amp; 100% On-Device Architecture</h2>
+      <p>
+        <strong>NotchTone: Brown Noise &amp; Focus</strong> is an acoustic wellness and concentration support application designed to generate soothing brown noise and customizable notch-filtered tones directly on your device.
+      </p>
+      <p>
+        All audio waveforms are synthesized locally in real time using mathematical digital signal processing (DSP) algorithms. NotchTone does not stream or download pre-recorded audio from external servers and operates completely offline without requiring an active internet connection for sound synthesis.
+      </p>
+
+      <h2>2. Zero Personal Data Collection</h2>
+      <p>Your privacy is our core principle. NotchTone is engineered to collect absolutely zero personal information:</p>
+      <ul>
+        <li><strong>No Account Required:</strong> You do not need to register, log in, or provide any personal identification to use the app.</li>
+        <li><strong>Zero Data Transmission:</strong> NotchTone does NOT collect, transmit, store, or sell your name, email address, physical location, IP address, device serial numbers, or usage history.</li>
+        <li><strong>No Third-Party Trackers or Advertisements:</strong> The application contains no advertising SDKs, no behavioral trackers, and no third-party telemetry or marketing analytics libraries.</li>
+      </ul>
+
+      <h2>3. Locally Stored Data</h2>
+      <p>
+        All user preferences—including notch center frequencies, bandwidths, sound volumes, and custom presets—are stored exclusively in your local device storage (via Android Room Database and DataStore). This data remains strictly on your hardware, is never uploaded to any remote server, and is inaccessible to the developer.
+      </p>
+
+      <h2>4. Android App Permissions &amp; Purpose</h2>
+      <p>NotchTone requests only the essential system permissions required to deliver its core acoustic playback features:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Enables the app to maintain smooth, uninterrupted background noise synthesis while your device screen is turned off or while multitasking in other applications.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Allows NotchTone to display ongoing media playback controls (play, pause, stop, sleep timer countdown) in the system notification shade and on the lock screen.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Handled strictly via Google Play's official in-app billing infrastructure to securely process one-time purchases and restore licenses for NotchTone Pro. The developer never receives or stores your credit card details or financial information.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Medical Disclaimer (Important)</h3>
+        <p>
+          NotchTone is designed solely as a general acoustic wellness, relaxation, and sound focus tool. <strong>NotchTone is NOT a medical device, nor is it a diagnostic or clinical therapy instrument.</strong>
+        </p>
+        <p>
+          It is NOT intended to diagnose, treat, cure, mitigate, or prevent tinnitus, hyperacusis, hearing loss, or any auditory or medical condition. If you experience chronic ear ringing, sudden hearing loss, dizziness, or ear pain, please consult a certified audiologist or ear, nose, and throat (ENT) physician immediately. Always listen at moderate, comfortable volumes to protect your hearing.
+        </p>
+      </div>
+
+      <h2>5. Contact Us</h2>
+      <p>If you have any questions or inquiries regarding this Privacy Policy, please feel free to reach out to the developer:</p>
+      <p>
+        <strong>Developer:</strong> t9star<br>
+        <strong>Email:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 2. 日本語 (ja) -->
+    <div id="content-ja" class="lang-content">
+      <h2>1. 基本方針と100%端末内オンデバイスDSP波形合成</h2>
+      <p>
+        <strong>NotchTone: ブラウンノイズ＆耳鳴り集中音</strong>は、心地よいブラウンノイズとカスタマイズ可能なノッチフィルター音を端末内でリアルタイム生成する音響ウェルネス・集中サポートアプリです。
+      </p>
+      <p>
+        すべての音響波形は数学的デジタル信号処理（DSP）アルゴリズムによって完全にお手元の端末内蔵プロセッサでリアルタイム生成され、外部音声ファイルのダウンロードやストリーミングは一切行いません。完全オフライン環境でもすべての音声合成機能が安定して動作します。
+      </p>
+
+      <h2>2. 個人情報の完全非収集</h2>
+      <p>お客様のプライバシー保護は本アプリの最優先事項です。NotchToneは個人情報を一切収集しない設計を徹底しています：</p>
+      <ul>
+        <li><strong>アカウント登録不要:</strong> 会員登録やログイン操作は一切不要で、インストール後すぐにご利用いただけます。</li>
+        <li><strong>個人情報の不収集・不送信:</strong> 氏名、メールアドレス、電話番号、位置情報、IPアドレス、端末固有識別子等の個人情報は一切収集、送信、保存、売却しません。</li>
+        <li><strong>外部広告・トラッキングSDKの完全排除:</strong> 広告配信SDKや第三者による行動追跡トラッカー、アナリティクスツールは一切組み込まれていません。</li>
+      </ul>
+
+      <h2>3. ローカルに保存される情報</h2>
+      <p>
+        ユーザーが調整したノッチ周波数、帯域幅、音量バランス、カスタムプリセット等の設定データは、お手元の端末内（Android RoomデータベースおよびDataStore）にのみ安全に保存されます。これらの情報が外部サーバーへ送信・同期されることは一切ありません。
+      </p>
+
+      <h2>4. 利用する権限とその利用目的</h2>
+      <p>NotchToneは、音響再生機能を提供するために必要最小限の権限のみを要求します：</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: 画面消灯中や他アプリの利用中も、途切れず安定してノイズ音声をバックグラウンド連続再生するために使用します。
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: 通知領域やロック画面から再生・一時停止・停止・スリープタイマーを直接操作できるメディアコントローラーを表示するために使用します。
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Google Play公式課金システムを介した安全なNotchTone Pro（買い切り機能）の購入処理および購入状態の復元にのみ使用します。開発者がクレジットカード番号等の決済情報にアクセスすることはありません。
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>医療上の免責事項（重要）</h3>
+        <p>
+          NotchToneは一般的なウェルネス、リラクゼーション、作業集中を目的とした音響支援ツールであり、<strong>医療機器ではありません。</strong>
+        </p>
+        <p>
+          耳鳴り、聴覚過敏、難聴、その他あらゆる耳や身体の疾患の診断、治療、緩和、予防を意図したものではありません。慢性的または激しい耳鳴り、急激な聴力低下、めまい、耳の痛み等がある場合は、直ちに耳鼻咽喉科専門医や医療機関を受診してください。聴覚を保護するため、常に過度な大音量を避け、快適で安全な音量でご使用ください。
+        </p>
+      </div>
+
+      <h2>5. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問やお問い合わせは、以下までご連絡ください：</p>
+      <p>
+        <strong>開発者:</strong> t9star<br>
+        <strong>メール:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 3. 简体中文 (zh-CN) -->
+    <div id="content-zh-CN" class="lang-content">
+      <h2>1. 概述与100%本地DSP音频合成</h2>
+      <p>
+        <strong>NotchTone: 棕色噪音与专注音 (Brown Noise &amp; Focus)</strong> 是一款旨在提供舒适棕色噪音与可自定义陷波滤波（Notch Filter）声音的声学健康与专注辅助应用。
+      </p>
+      <p>
+        所有声音波形均通过数学算法与实时数字信号处理（DSP）在您的设备本地直接合成，无需从外部服务器下载或串流任何音频文件，并且在完全断网的离线环境下亦可稳定运行。
+      </p>
+
+      <h2>2. 绝不收集个人数据</h2>
+      <p>我们无条件尊重并保护您的个人隐私：</p>
+      <ul>
+        <li><strong>无需注册账户:</strong> 无需创建账号或登录即可直接使用全部核心音频合成功能。</li>
+        <li><strong>零个人数据收集与传输:</strong> NotchTone 绝不收集、传输、存储或出售您的姓名、电子邮箱、地理位置、IP地址、设备唯一标识符或使用记录。</li>
+        <li><strong>无第三方广告与追踪SDK:</strong> 应用内不包含任何商业广告联盟SDK、行为追踪器或第三方数据统计分析库。</li>
+      </ul>
+
+      <h2>3. 本地存储的数据</h2>
+      <p>
+        用户调节的陷波中心频率、滤波器带宽、音量偏好以及自定义预设仅保存在您的本地设备内部存储中（通过 Android Room 数据库和 DataStore）。这些数据绝不会上传或同步至任何外部服务器。
+      </p>
+
+      <h2>4. Android 系统权限与用途</h2>
+      <p>NotchTone 仅申请维持音频播放核心功能所必需的最小系统权限：</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: 用于在熄屏休眠或切换至其他多任务应用时，保持平稳、不间断的后台噪音合成与音频播放。
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: 用于在系统通知栏和锁屏界面展示标准的媒体控制面板（播放、暂停、停止、睡眠定时器倒计时）。
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: 仅通过 Google Play 官方安全结算接口处理 NotchTone Pro（永久买断版）的应用内购买与许可证恢复。开发者绝不会接触您的任何支付卡或银行账户信息。
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>医疗免责声明（重要）</h3>
+        <p>
+          NotchTone 仅作为日常放松、助眠与声学专注工具，<strong>绝非医疗器械，亦不具备临床诊断或治疗功效。</strong>
+        </p>
+        <p>
+          本应用不用于诊断、治疗、缓解或预防耳鸣、听觉过敏、听力受损或任何医学疾病。如果您长期遭受严重耳鸣困扰、突发听力下降、眩晕或耳部疼痛，请立即前往正规医院耳鼻喉科（ENT）寻求专业诊疗。为了保护您的听力，请始终保持适度且舒适的声音大小。
+        </p>
+      </div>
+
+      <h2>5. 联系我们</h2>
+      <p>如对本隐私政策有任何疑问或反馈，请联系开发者：</p>
+      <p>
+        <strong>开发者:</strong> t9star<br>
+        <strong>电子邮箱:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 4. 繁體中文 (zh-TW) -->
+    <div id="content-zh-TW" class="lang-content">
+      <h2>1. 概述與 100% 裝置端 DSP 即時合成</h2>
+      <p>
+        <strong>NotchTone: 棕色噪音與專注音 (Brown Noise &amp; Focus)</strong> 是一款旨在產生舒適棕色噪音與自訂陷波濾波（Notch Filter）聲響的聲學健康與專注輔助應用程式。
+      </p>
+      <p>
+        所有音訊波形均藉由數學演算法與即時數位訊號處理（DSP）於您的裝置本機端即時運算產生，無須下載任何外部音訊，亦可在完全離線環境下流暢運作。
+      </p>
+
+      <h2>2. 零個人資料收集</h2>
+      <p>我們恪守最高標準的隱私保護原則：</p>
+      <ul>
+        <li><strong>免註冊帳號:</strong> 無須登入或建立帳號即可使用所有核心功能。</li>
+        <li><strong>不蒐集個人資料:</strong> NotchTone 絕不蒐集、傳輸、儲存或出售您的姓名、電子郵件、地理位置、IP 位址、裝置唯一識別碼或瀏覽歷程。</li>
+        <li><strong>無廣告與追蹤套件:</strong> 本應用程式不包含任何第三方廣告 SDK、行為追蹤程式或外部數據分析工具。</li>
+      </ul>
+
+      <h2>3. 本地端儲存之資料</h2>
+      <p>
+        使用者所自訂之陷波頻率、濾波器頻寬、音量調節與自訂預設設定，皆嚴格儲存於使用者自身裝置本機端（透過 Android Room 資料庫與 DataStore）。此資料絕不對外傳輸或備份至任何遠端伺服器。
+      </p>
+
+      <h2>4. 系統權限與使用目的</h2>
+      <p>NotchTone 僅索取維持音訊播放必備之系統權限：</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: 確保在螢幕關閉或多工切換時，背景音訊持續穩定播放不中斷。
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: 於通知欄與鎖定畫面中顯示播放控制通知（播放、暫停、停止、睡眠計時器倒數）。
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: 透過 Google Play 官方安全金流服務進行 NotchTone Pro（買斷版）的購買授權與購買紀錄復原。開發者無法存取您的信用卡等機密支付資訊。
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>醫療免責聲明（重要）</h3>
+        <p>
+          NotchTone 僅為促進日常身心放鬆、專注力提升之聲學健康工具，<strong>並非醫療器材，亦不具備臨床診斷或治療功能。</strong>
+        </p>
+        <p>
+          本應用程式無意亦無法用於診斷、治療、緩解或預防耳鳴、聽覺過敏、聽力受損或任何醫學病症。若您有持續性耳鳴、突發性聽力改變、眩暈或耳痛症狀，請儘速諮詢專業耳鼻喉科（ENT）專科醫師。請維持適中舒適之音量，以維護聽覺健康。
+        </p>
+      </div>
+
+      <h2>5. 聯絡我們</h2>
+      <p>如對本隱私權政策有任何疑問，歡迎隨時聯絡開發者：</p>
+      <p>
+        <strong>開發者:</strong> t9star<br>
+        <strong>電子郵件:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 5. 한국어 (ko) -->
+    <div id="content-ko" class="lang-content">
+      <h2>1. 개요 및 100% 기기 내 DSP 실시간 음원 합성</h2>
+      <p>
+        <strong>NotchTone: 브라운 노이즈 &amp; 이명 집중음 (Brown Noise &amp; Focus)</strong>은 편안한 브라운 노이즈와 사용자 맞춤형 노치 필터(Notch Filter) 음향을 기기 내에서 실시간 합성하는 음향 웰니스 및 집중 지원 애플리케이션입니다.
+      </p>
+      <p>
+        모든 소리는 수학적 디지털 신호 처리(DSP) 알고리즘을 통해 사용자 기기의 프로세서에서 직접 실시간 연산 생성되며, 외부 음원 파일의 스트리밍이나 다운로드 없이 완전한 오프라인 환경에서도 완벽히 작동합니다.
+      </p>
+
+      <h2>2. 개인정보 완전 미수집 원칙</h2>
+      <p>NotchTone은 사용자의 개인정보를 전적으로 존중하며, 어떠한 개인정보도 수집하지 않습니다:</p>
+      <ul>
+        <li><strong>회원가입 불필요:</strong> 계정 생성이나 로그인 없이 설치 즉시 모든 핵심 오디오 합성 기능을 자유롭게 이용할 수 있습니다.</li>
+        <li><strong>개인정보 미수집 및 외부 전송 금지:</strong> 이름, 이메일 주소, 전화번호, 위치 정보, IP 주소, 기기 식별자 등의 개인정보를 일절 수집, 전송, 저장, 판매하지 않습니다.</li>
+        <li><strong>광고 및 외부 추적 도구 배제:</strong> 타사 광고 SDK, 행동 분석 추적기, 외부 텔레메트리 도구가 일절 포함되어 있지 않습니다.</li>
+      </ul>
+
+      <h2>3. 로컬에 저장되는 데이터</h2>
+      <p>
+        사용자가 조절한 노치 주파수, 대역폭, 볼륨 설정 및 커스텀 프리셋은 사용자의 기기 내부 저장소(Android Room 데이터베이스 및 DataStore)에만 안전하게 보관됩니다. 이 데이터는 외부 서버로 전송되거나 동기화되지 않습니다.
+      </p>
+
+      <h2>4. 앱 권한 및 이용 목적</h2>
+      <p>NotchTone은 오디오 재생에 필수적인 최소한의 권한만 요청합니다:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: 화면이 꺼져 있거나 다른 앱을 사용하는 동안에도 끊김 없이 안정적으로 배경 소음을 연속 재생하기 위해 사용됩니다.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: 알림창 및 잠금화면에서 재생/일시정지/정지/수면 타이머를 손쉽게 조작할 수 있는 컨트롤러를 표시하기 위해 사용됩니다.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Google Play 공식 결제 시스템을 통해 NotchTone Pro(영구 구매)의 안전한 인앱 결제 및 구매 복원을 처리하는 데만 사용됩니다. 결제 카드 정보는 개발자에게 전달되지 않습니다.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>의료 관련 면책 조항 (중요)</h3>
+        <p>
+          NotchTone은 일상적인 웰니스, 이완 및 사운드 집중을 돕기 위한 음향 보조 도구이며, <strong>의료기기가 아닙니다.</strong>
+        </p>
+        <p>
+          이명, 청각 과민증, 난청 또는 기타 청각 및 의학적 질환을 진단, 치료, 완화 또는 예방하기 위한 목적으로 제작된 것이 아닙니다. 지속적인 이명이나 급격한 청력 저하, 어지럼증, 귀의 통증이 있는 경우 즉시 이비인후과 전문의나 의료기관을 방문하여 전문적인 진료를 받으시기 바랍니다. 청력을 보호하기 위해 항상 적당하고 편안한 볼륨으로 청취하시기 바랍니다.
+        </p>
+      </div>
+
+      <h2>5. 문의처</h2>
+      <p>본 개인정보 처리방침에 관하여 궁금한 점이 있으시면 언제든지 문의해 주시기 바랍니다:</p>
+      <p>
+        <strong>개발자:</strong> t9star<br>
+        <strong>이메일:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 6. Español (es) -->
+    <div id="content-es" class="lang-content">
+      <h2>1. Resumen y procesamiento DSP 100% en el dispositivo</h2>
+      <p>
+        <strong>NotchTone: Ruido Marrón y Enfoque (Brown Noise &amp; Focus)</strong> es una aplicación de bienestar acústico y concentración diseñada para generar ruido marrón relajante y tonos con filtro de muesca (Notch Filter) personalizables directamente en su dispositivo.
+      </p>
+      <p>
+        Todo el sonido se sintetiza localmente en tiempo real mediante algoritmos de procesamiento digital de señales (DSP). NotchTone no descarga ni transmite archivos de audio desde servidores externos y funciona de forma completamente autónoma sin conexión a Internet.
+      </p>
+
+      <h2>2. Cero recopilación de datos personales</h2>
+      <p>Respetamos incondicionalmente su privacidad. NotchTone está diseñado para no recopilar ningún dato personal:</p>
+      <ul>
+        <li><strong>Sin registro de cuenta:</strong> Puede utilizar la aplicación de inmediato sin registrarse ni proporcionar información de identidad.</li>
+        <li><strong>Cero recopilación o transmisión de datos:</strong> NotchTone NO recopila, transmite, vende ni almacena su nombre, correo electrónico, ubicación geográfica, dirección IP, identificadores de dispositivo o historial de uso.</li>
+        <li><strong>Sin publicidad ni rastreadores de terceros:</strong> La aplicación no incluye SDKs de publicidad, herramientas de seguimiento conductual ni bibliotecas analíticas externas.</li>
+      </ul>
+
+      <h2>3. Datos almacenados localmente</h2>
+      <p>
+        Todas las preferencias del usuario (frecuencias centrales de muesca, anchos de banda, niveles de volumen y preajustes personalizados) se almacenan exclusivamente en el almacenamiento interno de su dispositivo (mediante Android Room Database y DataStore). Estos datos nunca se envían a servidores externos.
+      </p>
+
+      <h2>4. Permisos de Android y justificación</h2>
+      <p>NotchTone únicamente solicita los permisos esenciales para garantizar la reproducción acústica continua:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Permite mantener la reproducción continua de ruido en segundo plano mientras la pantalla está apagada o se usan otras aplicaciones.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Permite mostrar los controles multimedia en la barra de notificaciones y la pantalla de bloqueo (reproducir, pausar, detener y temporizador de apagado).
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Utilizado de forma exclusiva por el sistema oficial de Google Play Billing para procesar la compra única y la restauración de licencias de NotchTone Pro. No accedemos a sus datos de pago o tarjetas bancarias.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Descargo de responsabilidad médica (Importante)</h3>
+        <p>
+          NotchTone es una herramienta diseñada exclusivamente para el bienestar general, la relajación y la concentración acústica. <strong>NotchTone NO es un dispositivo médico ni un tratamiento terapéutico o clínico.</strong>
+        </p>
+        <p>
+          NO está diseñada para diagnosticar, curar, tratar, mitigar ni prevenir el tinnitus (acúfenos), la hiperacusia, la pérdida auditiva ni ninguna otra afección médica. Si padece acúfenos crónicos, pérdida auditiva repentina, mareos o dolor de oído, consulte de inmediato a un médico otorrinolaringólogo o especialista en audición. Escuche siempre a volúmenes moderados y seguros para proteger su salud auditiva.
+        </p>
+      </div>
+
+      <h2>5. Contacto</h2>
+      <p>Si tiene preguntas sobre esta Política de Privacidad, comuníquese con el desarrollador:</p>
+      <p>
+        <strong>Desarrollador:</strong> t9star<br>
+        <strong>Correo electrónico:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 7. Português - Brasil (pt-BR) -->
+    <div id="content-pt-BR" class="lang-content">
+      <h2>1. Visão Geral e Processamento DSP 100% no Dispositivo</h2>
+      <p>
+        <strong>NotchTone: Ruído Marrom e Foco (Brown Noise &amp; Focus)</strong> é um aplicativo de bem-estar acústico e foco sonoro projetado para gerar ruído marrom relaxante e frequências sonoras filtradas (Notch Filter) personalizáveis diretamente no seu aparelho.
+      </p>
+      <p>
+        A síntese de áudio é calculada localmente em tempo real através de algoritmos de processamento digital de sinais (DSP). O NotchTone opera de forma totalmente independente e offline, sem transferir ou transmitir áudio de servidores remotos.
+      </p>
+
+      <h2>2. Zero Coleta de Dados Pessoais</h2>
+      <p>Priorizamos integralmente a sua privacidade e não coletamos nenhuma informação de nossos usuários:</p>
+      <ul>
+        <li><strong>Sem necessidade de cadastro:</strong> Utilize todas as funções sem criar contas ou fornecer credenciais de identificação.</li>
+        <li><strong>Sem coleta ou transmissão de dados:</strong> O NotchTone NÃO coleta, transmite, vende ou armazena seu nome, e-mail, geolocalização, endereço IP, identificadores de dispositivo ou histórico de atividade.</li>
+        <li><strong>Sem anúncios ou rastreadores de terceiros:</strong> O aplicativo é 100% livre de SDKs de publicidade, rastreadores de comportamento e ferramentas de telemetria externa.</li>
+      </ul>
+
+      <h2>3. Dados Armazenados Localmente</h2>
+      <p>
+        Suas preferências de frequência, largura de banda, volume e predefinições personalizadas são salvas unicamente na memória interna do seu dispositivo (via Android Room e DataStore), sem jamais serem sincronizadas com servidores remotos.
+      </p>
+
+      <h2>4. Permissões do Android e Finalidades</h2>
+      <p>O NotchTone solicita exclusivamente as permissões essenciais para reprodução contínua:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Permite que a síntese de som continue estável e contínua em segundo plano, mesmo com a tela apagada ou durante o uso de outros aplicativos.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Exibe os controles de mídia padrão (reproduzir, pausar, parar e temporizador) na barra de notificações e na tela de bloqueio.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Utilizado exclusivamente pelo sistema de faturamento oficial do Google Play para o processamento seguro de compras únicas e restauração de licenças do NotchTone Pro. Não temos acesso aos seus dados financeiros ou de pagamento.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Isenção de Responsabilidade Médica (Importante)</h3>
+        <p>
+          O NotchTone é uma ferramenta voltada unicamente ao relaxamento, bem-estar e foco sonoro. <strong>O aplicativo NÃO é um dispositivo médico e não possui finalidade diagnóstica ou terapêutica.</strong>
+        </p>
+        <p>
+          NÃO foi concebido para diagnosticar, tratar, curar, aliviar ou prevenir o zumbido no ouvido (tinnitus), hiperacusia, perda auditiva ou qualquer outra condição de saúde. Se você apresenta zumbido persistente, redução súbita de audição, tonturas ou dores de ouvido, consulte imediatamente um médico otorrinolaringologista ou profissional de saúde auditiva. Mantenha sempre o volume em níveis moderados e confortáveis.
+        </p>
+      </div>
+
+      <h2>5. Contato</h2>
+      <p>Em caso de dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+      <p>
+        <strong>Desenvolvedor:</strong> t9star<br>
+        <strong>E-mail:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 8. Français (fr) -->
+    <div id="content-fr" class="lang-content">
+      <h2>1. Présentation &amp; Traitement DSP 100% sur l'appareil</h2>
+      <p>
+        <strong>NotchTone: Bruit Brun &amp; Concentration (Brown Noise &amp; Focus)</strong> est une application de bien-être sonore et de concentration conçue pour générer un bruit brun apaisant et des fréquences avec filtre coupe-bande (Notch Filter) personnalisables directement sur votre appareil.
+      </p>
+      <p>
+        L'ensemble de la synthèse acoustique est calculé en temps réel par des algorithmes de traitement numérique du signal (DSP). NotchTone fonctionne de manière totalement autonome sans nécessiter de connexion Internet et sans télécharger de fichiers audio distants.
+      </p>
+
+      <h2>2. Zéro Collecte de Données Personnelles</h2>
+      <p>La protection de votre vie privée est notre principe fondamental :</p>
+      <ul>
+        <li><strong>Aucun compte requis:</strong> Utilisez NotchTone sans créer de compte ni fournir d'identifiants personnels.</li>
+        <li><strong>Aucune donnée collectée ni transmise:</strong> NotchTone ne collecte, ne transmet, ne vend ni ne conserve votre nom, adresse e-mail, localisation géographique, adresse IP, identifiant d'appareil ou historique d'utilisation.</li>
+        <li><strong>Aucun outil publicitaire ni traceur tiers:</strong> L'application ne contient aucun SDK de publicité, aucun traceur de comportement et aucun service d'analyse tiers.</li>
+      </ul>
+
+      <h2>3. Données Stockées Localement</h2>
+      <p>
+        Vos réglages de fréquences, bandes passantes, niveaux sonores et préréglages personnalisés sont conservés exclusivement sur votre appareil (via Android Room et DataStore). Ces données ne sont jamais transférées vers des serveurs externes.
+      </p>
+
+      <h2>4. Autorisations Android et Justification</h2>
+      <p>NotchTone sollicite uniquement les permissions indispensables à la génération sonore :</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Permet de maintenir la diffusion audio en arrière-plan lorsque l'écran est éteint ou lors de l'utilisation d'autres applications.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Affiche le lecteur de notification standard (lecture, pause, arrêt, minuterie de veille) sur l'écran de verrouillage et le volet de notification.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Utilisé exclusivement par l'infrastructure sécurisée de Google Play Billing pour l'achat unique et la restauration de licence de NotchTone Pro. Nous n'avons aucun accès à vos données bancaires.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Avertissement Médical (Important)</h3>
+        <p>
+          NotchTone est un outil d'accompagnement au bien-être, à la relaxation et à la concentration. <strong>Ce n'est PAS un dispositif médical ni un traitement clinique.</strong>
+        </p>
+        <p>
+          Il n'a pas vocation à diagnostiquer, traiter, guérir ou prévenir les acouphènes, l'hyperacousie, la surdité ou toute autre pathologie auditive ou médicale. En cas d'acouphènes persistants, de baisse brutale d'audition, de vertiges ou de douleurs auriculaires, veuillez consulter sans délai un médecin oto-rhino-laryngologiste (ORL). Maintenez toujours un volume d'écoute modéré et confortable pour préserver votre audition.
+        </p>
+      </div>
+
+      <h2>5. Contact</h2>
+      <p>Pour toute question concernant cette politique de confidentialité, n'hésitez pas à contacter le développeur :</p>
+      <p>
+        <strong>Développeur:</strong> t9star<br>
+        <strong>E-mail:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 9. Deutsch (de) -->
+    <div id="content-de" class="lang-content">
+      <h2>1. Übersicht &amp; 100% gerätebasierte DSP-Signalverarbeitung</h2>
+      <p>
+        <strong>NotchTone: Braunes Rauschen &amp; Fokus (Brown Noise &amp; Focus)</strong> ist eine Audio-Wellness- und Konzentrationsanwendung, die beruhigendes braunes Rauschen und individuell anpassbare Kerbfilter-Töne (Notch-Filter) direkt auf Ihrem Gerät in Echtzeit erzeugt.
+      </p>
+      <p>
+        Die gesamte Klangsynthese erfolgt lokal auf Ihrem Endgerät durch mathematische digitale Signalverarbeitung (DSP). NotchTone funktioniert vollständig offline ohne externe Datenübertragung und ohne das Herunterladen von Audioinhalten.
+      </p>
+
+      <h2>2. Keine Erfassung personenbezogener Daten</h2>
+      <p>Ihre Privatsphäre hat für uns oberste Priorität. NotchTone erfasst keinerlei persönliche Daten:</p>
+      <ul>
+        <li><strong>Keine Registrierung erforderlich:</strong> Sie können NotchTone ohne Erstellung eines Kontos oder Angabe persönlicher Daten nutzen.</li>
+        <li><strong>Keine Datenerfassung oder -weitergabe:</strong> NotchTone erfasst, überträgt, verkauft oder speichert keinerlei Namen, E-Mail-Adressen, Standorte, IP-Adressen, Gerätekennungen oder Nutzungsverläufe.</li>
+        <li><strong>Keine Werbe- oder Tracking-SDKs:</strong> Die Anwendung enthält keinerlei Werbenetzwerke, Tracking-Module oder externe Analysedienste.</li>
+      </ul>
+
+      <h2>3. Lokal gespeicherte Daten</h2>
+      <p>
+        Alle individuellen Konfigurationen wie Filterfrequenzen, Bandbreiten, Lautstärkepegel und eigene Presets werden ausschließlich im internen Speicher Ihres Geräts gesichert (über Android Room und DataStore). Es findet keine Übertragung an externe Server statt.
+      </p>
+
+      <h2>4. Android-Berechtigungen und Verwendungszweck</h2>
+      <p>NotchTone fordert nur jene Berechtigungen an, die für die Kernfunktion zwingend erforderlich sind:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Ermöglicht die kontinuierliche Klangwiedergabe im Hintergrund bei ausgeschaltetem Bildschirm oder während der Nutzung anderer Apps.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Ermöglicht die Anzeige der Mediensteuerung (Wiedergabe, Pause, Stopp, Sleep-Timer) in der Benachrichtigungsleiste und auf dem Sperrbildschirm.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Dient ausschließlich der sicheren Abwicklung des Einmalkaufs und der Wiederherstellung der NotchTone Pro-Lizenz über das offizielle Google Play Billing-System. Wir erhalten keinen Zugriff auf Zahlungsdaten.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Medizinischer Haftungsausschluss (Wichtig)</h3>
+        <p>
+          NotchTone ist ein akustisches Hilfsmittel für allgemeines Wohlbefinden, Entspannung und Konzentrationsförderung und <strong>KEIN Medizinprodukt.</strong>
+        </p>
+        <p>
+          Die Anwendung ist nicht zur Diagnose, Behandlung, Linderung oder Vorbeugung von Tinnitus, Hyperakusis, Hörverlust oder anderen Erkrankungen bestimmt. Bei anhaltendem Ohrgeräusch, plötzlichem Hörverlust, Schwindel oder Schmerzen suchen Sie bitte umgehend einen Facharzt für Hals-Nasen-Ohren-Heilkunde (HNO) auf. Hören Sie stets mit moderater Lautstärke, um Ihr Gehör zu schonen.
+        </p>
+      </div>
+
+      <h2>5. Kontakt</h2>
+      <p>Bei Fragen zu dieser Datenschutzerklärung wenden Sie sich bitte an den Entwickler:</p>
+      <p>
+        <strong>Entwickler:</strong> t9star<br>
+        <strong>E-Mail:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 10. Bahasa Indonesia (id) -->
+    <div id="content-id" class="lang-content">
+      <h2>1. Gambaran Umum &amp; Sintesis DSP 100% di Perangkat</h2>
+      <p>
+        <strong>NotchTone: Brown Noise &amp; Fokus (Brown Noise &amp; Focus)</strong> adalah aplikasi kebugaran akustik dan fokus suara yang dirancang untuk menghasilkan brown noise yang menenangkan serta nada filter notch yang dapat disesuaikan secara real-time.
+      </p>
+      <p>
+        Semua sintesis audio diproses secara lokal melalui pengolahan sinyal digital (DSP) matematis pada prosesor perangkat Anda. NotchTone berfungsi sepenuhnya secara offline tanpa memerlukan koneksi internet untuk menghasilkan suara.
+      </p>
+
+      <h2>2. Nol Pengumpulan Data Pribadi</h2>
+      <p>Privasi Anda adalah komitmen utama kami. NotchTone tidak mengumpulkan data pribadi apa pun:</p>
+      <ul>
+        <li><strong>Tanpa Pendaftaran Akun:</strong> Anda dapat menggunakan NotchTone tanpa perlu mendaftar akun atau memasukkan informasi identitas pribadi apa pun.</li>
+        <li><strong>Nol Pengumpulan atau Pengiriman Data:</strong> NotchTone TIDAK mengumpulkan, mengirimkan, menjual, atau menyimpan nama, email, lokasi fisik, alamat IP, pengidentifikasi perangkat, atau riwayat penggunaan Anda.</li>
+        <li><strong>Bebas Iklan dan Pelacak:</strong> Aplikasi ini tidak mengandung SDK iklan, pelacak perilaku, maupun analitik pihak ketiga.</li>
+      </ul>
+
+      <h2>3. Data yang Disimpan Secara Lokal</h2>
+      <p>
+        Pengaturan pengguna seperti frekuensi notch, bandwidth, tingkat volume, dan preset tersimpan secara eksklusif di memori lokal perangkat Anda (melalui Android Room dan DataStore). Data ini tidak pernah dikirim ke server luar.
+      </p>
+
+      <h2>4. Izin Sistem Android dan Tujuannya</h2>
+      <p>NotchTone hanya meminta izin yang sangat dibutuhkan untuk fitur pemutaran audio:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Memungkinkan suara terus diputar di latar belakang saat layar mati atau saat membuka aplikasi lain.
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: Menampilkan kontrol pemutar media standar (putar, jeda, hentikan, dan pengatur waktu tidur) di bilah notifikasi dan layar kunci.
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Digunakan secara eksklusif oleh sistem Google Play Billing untuk memproses pembelian satu kali dan memulihkan lisensi NotchTone Pro dengan aman. Kami tidak memiliki akses ke rincian pembayaran atau kartu Anda.
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>Penafian Medis (Penting)</h3>
+        <p>
+          NotchTone dirancang murni sebagai alat bantu relaksasi, kebugaran, dan fokus suara, serta <strong>BUKAN perangkat medis.</strong>
+        </p>
+        <p>
+          Aplikasi ini tidak ditujukan untuk mendiagnosis, mengobati, menyembuhkan, atau mencegah tinitus, gangguan pendengaran, hiperakusis, atau kondisi medis lainnya. Jika Anda mengalami tinitus kronis, penurunan pendengaran mendadak, pusing, atau nyeri telinga, segera konsultasikan dengan dokter spesialis THT atau ahli audiologi. Gunakan selalu tingkat volume yang nyaman dan aman untuk melindungi pendengaran Anda.
+        </p>
+      </div>
+
+      <h2>5. Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi pengembang:</p>
+      <p>
+        <strong>Pengembang:</strong> t9star<br>
+        <strong>Email:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <!-- 11. हिन्दी (hi) -->
+    <div id="content-hi" class="lang-content">
+      <h2>1. अवलोकन और 100% ऑन-डिवाइस डीएसपी ध्वनि संश्लेषण</h2>
+      <p>
+        <strong>NotchTone: ब्राउन नॉइज़ और फोकस (Brown Noise &amp; Focus)</strong> एक वेलनेस और एकाग्रता ऑडियो ऐप है जिसे आपके डिवाइस पर सुखदायक ब्राउन नॉइज़ और अनुकूलन योग्य नॉच-फ़िल्टर ध्वनि उत्पन्न करने के लिए डिज़ाइन किया गया है।
+      </p>
+      <p>
+        सभी ध्वनियाँ वास्तविक समय गणितीय डिजिटल सिग्नल प्रोसेसिंग (DSP) एल्गोरिदम द्वारा आपके डिवाइस पर स्थानीय रूप से बनाई जाती हैं। NotchTone ध्वनि उत्पन्न करने के लिए किसी भी बाहरी सर्वर से ऑडियो डाउनलोड नहीं करता है और पूरी तरह से ऑफ़लाइन कार्य करता है।
+      </p>
+
+      <h2>2. व्यक्तिगत डेटा का शून्य संग्रह</h2>
+      <p>हम आपकी गोपनीयता का पूर्ण सम्मान करते हैं और कोई व्यक्तिगत डेटा एकत्र नहीं करते:</p>
+      <ul>
+        <li><strong>किसी खाते की आवश्यकता नहीं:</strong> बिना किसी पंजीकरण या व्यक्तिगत जानकारी के ऐप की सभी मुख्य सुविधाओं का तुरंत उपयोग करें।</li>
+        <li><strong>शून्य डेटा संग्रह व संचरण:</strong> NotchTone आपका नाम, ईमेल, स्थान, आईपी पता, डिवाइस पहचानकर्ता या उपयोग इतिहास कभी भी एकत्र, प्रेषित, साझा या संग्रहीत नहीं करता है।</li>
+        <li><strong>कोई विज्ञापन या ट्रैकर नहीं:</strong> ऐप में कोई विज्ञापन SDK, ट्रैकिंग मॉड्यूल या तृतीय-पक्ष एनालिटिक्स शामिल नहीं है।</li>
+      </ul>
+
+      <h2>3. स्थानीय रूप से संग्रहीत डेटा</h2>
+      <p>
+        आपकी आवृत्ति सेटिंग्स, बैंडविड्थ, वॉल्यूम और कस्टम प्रीसेट केवल आपके डिवाइस के स्थानीय स्टोरेज (Android Room और DataStore के माध्यम से) में सुरक्षित रहते हैं। यह डेटा कभी भी बाहरी सर्वर पर अपलोड नहीं किया जाता है।
+      </p>
+
+      <h2>4. एंड्रॉइड अनुमतियाँ और उनका उद्देश्य</h2>
+      <p>NotchTone केवल ध्वनि प्लेबैक के लिए आवश्यक न्यूनतम अनुमतियों का अनुरोध करता है:</p>
+      <ul>
+        <li>
+          <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: स्क्रीन बंद होने या अन्य ऐप्स का उपयोग करते समय भी पृष्ठभूमि में निरंतर और स्थिर ध्वनि उत्पन्न करने के लिए।
+        </li>
+        <li>
+          <code>POST_NOTIFICATIONS</code>: नोटिफिकेशन पैनल और लॉक स्क्रीन पर मीडिया नियंत्रण (प्ले, पॉज, स्टॉप, स्लीप टाइमर) प्रदर्शित करने के लिए।
+        </li>
+        <li>
+          <code>com.android.vending.BILLING</code>: Google Play Billing के माध्यम से सुरक्षित रूप से NotchTone Pro की एकमुश्त खरीद और लाइसेंस पुनर्प्राप्ति के लिए। हमें आपकी भुगतान जानकारी तक कोई पहुँच नहीं होती।
+        </li>
+      </ul>
+
+      <div class="disclaimer-card">
+        <h3>चिकित्सा अस्वीकरण (महत्वपूर्ण)</h3>
+        <p>
+          NotchTone केवल सामान्य विश्राम, वेलनेस और ध्वनि एकाग्रता के लिए एक उपकरण है, और यह <strong>कोई चिकित्सा उपकरण नहीं है।</strong>
+        </p>
+        <p>
+          यह टिनिटस (कान बजना), सुनने की अक्षमता या किसी भी चिकित्सीय स्थिति के निदान, उपचार या रोकथाम के लिए अभिप्रेत नहीं है। यदि आप लगातार टिनिटस, अचानक सुनने में कमी, चक्कर आना या कान में दर्द का अनुभव करते हैं, तो तुरंत ईएनटी (ENT) विशेषज्ञ या चिकित्सक से परामर्श करें। अपनी श्रवण सुरक्षा के लिए हमेशा सुरक्षित और आरामदायक ध्वनि स्तर पर ही सुनें।
+        </p>
+      </div>
+
+      <h2>5. संपर्क करें</h2>
+      <p>यदि इस गोपनीयता नीति के संबंध में आपके कोई प्रश्न हैं, तो कृपया डेवलपर से संपर्क करें:</p>
+      <p>
+        <strong>डेवलपर:</strong> t9star<br>
+        <strong>ईमेल:</strong> <a href="mailto:frog9@users.noreply.github.com">frog9@users.noreply.github.com</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved. &bull; NotchTone (jp.tpp.t9s.notchtone)
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      try {
+        localStorage.setItem('notchtone_pref_lang', lang);
+      } catch (e) {}
+
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+
+      var target = document.getElementById('content-' + lang);
+      if (!target) {
+        lang = 'en';
+        target = document.getElementById('content-en');
+      }
+      if (target) {
+        target.classList.add('active');
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        }
+      });
+
+      document.documentElement.lang = lang;
+    }
+
+    function init() {
+      var saved = 'en';
+      try {
+        saved = localStorage.getItem('notchtone_pref_lang') || 'en';
+      } catch (e) {}
+      switchLang(saved);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
