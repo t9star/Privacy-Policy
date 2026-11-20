@@ -72,7 +72,7 @@
         <p><strong>Application:</strong> LedgerPad (Package: <code>jp.tpp.t9s.ledgerpad</code>)</p>
 
         <h2>1. Overview and Core Philosophy</h2>
-        <p>LedgerPad is an offline-first mobile utility application designed for small business shop owners to manage credit ledgers and daily cashbooks. We believe that your financial business records and customer personal information should remain strictly private and under your complete control. <strong>LedgerPad operates with zero application servers and does not collect or transmit your ledger data over the internet.</strong></p>
+        <p>LedgerPad is an offline-first mobile utility application designed for small business shop owners to manage credit ledgers and daily cashbooks. We believe that your financial business records and customer personal information should remain strictly private and under your complete control. <strong>LedgerPad operates with zero developer application servers and does not collect, track, or transmit your ledger data or precise location over the internet.</strong> The App does not request device GPS/location permissions (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>).</p>
 
         <h2>2. Data Collection and Processing</h2>
         <ul>
@@ -82,9 +82,9 @@
         </ul>
 
         <h2>3. Third-Party Services and Advertising</h2>
-        <p>To support ongoing maintenance with zero running costs, LedgerPad utilizes Google Mobile Ads (AdMob) and Google Play Billing:</p>
+        <p>While core ledger and cashbook operations are processed 100% locally on your device, LedgerPad utilizes Google Mobile Ads SDK (AdMob) in the free version and Google Play Billing for ad removal:</p>
         <ul>
-            <li><strong>Google AdMob:</strong> Serves banner, native, and interstitial advertisements. Google may collect anonymous device identifiers (such as the Advertising ID) and technical telemetry in compliance with Google's Privacy Policy and your regional consent preferences.</li>
+            <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Serves banner, native, and interstitial advertisements in the free version. To deliver ads, improve the geographical relevance of ads, measure ad performance, and prevent fraud, Google's AdMob SDK may automatically collect and process advertising identifiers (Google Advertising ID / AAID), IP addresses and approximate location derived therefrom, device information (model, OS version, carrier, etc.), and app interaction/diagnostic data in compliance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and your regional consent preferences.</li>
             <li><strong>Google Play In-App Billing:</strong> Processes one-time purchases for ad removal. Financial payment transactions are handled directly and securely by Google Play. We do not receive or process your payment card numbers.</li>
         </ul>
 

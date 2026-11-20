@@ -136,7 +136,7 @@
       <p>The Application includes an optional feature that lets players create and publish custom stages to the community ("Community Stages").</p>
       <ul>
         <li><strong>Data Uploaded:</strong> When you voluntarily submit a stage to the public community, the Application uploads the stage configuration (line coordinates, start/goal positions, physics properties), a stage title provided by you, your chosen author nickname, and timestamp to Google Firebase Realtime Database.</li>
-        <li><strong>Zero Sensitive Personal Data:</strong> We do NOT collect, transmit, or store real names, email addresses, phone numbers, contacts, device hardware identifiers, or precise GPS locations.</li>
+        <li><strong>Zero Sensitive Personal Data &amp; No Location Permission:</strong> The Application does NOT request device GPS/location permissions (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>), and we do NOT collect, transmit, or track real names, email addresses, phone numbers, contacts, device hardware identifiers, or precise GPS locations.</li>
         <li><strong>Public Availability:</strong> Any stage published to Community Stages becomes visible and playable by other users of the Application.</li>
       </ul>
 
@@ -144,7 +144,7 @@
       <p>The Application utilizes trusted third-party services to provide backend functionality and monetization:</p>
       <ul>
         <li><strong>Google Firebase Realtime Database:</strong> Used to store and distribute community-created stages and likes count. For more details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--badge-text);">Google Privacy Policy</a>.</li>
-        <li><strong>Google AdMob:</strong> May display non-intrusive advertisements in the free version. AdMob may process non-personalized technical identifiers and diagnostics.</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Used to display advertisements in the free version. To deliver ads, improve the geographical relevance of ads, measure ad performance, and prevent fraud, the AdMob SDK may automatically collect and process advertising identifiers (Google Advertising ID / AAID), IP addresses and approximate location derived therefrom, device information (device model, OS version, carrier, etc.), and app interaction/diagnostic data. For details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--badge-text);">Google Privacy Policy</a>.</li>
         <li><strong>Google Play Billing:</strong> Handles secure transactions for in-app purchases. All payment details are processed directly and securely by Google Play.</li>
       </ul>
 
@@ -188,7 +188,7 @@
       <p>本アプリには、ユーザーが作成したオリジナルステージを他のプレイヤーと共有できる「みんなのステージ」機能が搭載されています。</p>
       <ul>
         <li><strong>送信されるデータ:</strong> ユーザーが自発的に「公開」を選択した場合に限り、ステージ構成データ（線の座標・ゴール位置等）、ユーザーが入力したステージ名および作者ニックネーム、作成日時が Google Firebase Realtime Database に保存・公開されます。</li>
-        <li><strong>個人情報の非収集:</strong> 実名、メールアドレス、電話番号、連絡先、端末固有の識別情報（IMEI等）、位置情報などの個人を特定できる情報は一切収集・保存しません。</li>
+        <li><strong>個人情報の非収集および位置情報権限の不使用:</strong> 本アプリは端末のGPS・位置情報権限（<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>）を要求せず、実名、メールアドレス、電話番号、連絡先、端末固有の識別情報（IMEI等）、精密な位置情報などの個人を特定できる情報は一切収集・追跡・保存しません。</li>
         <li><strong>公開範囲:</strong> 公開されたステージデータは、本アプリを利用するすべてのユーザーが閲覧・プレイできます。</li>
       </ul>
 
@@ -196,7 +196,7 @@
       <p>本アプリは機能提供および運用のために以下の信頼できるサードパーティサービスを利用しています：</p>
       <ul>
         <li><strong>Google Firebase Realtime Database:</strong> 共有ステージの保存・配信および「いいね」カウント管理に使用しています。<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener" style="color: var(--badge-text);">Google プライバシーポリシー</a>をご確認ください。</li>
-        <li><strong>Google AdMob:</strong> アプリの無料提供を維持するため、広告配信を行う場合があります。</li>
+        <li><strong>Google AdMob（Google Mobile Ads SDK）:</strong> 無料版の広告配信に使用しています。広告の配信、広告の地理的な関連性の向上、広告効果の測定、不正防止のため、AdMob SDKが広告識別子（Google Advertising ID / AAID）、IPアドレスおよびそれに基づくおおよその位置情報（approximate location）、デバイス情報（端末モデル、OSバージョン、通信キャリア等）、アプリ操作・診断データを自動的に収集・処理する場合があります。詳細は <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener" style="color: var(--badge-text);">Google プライバシーポリシー</a> をご確認ください。</li>
         <li><strong>Google Play Billing:</strong> アプリ内アイテム購入や広告非表示の安全な決済処理に使用されます。決済情報はGoogle Playにより安全に保護されます。</li>
       </ul>
 

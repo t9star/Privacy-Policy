@@ -131,7 +131,7 @@
     <div class="header">
       <div>
         <h1>PingRadar</h1>
-        <div class="last-updated">Effective Date: November 8, 2026</div>
+        <div class="last-updated">Effective Date: November 20, 2026</div>
       </div>
     </div>
 
@@ -153,7 +153,7 @@
     <!-- English Version (Default) -->
     <div id="content-en" class="lang-content active">
       <h2>1. Introduction</h2>
-      <p>Thank you for using <strong>PingRadar</strong> ("we", "our", or "the App"), developed by <strong>T9Star</strong>. We take your privacy very seriously. PingRadar is designed as a standalone, client-side utility tool to help you locate misplaced Bluetooth devices. <strong>We do not collect, transmit, or sell any personal information ourselves.</strong> The free version displays ads via Google AdMob, which may process an advertising identifier as described in Section 4.</p>
+      <p>Thank you for using <strong>PingRadar</strong> ("we", "our", or "the App"), developed by <strong>T9Star</strong>. We take your privacy very seriously. PingRadar is designed as a standalone, client-side utility tool to help you locate misplaced Bluetooth devices. <strong>We do not collect, transmit, or sell any personal information ourselves.</strong> However, the free version displays advertisements via Google AdMob, which may process advertising identifiers, approximate location, and related technical data as described in Section 4.</p>
 
       <h2>2. Bluetooth Signal &amp; On-Device Processing</h2>
       <p>PingRadar scans for nearby Bluetooth Low Energy (BLE) advertisements and measures Received Signal Strength Indication (RSSI) purely in real-time on your device:</p>
@@ -167,7 +167,7 @@
       <p>The App requests only the permissions necessary to provide device radar and haptic feedback:</p>
       <ul>
         <li><strong>Bluetooth Scan &amp; Connect (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Required on Android 12+ to detect nearby Bluetooth accessories (e.g., AirPods, smartwatches) and display their broadcasted signal strength.</li>
-        <li><strong>Location Permission (<code>ACCESS_FINE_LOCATION</code>):</strong> Required because the Android operating system classifies Bluetooth device discovery (BLE beacons and Classic Bluetooth scanning) as location-related. Without it, Android filters out many nearby devices. PingRadar never reads, uses, or stores your GPS position.</li>
+        <li><strong>Location Permission (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Essential because the Android operating system classifies Bluetooth device discovery (BLE beacons and Classic Bluetooth radio scanning) as location-related. Without it, Android filters out many nearby devices. PingRadar's own scanning features never record, store, or transmit your GPS coordinates or location history to any developer server. However, in the free version, if you grant location permission to the App, the Google Mobile Ads SDK (AdMob) may collect and use coarse (approximate) location data to improve the geographical relevance of advertisements (see Section 4 for details; the Pro version does not serve ads via the ad SDK).</li>
         <li><strong>Vibration (<code>VIBRATE</code>):</strong> Used exclusively to deliver tactile proximity pulses when approaching a tracked device.</li>
         <li><strong>Google Play Billing (<code>BILLING</code>):</strong> Used to securely manage optional one-time Pro purchases through Google Play's official billing system.</li>
       </ul>
@@ -175,7 +175,15 @@
       <h2>4. Third-Party Services</h2>
       <p>The App integrates solely with official, certified Google services:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> Displays banner advertisements in the free version (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy &amp; Terms</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Used to display banner advertisements in the free version (upgrading to Pro disables ad serving). To deliver advertisements, improve geographical relevance (geographically relevant ads), measure ad performance, and prevent fraud, the AdMob SDK may automatically collect and process:
+          <ul>
+            <li>Advertising identifiers (such as Google Advertising ID)</li>
+            <li>Approximate location information (estimated from your IP address, as well as device coarse/approximate location when location permission has been granted to the App)</li>
+            <li>Device information (device model, OS version, language settings, etc.)</li>
+            <li>Ad interaction and diagnostic data</li>
+          </ul>
+          You can adjust or limit these settings at any time via <strong>"Ad Privacy Settings"</strong> (UMP consent form) inside the App's settings screen, or through your device settings (app permission management and Google Ads settings). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy &amp; Terms</a>)
+        </li>
         <li><strong>Google Play In-App Billing:</strong> Processes Pro license purchases securely without sharing payment details with us (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</li>
       </ul>
 
@@ -187,7 +195,7 @@
     <!-- Japanese Version -->
     <div id="content-ja" class="lang-content">
       <h2>1. はじめに</h2>
-      <p><strong>PingRadar</strong>（以下「本アプリ」）をご利用いただきありがとうございます。開発者（<strong>T9Star</strong>）はユーザーのプライバシー保護を最重要事項と考えています。本アプリは紛失したBluetooth機器を探すためのスタンドアロン型ツールであり、<strong>開発者が個人情報を収集・外部送信・第三者提供することはありません。</strong>なお、無料版ではGoogle AdMobによる広告を表示しており、第4項のとおり広告IDが処理される場合があります。</p>
+      <p><strong>PingRadar</strong>（以下「本アプリ」）をご利用いただきありがとうございます。開発者（<strong>T9Star</strong>）はユーザーのプライバシー保護を最重要事項と考えています。本アプリは紛失したBluetooth機器を探すためのスタンドアロン型ツールであり、<strong>開発者が個人情報を収集・外部送信・販売することはありません。</strong>なお、無料版ではGoogle AdMobによる広告を表示しており、第4項に記載のとおり広告識別子やおおよその位置情報（approximate location）等が処理される場合があります。</p>
 
       <h2>2. Bluetooth電波と端末内処理について</h2>
       <p>本アプリは周囲のBluetooth Low Energy (BLE) 電波強度（RSSI）をリアルタイムで測定し、端末ローカル内のみで探査レーダーを処理します：</p>
@@ -201,7 +209,7 @@
       <p>本アプリは機器探知および触覚フィードバックに必要な最小限の権限のみを使用します：</p>
       <ul>
         <li><strong>Bluetooth権限 (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Android 12以降において、付近のイヤホンやスマートウォッチの電波強度を検知・測定するために使用します。</li>
-        <li><strong>位置情報権限 (<code>ACCESS_FINE_LOCATION</code>):</strong> AndroidのOS仕様上、Bluetooth機器の検出（BLEビーコンおよびクラシックBluetoothスキャン）が位置情報関連の機能として扱われるため要求されます。許可がない場合、周囲の多くの機器がOSにより除外されます。GPS位置情報を取得・利用・保存することは一切ありません。</li>
+        <li><strong>位置情報権限 (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> AndroidのOS仕様上、Bluetooth機器の検出（BLEビーコンおよびクラシックBluetooth電波スキャン）に不可欠なため要求されます。許可がない場合、周囲の多くの機器がOSにより除外されます。PingRadar自身の探査機能（開発者側）がユーザーのGPS座標や移動履歴を記録・保存・独自サーバーへ送信することは一切ありません。ただし、無料版においては、ユーザーがアプリに位置情報権限を許可している場合、広告の地理的な関連性を高めるために Google Mobile Ads SDK（AdMob）がおおよその位置情報（coarse / approximate location）を収集・利用する場合があります（詳細は第4項をご確認ください。なお、Pro版では広告SDKによる広告配信自体が行われません）。</li>
         <li><strong>バイブレーション (<code>VIBRATE</code>):</strong> 探査対象に近づいた際の触覚パルス通知にのみ使用します。</li>
         <li><strong>Google Play Billing (<code>BILLING</code>):</strong> Pro版（買い切り）の安全な決済処理にのみ使用します。</li>
       </ul>
@@ -209,7 +217,15 @@
       <h2>4. 第三者サービスについて</h2>
       <p>本アプリではGoogle社提供の公式サービスのみを使用しています：</p>
       <ul>
-        <li><strong>Google AdMob:</strong> 無料版におけるバナー広告の配信 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーと規約</a>)</li>
+        <li><strong>Google AdMob（Google Mobile Ads SDK）:</strong> 無料版におけるバナー広告の配信に使用しています（Pro版では広告配信は行われません）。AdMob SDKは広告の配信、地理的な関連性の向上（地域に適した広告表示）、広告効果測定および不正防止のために、以下の情報を自動的に収集・処理する場合があります：
+          <ul>
+            <li>広告識別子（Google Advertising ID / AAID）</li>
+            <li>おおよその位置情報（IPアドレスからの推定、および位置情報権限が許可されている場合はデバイスのおおよその位置情報）</li>
+            <li>デバイス情報（端末モデル、OSバージョン、言語設定等）</li>
+            <li>広告操作および診断データ</li>
+          </ul>
+          これらの設定は、アプリ内の<strong>「広告のプライバシー設定」</strong>（Google UMP同意管理フォーム）、または端末のシステム設定（アプリの権限管理・Google広告設定）からいつでも変更・制限できます。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーと規約</a>）
+        </li>
         <li><strong>Google Play In-App Billing:</strong> 安全な決済処理 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>)</li>
       </ul>
 
@@ -221,13 +237,13 @@
     <!-- Simplified Chinese Version -->
     <div id="content-zh-CN" class="lang-content">
       <h2>1. 引言</h2>
-      <p>感谢您使用由 <strong>T9Star</strong> 开发的 <strong>PingRadar</strong>（以下简称“我们”或“本应用”）。我们非常重视您的隐私。PingRadar 是一款独立的客户端实用工具，旨在帮助您找回遗失的蓝牙设备。<strong>我们自身不收集、传输或出售任何个人信息。</strong>免费版通过 Google AdMob 展示广告，可能会如第 4 节所述处理广告标识符。</p>
+      <p>感谢您使用由 <strong>T9Star</strong> 开发的 <strong>PingRadar</strong>（以下简称“我们”或“本应用”）。我们非常重视您的隐私。PingRadar 是一款独立的客户端实用工具，旨在帮助您找回遗失的蓝牙设备。<strong>我们自身不会收集、存储或出售任何个人信息。</strong>免费版通过 Google AdMob 展示广告，如第 4 节所述，可能会处理广告标识符及大致位置信息（approximate location）等数据。</p>
 
       <h2>2. 蓝牙信号与设备端处理</h2>
       <p>PingRadar 会实时扫描附近的低功耗蓝牙 (BLE) 广播并测量接收信号强度指示 (RSSI)，所有处理均在您的设备本地完成：</p>
       <ul>
         <li><strong>无云端追踪：</strong>所有设备扫描、信号计算、距离估算及音频 Ping 合成均完全在您的手机本地进行。</li>
-        <li><strong>无位置记录：</strong>本应用不会记录、记录或追踪您的实际 GPS 坐标或位置历史记录。</li>
+        <li><strong>无位置记录：</strong>本应用不会记录、存储或追踪您的实际 GPS 坐标或位置历史记录。</li>
         <li><strong>设备标识符：</strong>MAC 地址和蓝牙设备名称仅在活动界面中实时使用，绝不会发送到任何外部服务器。</li>
       </ul>
 
@@ -235,7 +251,7 @@
       <p>本应用仅申请提供设备雷达和触觉反馈所必需的权限：</p>
       <ul>
         <li><strong>蓝牙扫描与连接 (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>)：</strong>在 Android 12+ 上必需，用于检测附近的蓝牙配件（例如 AirPods、智能手表）并显示其广播的信号强度。</li>
-        <li><strong>位置权限 (<code>ACCESS_FINE_LOCATION</code>)：</strong>必需，因为 Android 操作系统将蓝牙设备发现（BLE 信标和传统蓝牙扫描）归类为与位置相关的功能。若未授予此权限，Android 将过滤掉许多附近设备。PingRadar 绝不会读取、使用或存储您的 GPS 位置。</li>
+        <li><strong>位置权限 (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>)：</strong>由于 Android 操作系统规范要求，位置权限是检测蓝牙设备（BLE 信标和传统蓝牙无线电扫描）所必需的。若未授予此权限，Android 将过滤掉许多附近设备。PingRadar 自身的扫描功能（开发者侧）绝不会记录、存储您的 GPS 坐标或位置历史记录，也绝不会发送至任何自有服务器。但在免费版中，如果您已向本应用授予位置权限，Google Mobile Ads SDK (AdMob) 可能会收集并使用大致位置信息（coarse / approximate location）以提升广告的地理相关性（详见第 4 节；Pro 版不会通过广告 SDK 投放广告）。</li>
         <li><strong>震动 (<code>VIBRATE</code>)：</strong>仅用于在接近被追踪设备时提供触觉接近脉冲反馈。</li>
         <li><strong>Google Play 结算 (<code>BILLING</code>)：</strong>用于通过 Google Play 官方结算系统安全管理可选的一次性 Pro 购买。</li>
       </ul>
@@ -243,7 +259,15 @@
       <h2>4. 第三方服务</h2>
       <p>本应用仅集成官方认证的 Google 服务：</p>
       <ul>
-        <li><strong>Google AdMob：</strong>在免费版本中展示横幅广告（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权与条款</a>）。</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK)：</strong>用于在免费版本中展示横幅广告（Pro 版不投放广告）。为了投放广告、提升广告的地理相关性、衡量广告效果及防止欺诈，AdMob SDK 可能会自动收集并处理以下信息：
+          <ul>
+            <li>广告标识符（Google Advertising ID）</li>
+            <li>大致位置信息（通过 IP 地址估算，以及在应用获授位置权限时读取设备的大致位置信息）</li>
+            <li>设备信息（机型、操作系统版本、语言设置等）</li>
+            <li>广告交互与诊断数据</li>
+          </ul>
+          您可以随时通过应用内的<strong>“广告隐私设置”</strong>（UMP 同意表单）或设备系统设置（应用权限管理、Google 广告设置）更改或限制相关设置。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权与条款</a>）
+        </li>
         <li><strong>Google Play 应用内结算：</strong>安全处理 Pro 许可购买，无需与我们共享支付详情（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>）。</li>
       </ul>
 
@@ -255,7 +279,7 @@
     <!-- Traditional Chinese Version -->
     <div id="content-zh-TW" class="lang-content">
       <h2>1. 前言</h2>
-      <p>感謝您使用由 <strong>T9Star</strong> 開發的 <strong>PingRadar</strong>（以下簡稱「我們」或「本應用程式」）。我們非常重視您的隱私權。PingRadar 是一款獨立的用戶端實用工具，旨在協助您尋找遺失的藍牙裝置。<strong>我們本身不會收集、傳輸或販售任何個人資訊。</strong>免費版本透過 Google AdMob 顯示廣告，可能會如第 4 節所述處理廣告識別碼。</p>
+      <p>感謝您使用由 <strong>T9Star</strong> 開發的 <strong>PingRadar</strong>（以下簡稱「我們」或「本應用程式」）。我們非常重視您的隱私權。PingRadar 是一款獨立的用戶端實用工具，旨在協助您尋找遺失的藍牙裝置。<strong>我們本身不會收集、儲存或販售任何個人資訊。</strong>免費版本透過 Google AdMob 顯示廣告，如第 4 節所述，可能會處理廣告識別碼及約略位置資訊（approximate location）等資料。</p>
 
       <h2>2. 藍牙訊號與裝置端處理</h2>
       <p>PingRadar 會即時掃描附近的低功耗藍牙 (BLE) 廣播並測量接收訊號強度指示 (RSSI)，所有處理均在您的裝置本機完成：</p>
@@ -269,7 +293,7 @@
       <p>本應用程式僅要求提供裝置雷達和觸覺回饋所必需的權限：</p>
       <ul>
         <li><strong>藍牙掃描與連線 (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>)：</strong>在 Android 12+ 上為必要權限，用於偵測附近的藍牙配件（例如 AirPods、智慧手錶）並顯示其廣播的訊號強度。</li>
-        <li><strong>位置權限 (<code>ACCESS_FINE_LOCATION</code>)：</strong>必要權限，因為 Android 作業系統將藍牙裝置搜尋（BLE 信標與傳統藍牙掃描）歸類為與位置相關的功能。若無此權限，Android 將篩除許多附近的裝置。PingRadar 絕不會讀取、使用或儲存您的 GPS 位置。</li>
+        <li><strong>位置權限 (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>)：</strong>因 Android 作業系統規範要求，位置權限是偵測藍牙裝置（BLE 信標與傳統藍牙無線電掃描）所必需的權限。若無此權限，Android 將篩除許多附近的裝置。PingRadar 本身的掃描功能（開發者端）絕不會記錄、儲存您的 GPS 座標或位置歷史紀錄，也絕不會傳送至任何自有伺服器。然而，在免費版本中，若您已向本應用程式授予位置權限，Google Mobile Ads SDK (AdMob) 可能會收集並使用約略位置資訊（coarse / approximate location）以提升廣告的地理相關性（詳情請見第 4 節；Pro 版不會透過廣告 SDK 投放廣告）。</li>
         <li><strong>震動 (<code>VIBRATE</code>)：</strong>僅用於在接近受追蹤裝置時提供觸覺接近脈衝。</li>
         <li><strong>Google Play 帳單 (<code>BILLING</code>)：</strong>用於透過 Google Play 官方帳單系統安全管理選購的一次性 Pro 購買。</li>
       </ul>
@@ -277,7 +301,15 @@
       <h2>4. 第三方服務</h2>
       <p>本應用程式僅與經過認證的官方 Google 服務整合：</p>
       <ul>
-        <li><strong>Google AdMob：</strong>在免費版本中顯示橫幅廣告（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權與條款</a>）。</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK)：</strong>用於在免費版本中顯示橫幅廣告（Pro 版不投放廣告）。為投放廣告、提升廣告的地理相關性、衡量廣告成效及防止詐欺，AdMob SDK 可能會自動收集並處理以下資訊：
+          <ul>
+            <li>廣告識別碼（Google Advertising ID）</li>
+            <li>約略位置資訊（透過 IP 位址推估，以及在應用程式獲授位置權限時讀取裝置的約略位置資訊）</li>
+            <li>裝置資訊（機型、作業系統版本、語言設定等）</li>
+            <li>廣告互動與診斷資料</li>
+          </ul>
+          您可隨時透過應用程式內的<strong>「廣告隱私設定」</strong>（UMP 同意表單）或裝置系統設定（應用程式權限管理、Google 廣告設定）變更或限制相關設定。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權與條款</a>）
+        </li>
         <li><strong>Google Play 應用程式內購帳單：</strong>安全處理 Pro 授權購買，不與我們分享付款詳情（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>）。</li>
       </ul>
 
@@ -289,7 +321,7 @@
     <!-- Korean Version -->
     <div id="content-ko" class="lang-content">
       <h2>1. 소개</h2>
-      <p><strong>T9Star</strong>에서 개발한 <strong>PingRadar</strong>(이하 "당사" 또는 "본 앱")를 이용해 주셔서 감사합니다. 당사는 사용자의 개인정보 보호를 매우 중요하게 여깁니다. PingRadar는 분실한 Bluetooth 기기를 찾을 수 있도록 돕는 독립형 클라이언트 유틸리티 툴로 설계되었습니다. <strong>당사는 어떠한 개인정보도 직접 수집, 전송 또는 판매하지 않습니다.</strong> 무료 버전은 Google AdMob을 통해 광고를 표시하며, 제4조에 명시된 바와 같이 광고 식별자를 처리할 수 있습니다.</p>
+      <p><strong>T9Star</strong>에서 개발한 <strong>PingRadar</strong>(이하 "당사" 또는 "본 앱")를 이용해 주셔서 감사합니다. 당사는 사용자의 개인정보 보호를 매우 중요하게 여깁니다. PingRadar는 분실한 Bluetooth 기기를 찾을 수 있도록 돕는 독립형 클라이언트 유틸리티 툴로 설계되었습니다. <strong>당사는 어떠한 개인정보도 직접 수집, 저장 또는 판매하지 않습니다.</strong> 무료 버전은 Google AdMob을 통해 광고를 표시하며, 제4조에 명시된 바와 같이 광고 식별자 및 대략적인 위치 정보(approximate location) 등을 처리할 수 있습니다.</p>
 
       <h2>2. Bluetooth 신호 및 기기 내 처리</h2>
       <p>PingRadar는 주변의 BLE(Bluetooth Low Energy) 신호를 스캔하고 실시간으로 수신 신호 강도 표시(RSSI)를 기기 내에서만 측정합니다:</p>
@@ -303,7 +335,7 @@
       <p>본 앱은 기기 레이더 및 햅틱 피드백을 제공하는 데 필요한 최소한의 권한만 요청합니다:</p>
       <ul>
         <li><strong>Bluetooth 스캔 및 연결 (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Android 12 이상에서 주변 Bluetooth 액세서리(예: AirPods, 스마트워치)를 감지하고 브로드캐스트되는 신호 강도를 표시하기 위해 필요합니다.</li>
-        <li><strong>위치 권한 (<code>ACCESS_FINE_LOCATION</code>):</strong> Android 운영체제에서 Bluetooth 기기 검색(BLE 비콘 및 일반 Bluetooth 스캔)을 위치 관련 기능으로 분류하기 때문에 필요합니다. 이 권한이 없으면 Android에서 주변의 많은 기기를 필터링하여 제외합니다. PingRadar는 사용자의 GPS 위치를 절대 읽거나, 사용하거나, 저장하지 않습니다.</li>
+        <li><strong>위치 권한 (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Android 운영체제 사양상 Bluetooth 기기 검색(BLE 비콘 및 클래식 Bluetooth 전파 스캔)에 필수적이므로 위치 권한을 요청합니다. 이 권한이 없으면 Android에서 주변의 많은 기기를 필터링하여 제외합니다. PingRadar 자체 스캔 기능(개발자 측)은 사용자의 GPS 좌표나 이동 기록을 기록·저장하거나 자체 서버로 전송하지 않습니다. 다만 무료 버전에서는 사용자가 앱에 위치 권한을 허용한 경우, 광고의 지리적 관련성을 높이기 위해 Google Mobile Ads SDK(AdMob)가 대략적인 위치 정보(coarse / approximate location)를 수집·이용할 수 있습니다(자세한 내용은 제4조 참고. Pro 버전에서는 광고 SDK를 통한 광고가 제공되지 않습니다).</li>
         <li><strong>진동 (<code>VIBRATE</code>):</strong> 추적 중인 기기에 접근할 때 촉각 근접 펄스를 전달하기 위해서만 사용됩니다.</li>
         <li><strong>Google Play 결제 (<code>BILLING</code>):</strong> Google Play 공식 결제 시스템을 통해 선택적 1회성 Pro 구매를 안전하게 관리하기 위해 사용됩니다.</li>
       </ul>
@@ -311,7 +343,15 @@
       <h2>4. 제3자 서비스</h2>
       <p>본 앱은 공식적이고 인증된 Google 서비스와만 연동됩니다:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> 무료 버전에서 배너 광고를 표시합니다 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보 보호 및 약관</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> 무료 버전에서 배너 광고를 표시하는 데 사용됩니다(Pro 버전에서는 광고가 표시되지 않습니다). AdMob SDK는 광고 게재, 광고의 지리적 관련성 향상, 광고 성과 측정 및 부정 행위 방지를 위해 다음 정보를 자동으로 수집·처리할 수 있습니다:
+          <ul>
+            <li>광고 식별자(Google Advertising ID)</li>
+            <li>대략적인 위치 정보(IP 주소 기반 추정 및 앱에 위치 권한이 허용된 경우 기기의 대략적인 위치 정보)</li>
+            <li>기기 정보(기기 모델, OS 버전, 언어 설정 등)</li>
+            <li>광고 상호작용 및 진단 데이터</li>
+          </ul>
+          사용자는 언제든지 앱 내 설정의 <strong>「광고 개인정보 보호 설정」</strong>(UMP 동의 양식) 또는 기기 시스템 설정(앱 권한 관리 및 Google 광고 설정)에서 해당 설정을 변경하거나 제한할 수 있습니다. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보 보호 및 약관</a>)
+        </li>
         <li><strong>Google Play 인앱 결제:</strong> 당사와 결제 정보를 공유하지 않고 Pro 라이선스 구매를 안전하게 처리합니다 (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>).</li>
       </ul>
 
@@ -323,7 +363,7 @@
     <!-- Spanish Version -->
     <div id="content-es" class="lang-content">
       <h2>1. Introducción</h2>
-      <p>Gracias por usar <strong>PingRadar</strong> ("nosotros", "nuestro" o "la Aplicación"), desarrollada por <strong>T9Star</strong>. Nos tomamos su privacidad muy en serio. PingRadar está diseñada como una herramienta de utilidad independiente y del lado del cliente para ayudarle a localizar dispositivos Bluetooth extraviados. <strong>Nosotros mismos no recopilamos, transmitimos ni vendemos ninguna información personal.</strong> La versión gratuita muestra anuncios a través de Google AdMob, que puede procesar un identificador de publicidad como se describe en la Sección 4.</p>
+      <p>Gracias por usar <strong>PingRadar</strong> ("nosotros", "nuestro" o "la Aplicación"), desarrollada por <strong>T9Star</strong>. Nos tomamos su privacidad muy en serio. PingRadar está diseñada como una herramienta de utilidad independiente y del lado del cliente para ayudarle a localizar dispositivos Bluetooth extraviados. <strong>Nosotros mismos no recopilamos, almacenamos ni vendemos ninguna información personal.</strong> Sin embargo, la versión gratuita muestra anuncios a través de Google AdMob, que puede procesar identificadores de publicidad, ubicación aproximada y datos técnicos relacionados como se describe en la Sección 4.</p>
 
       <h2>2. Señal Bluetooth y procesamiento en el dispositivo</h2>
       <p>PingRadar escanea las señales de Bluetooth Low Energy (BLE) cercanas y mide la indicación de intensidad de la señal recibida (RSSI) en tiempo real exclusivamente en su dispositivo:</p>
@@ -337,7 +377,7 @@
       <p>La Aplicación solicita únicamente los permisos necesarios para proporcionar el radar de dispositivos y la respuesta háptica:</p>
       <ul>
         <li><strong>Escaneo y conexión Bluetooth (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Requerido en Android 12+ para detectar accesorios Bluetooth cercanos (p. ej., AirPods, relojes inteligentes) y mostrar la intensidad de su señal emitida.</li>
-        <li><strong>Permiso de ubicación (<code>ACCESS_FINE_LOCATION</code>):</strong> Requerido porque el sistema operativo Android clasifica el descubrimiento de dispositivos Bluetooth (balizas BLE y escaneo de Bluetooth clásico) como relacionado con la ubicación. Sin él, Android filtra y descarta muchos dispositivos cercanos. PingRadar nunca lee, utiliza ni almacena su posición GPS.</li>
+        <li><strong>Permiso de ubicación (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Esencial porque el sistema operativo Android clasifica el descubrimiento de dispositivos Bluetooth (balizas BLE y escaneo de radio Bluetooth clásico) como relacionado con la ubicación. Sin él, Android filtra y descarta muchos dispositivos cercanos. Las funciones de escaneo propias de PingRadar nunca registran, almacenan ni transmiten sus coordenadas GPS ni su historial de ubicaciones a ningún servidor del desarrollador. Sin embargo, en la versión gratuita, si concede permiso de ubicación a la Aplicación, el SDK de Google Mobile Ads (AdMob) puede recopilar y usar la ubicación aproximada (coarse location) para mejorar la relevancia geográfica de los anuncios (consulte la Sección 4; la versión Pro no muestra anuncios mediante el SDK).</li>
         <li><strong>Vibración (<code>VIBRATE</code>):</strong> Se utiliza exclusivamente para emitir pulsos táctiles de proximidad al acercarse a un dispositivo rastreado.</li>
         <li><strong>Facturación de Google Play (<code>BILLING</code>):</strong> Se utiliza para gestionar de forma segura las compras únicas opcionales de Pro a través del sistema de facturación oficial de Google Play.</li>
       </ul>
@@ -345,7 +385,15 @@
       <h2>4. Servicios de terceros</h2>
       <p>La Aplicación se integra únicamente con servicios oficiales y certificados de Google:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> Muestra anuncios de banner en la versión gratuita (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidad y condiciones de Google</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Se utiliza para mostrar anuncios de banner en la versión gratuita (actualizar a Pro desactiva los anuncios). Para mostrar anuncios, mejorar su relevancia geográfica, medir el rendimiento y prevenir fraudes, el SDK de AdMob puede recopilar y procesar automáticamente:
+          <ul>
+            <li>Identificadores de publicidad (como Google Advertising ID)</li>
+            <li>Ubicación aproximada (estimada a partir de su dirección IP, así como la ubicación aproximada del dispositivo si se ha concedido el permiso de ubicación a la Aplicación)</li>
+            <li>Información del dispositivo (modelo, versión del sistema operativo, idioma, etc.)</li>
+            <li>Datos de interacción con anuncios y diagnóstico</li>
+          </ul>
+          Puede cambiar o limitar estos ajustes en cualquier momento desde <strong>«Ajustes de privacidad de anuncios»</strong> (formulario de consentimiento UMP) en la pantalla de ajustes de la Aplicación, o desde los ajustes de su dispositivo (gestión de permisos de apps y ajustes de anuncios de Google). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidad y condiciones de Google</a>)
+        </li>
         <li><strong>Facturación integrada de Google Play:</strong> Procesa las compras de licencias Pro de forma segura sin compartir detalles de pago con nosotros (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a>).</li>
       </ul>
 
@@ -357,7 +405,7 @@
     <!-- Portuguese (Brazil) Version -->
     <div id="content-pt-BR" class="lang-content">
       <h2>1. Introdução</h2>
-      <p>Obrigado por usar o <strong>PingRadar</strong> ("nós", "nosso" ou "o Aplicativo"), desenvolvido por <strong>T9Star</strong>. Levamos sua privacidade muito a sério. O PingRadar foi desenvolvido como uma ferramenta utilitária independente e do lado do cliente para ajudar a localizar dispositivos Bluetooth perdidos. <strong>Nós mesmos não coletamos, transmitimos ou vendemos nenhuma informação pessoal.</strong> A versão gratuita exibe anúncios por meio do Google AdMob, que pode processar um identificador de publicidade conforme descrito na Seção 4.</p>
+      <p>Obrigado por usar o <strong>PingRadar</strong> ("nós", "nosso" ou "o Aplicativo"), desenvolvido por <strong>T9Star</strong>. Levamos sua privacidade muito a sério. O PingRadar foi desenvolvido como uma ferramenta utilitária independente e do lado do cliente para ajudar a localizar dispositivos Bluetooth perdidos. <strong>Nós mesmos não coletamos, armazenamos nem vendemos nenhuma informação pessoal.</strong> Contudo, a versão gratuita exibe anúncios por meio do Google AdMob, que pode processar identificadores de publicidade, localização aproximada e dados técnicos relacionados conforme descrito na Seção 4.</p>
 
       <h2>2. Sinal Bluetooth e processamento no dispositivo</h2>
       <p>O PingRadar busca anúncios de Bluetooth Low Energy (BLE) próximos e mede o Indicador de Força do Sinal Recebido (RSSI) puramente em tempo real no seu dispositivo:</p>
@@ -371,7 +419,7 @@
       <p>O Aplicativo solicita apenas as permissões necessárias para fornecer o radar do dispositivo e o feedback tátil:</p>
       <ul>
         <li><strong>Escaneamento e conexão Bluetooth (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Necessário no Android 12+ para detectar acessórios Bluetooth próximos (por exemplo, AirPods, smartwatches) e exibir a intensidade do sinal transmitido.</li>
-        <li><strong>Permissão de localização (<code>ACCESS_FINE_LOCATION</code>):</strong> Necessária porque o sistema operacional Android classifica a descoberta de dispositivos Bluetooth (beacons BLE e verificação de Bluetooth clássico) como relacionada à localização. Sem ela, o Android filtra e oculta muitos dispositivos próximos. O PingRadar nunca lê, usa ou armazena sua posição GPS.</li>
+        <li><strong>Permissão de localização (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Essencial porque o sistema operacional Android classifica a descoberta de dispositivos Bluetooth (beacons BLE e verificação de rádio Bluetooth clássico) como relacionada à localização. Sem ela, o Android filtra e oculta muitos dispositivos próximos. Os recursos de varredura do próprio PingRadar nunca registram, armazenam ou enviam suas coordenadas de GPS ou histórico de localização para qualquer servidor do desenvolvedor. No entanto, na versão gratuita, caso você conceda permissão de localização ao Aplicativo, o SDK Google Mobile Ads (AdMob) poderá coletar e usar a localização aproximada (coarse location) para melhorar a relevância geográfica dos anúncios (consulte a Seção 4; a versão Pro não exibe anúncios via SDK).</li>
         <li><strong>Vibração (<code>VIBRATE</code>):</strong> Usado exclusivamente para fornecer pulsos táteis de proximidade ao se aproximar de um dispositivo rastreado.</li>
         <li><strong>Faturamento do Google Play (<code>BILLING</code>):</strong> Usado para gerenciar com segurança compras opcionais e únicas da versão Pro por meio do sistema oficial de faturamento do Google Play.</li>
       </ul>
@@ -379,7 +427,15 @@
       <h2>4. Serviços de terceiros</h2>
       <p>O Aplicativo integra-se exclusivamente com serviços oficiais e certificados do Google:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> Exibe anúncios em banner na versão gratuita (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidade e Termos do Google</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Usado para exibir anúncios em banner na versão gratuita (a atualização para a versão Pro desativa a exibição de anúncios). Para veicular anúncios, melhorar a relevância geográfica, medir o desempenho e prevenir fraudes, o SDK do AdMob pode coletar e processar automaticamente:
+          <ul>
+            <li>Identificadores de publicidade (como o Google Advertising ID)</li>
+            <li>Localização aproximada (estimada pelo endereço IP, bem como localização aproximada do dispositivo caso a permissão de localização tenha sido concedida ao Aplicativo)</li>
+            <li>Informações do dispositivo (modelo, versão do sistema operacional, idioma, etc.)</li>
+            <li>Dados de interação com anúncios e diagnóstico</li>
+          </ul>
+          Você pode alterar ou limitar essas configurações a qualquer momento em <strong>"Configurações de privacidade de anúncios"</strong> (formulário de consentimento UMP) na tela de configurações do Aplicativo, ou nas configurações do dispositivo (gerenciamento de permissões de apps e configurações de anúncios do Google). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidade e Termos do Google</a>)
+        </li>
         <li><strong>Faturamento no aplicativo do Google Play:</strong> Processa compras de licenças Pro com segurança, sem compartilhar detalhes de pagamento conosco (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>).</li>
       </ul>
 
@@ -391,7 +447,7 @@
     <!-- French Version -->
     <div id="content-fr" class="lang-content">
       <h2>1. Introduction</h2>
-      <p>Merci d'utiliser <strong>PingRadar</strong> (« nous », « notre » ou « l'Application »), développé par <strong>T9Star</strong>. Nous accordons une grande importance à la protection de votre vie privée. PingRadar est conçu comme un outil utilitaire autonome et côté client destiné à vous aider à localiser vos appareils Bluetooth égarés. <strong>Nous ne collectons, ne transmettons et ne vendons nous-mêmes aucune information personnelle.</strong> La version gratuite affiche des publicités via Google AdMob, qui peut traiter un identifiant publicitaire comme décrit à la Section 4.</p>
+      <p>Merci d'utiliser <strong>PingRadar</strong> (« nous », « notre » ou « l'Application »), développé par <strong>T9Star</strong>. Nous accordons une grande importance à la protection de votre vie privée. PingRadar est conçu comme un outil utilitaire autonome et côté client destiné à vous aider à localiser vos appareils Bluetooth égarés. <strong>Nous ne collectons, ne conservons et ne vendons nous-mêmes aucune information personnelle.</strong> Cependant, la version gratuite affiche des publicités via Google AdMob, qui peut traiter des identifiants publicitaires, une localisation approximative et des données techniques associées comme décrit à la Section 4.</p>
 
       <h2>2. Signal Bluetooth et traitement sur l'appareil</h2>
       <p>PingRadar analyse les signaux Bluetooth Low Energy (BLE) à proximité et mesure l'indicateur de puissance du signal reçu (RSSI) en temps réel exclusivement sur votre appareil :</p>
@@ -405,7 +461,7 @@
       <p>L'Application ne demande que les autorisations nécessaires pour fournir le radar d'appareils et le retour haptique :</p>
       <ul>
         <li><strong>Recherche et connexion Bluetooth (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>) :</strong> Requis sous Android 12+ pour détecter les accessoires Bluetooth à proximité (ex. AirPods, montres connectées) et afficher la force de leur signal émis.</li>
-        <li><strong>Autorisation de localisation (<code>ACCESS_FINE_LOCATION</code>) :</strong> Requise car le système d'exploitation Android classe la détection d'appareils Bluetooth (balises BLE et analyse Bluetooth classique) comme liée à la localisation. Sans cette autorisation, Android filtre de nombreux appareils à proximité. PingRadar ne lit, n'utilise et ne stocke jamais votre position GPS.</li>
+        <li><strong>Autorisation de localisation (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>) :</strong> Indispensable car le système d'exploitation Android classe la détection d'appareils Bluetooth (balises BLE et analyse radio Bluetooth classique) comme liée à la localisation. Sans cette autorisation, Android filtre de nombreux appareils à proximité. Les fonctions de recherche propres à PingRadar n'enregistrent, ne stockent et ne transmettent jamais vos coordonnées GPS ou votre historique de localisation vers un serveur du développeur. Toutefois, dans la version gratuite, si vous accordez l'autorisation de localisation à l'Application, le SDK Google Mobile Ads (AdMob) peut collecter et utiliser la localisation approximative (coarse location) afin d'améliorer la pertinence géographique des annonces (voir la Section 4 ; la version Pro n'affiche pas de publicités via le SDK).</li>
         <li><strong>Vibration (<code>VIBRATE</code>) :</strong> Utilisée exclusivement pour émettre des impulsions tactiles de proximité à l'approche d'un appareil suivi.</li>
         <li><strong>Facturation Google Play (<code>BILLING</code>) :</strong> Utilisée pour gérer de manière sécurisée les achats ponctuels facultatifs de la version Pro via le système officiel de facturation Google Play.</li>
       </ul>
@@ -413,7 +469,15 @@
       <h2>4. Services tiers</h2>
       <p>L'Application s'intègre uniquement avec des services officiels et certifiés de Google :</p>
       <ul>
-        <li><strong>Google AdMob :</strong> Affiche des bannières publicitaires dans la version gratuite (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité et conditions d'utilisation de Google</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK) :</strong> Utilisé pour afficher des bannières publicitaires dans la version gratuite (le passage à la version Pro désactive la diffusion de publicités). Pour diffuser des annonces, améliorer leur pertinence géographique, mesurer les performances publicitaires et prévenir la fraude, le SDK AdMob peut collecter et traiter automatiquement :
+          <ul>
+            <li>Identifiants publicitaires (tels que Google Advertising ID)</li>
+            <li>Localisation approximative (estimée à partir de votre adresse IP, ainsi que la localisation approximative de l'appareil lorsque l'autorisation de localisation a été accordée à l'Application)</li>
+            <li>Informations sur l'appareil (modèle, version du système d'exploitation, langue, etc.)</li>
+            <li>Données d'interaction publicitaire et de diagnostic</li>
+          </ul>
+          Vous pouvez modifier ou limiter ces paramètres à tout moment via <strong>« Paramètres de confidentialité des annonces »</strong> (formulaire de consentement UMP) dans les paramètres de l'Application, ou depuis les paramètres de votre appareil (gestion des autorisations d'applications et paramètres des annonces Google). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité et conditions d'utilisation de Google</a>)
+        </li>
         <li><strong>Facturation via Google Play :</strong> Traite les achats de licences Pro en toute sécurité sans partager les informations de paiement avec nous (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité de Google</a>).</li>
       </ul>
 
@@ -425,7 +489,7 @@
     <!-- German Version -->
     <div id="content-de" class="lang-content">
       <h2>1. Einleitung</h2>
-      <p>Vielen Dank, dass Sie <strong>PingRadar</strong> („wir“, „unser“ oder „die App“) verwenden, entwickelt von <strong>T9Star</strong>. Wir nehmen Ihren Datenschutz sehr ernst. PingRadar ist als eigenständiges, clientseitiges Dienstprogramm konzipiert, das Ihnen beim Auffinden verlegter Bluetooth-Geräte hilft. <strong>Wir selbst erheben, übertragen oder verkaufen keinerlei personenbezogene Daten.</strong> Die kostenlose Version zeigt Werbung über Google AdMob an, wodurch möglicherweise eine Werbekennung gemäß Abschnitt 4 verarbeitet wird.</p>
+      <p>Vielen Dank, dass Sie <strong>PingRadar</strong> („wir“, „unser“ oder „die App“) verwenden, entwickelt von <strong>T9Star</strong>. Wir nehmen Ihren Datenschutz sehr ernst. PingRadar ist als eigenständiges, clientseitiges Dienstprogramm konzipiert, das Ihnen beim Auffinden verlegter Bluetooth-Geräte hilft. <strong>Wir selbst erheben, speichern oder verkaufen keinerlei personenbezogene Daten.</strong> Die kostenlose Version zeigt jedoch Werbung über Google AdMob an, wodurch wie in Abschnitt 4 beschrieben Werbekennungen, ein ungefährer Standort (approximate location) und zugehörige technische Daten verarbeitet werden können.</p>
 
       <h2>2. Bluetooth-Signal &amp; Verarbeitung auf dem Gerät</h2>
       <p>PingRadar sucht nach Bluetooth Low Energy (BLE)-Signalen in der Nähe und misst die Empfangsfeldstärke (RSSI) in Echtzeit ausschließlich auf Ihrem Gerät:</p>
@@ -439,7 +503,7 @@
       <p>Die App fordert nur die Berechtigungen an, die für das Geräteradar und das haptische Feedback erforderlich sind:</p>
       <ul>
         <li><strong>Bluetooth-Scan &amp; -Verbindung (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Erforderlich ab Android 12+, um Bluetooth-Zubehör in der Nähe (z. B. AirPods, Smartwatches) zu erkennen und deren gesendete Signalstärke anzuzeigen.</li>
-        <li><strong>Standortberechtigung (<code>ACCESS_FINE_LOCATION</code>):</strong> Erforderlich, da das Android-Betriebssystem das Erkennen von Bluetooth-Geräten (BLE-Beacons und klassischer Bluetooth-Scan) als standortbezogen einstuft. Ohne diese Berechtigung filtert Android viele Geräte in der Nähe heraus. PingRadar liest, verwendet oder speichert Ihre GPS-Position niemals.</li>
+        <li><strong>Standortberechtigung (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Unerlässlich, da das Android-Betriebssystem das Erkennen von Bluetooth-Geräten (BLE-Beacons und klassischer Bluetooth-Funkscan) als standortbezogen einstuft. Ohne diese Berechtigung filtert Android viele Geräte in der Nähe heraus. Die eigenen Scanfunktionen von PingRadar erfassen, speichern oder übertragen Ihre GPS-Koordinaten oder Ihren Standortverlauf niemals an Entwicklerserver. Wenn Sie der App jedoch in der kostenlosen Version die Standortberechtigung erteilen, kann das Google Mobile Ads SDK (AdMob) den ungefähren Standort (coarse / approximate location) erheben und nutzen, um die geografische Relevanz von Anzeigen zu verbessern (Details siehe Abschnitt 4; die Pro-Version schaltet keine Werbung über das Ad-SDK).</li>
         <li><strong>Vibration (<code>VIBRATE</code>):</strong> Wird ausschließlich verwendet, um fühlbare Näherungsimpulse auszulösen, wenn Sie sich einem verfolgten Gerät nähern.</li>
         <li><strong>Google Play-Abrechnung (<code>BILLING</code>):</strong> Wird verwendet, um optionale einmalige Pro-Käufe über das offizielle Abrechnungssystem von Google Play sicher zu verwalten.</li>
       </ul>
@@ -447,7 +511,15 @@
       <h2>4. Drittanbieterdienste</h2>
       <p>Die App ist ausschließlich in offizielle, zertifizierte Google-Dienste integriert:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> Zeigt Bannerwerbung in der kostenlosen Version an (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutz &amp; Nutzungsbedingungen</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Wird verwendet, um in der kostenlosen Version Bannerwerbung anzuzeigen (ein Upgrade auf Pro deaktiviert die Anzeigenauslieferung). Um Anzeigen auszuliefern, deren geografische Relevanz zu verbessern, die Anzeigenleistung zu messen und Betrug zu verhindern, kann das AdMob SDK automatisch Folgendes erheben und verarbeiten:
+          <ul>
+            <li>Werbekennungen (z. B. Google Advertising ID)</li>
+            <li>Ungefährer Standort (geschätzt anhand Ihrer IP-Adresse sowie der ungefähre Gerätestandort, sofern der App die Standortberechtigung erteilt wurde)</li>
+            <li>Geräteinformationen (Gerätemodell, Betriebssystemversion, Spracheinstellungen usw.)</li>
+            <li>Anzeigeninteraktions- und Diagnosedaten</li>
+          </ul>
+          Sie können diese Einstellungen jederzeit über <strong>„Datenschutzeinstellungen für Anzeigen“</strong> (UMP-Einwilligungsformular) in den App-Einstellungen oder über Ihre Geräteeinstellungen (App-Berechtigungen und Google-Anzeigeneinstellungen) anpassen oder einschränken. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutz &amp; Nutzungsbedingungen</a>)
+        </li>
         <li><strong>Google Play In-App-Abrechnung:</strong> Verarbeitet Pro-Lizenzkäufe sicher, ohne Zahlungsdetails an uns weiterzugeben (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>).</li>
       </ul>
 
@@ -459,7 +531,7 @@
     <!-- Indonesian Version -->
     <div id="content-id" class="lang-content">
       <h2>1. Pendahuluan</h2>
-      <p>Terima kasih telah menggunakan <strong>PingRadar</strong> ("kami" atau "Aplikasi"), yang dikembangkan oleh <strong>T9Star</strong>. Kami sangat menjaga privasi Anda. PingRadar dirancang sebagai alat utilitas mandiri di sisi klien untuk membantu Anda menemukan perangkat Bluetooth yang salah taruh atau hilang. <strong>Kami sendiri tidak mengumpulkan, mengirimkan, atau menjual informasi pribadi apa pun.</strong> Versi gratis menampilkan iklan melalui Google AdMob, yang dapat memproses pengenal iklan sebagaimana dijelaskan pada Bagian 4.</p>
+      <p>Terima kasih telah menggunakan <strong>PingRadar</strong> ("kami" atau "Aplikasi"), yang dikembangkan oleh <strong>T9Star</strong>. Kami sangat menjaga privasi Anda. PingRadar dirancang sebagai alat utilitas mandiri di sisi klien untuk membantu Anda menemukan perangkat Bluetooth yang salah taruh atau hilang. <strong>Kami sendiri tidak mengumpulkan, menyimpan, atau menjual informasi pribadi apa pun.</strong> Namun, versi gratis menampilkan iklan melalui Google AdMob, yang dapat memproses pengenal iklan, lokasi perkiraan (approximate location), dan data teknis terkait sebagaimana dijelaskan pada Bagian 4.</p>
 
       <h2>2. Sinyal Bluetooth &amp; Pemrosesan di Perangkat</h2>
       <p>PingRadar memindai sinyal Bluetooth Low Energy (BLE) di sekitar dan mengukur Received Signal Strength Indication (RSSI) murni secara real-time pada perangkat Anda:</p>
@@ -473,7 +545,7 @@
       <p>Aplikasi hanya meminta izin yang diperlukan untuk menyediakan radar perangkat dan umpan balik haptik:</p>
       <ul>
         <li><strong>Pemindaian &amp; Sambungan Bluetooth (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Diperlukan pada Android 12+ untuk mendeteksi aksesori Bluetooth terdekat (misalnya AirPods, smartwatch) dan menampilkan kekuatan sinyal siarannya.</li>
-        <li><strong>Izin Lokasi (<code>ACCESS_FINE_LOCATION</code>):</strong> Diperlukan karena sistem operasi Android mengklasifikasikan penemuan perangkat Bluetooth (beacon BLE dan pemindaian Bluetooth Klasik) sebagai terkait lokasi. Tanpa izin ini, Android akan menyaring banyak perangkat di sekitar. PingRadar tidak pernah membaca, menggunakan, atau menyimpan posisi GPS Anda.</li>
+        <li><strong>Izin Lokasi (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> Penting karena sistem operasi Android mengklasifikasikan penemuan perangkat Bluetooth (beacon BLE dan pemindaian radio Bluetooth Klasik) sebagai terkait lokasi. Tanpa izin ini, Android akan menyaring banyak perangkat di sekitar. Fitur pemindaian PingRadar sendiri tidak pernah merekam, menyimpan, atau mengirimkan koordinat GPS maupun riwayat lokasi Anda ke server pengembang mana pun. Namun, pada versi gratis, jika Anda memberikan izin lokasi kepada Aplikasi, Google Mobile Ads SDK (AdMob) dapat mengumpulkan dan menggunakan data lokasi perkiraan (coarse / approximate location) untuk meningkatkan relevansi geografis iklan (lihat Bagian 4; versi Pro tidak menayangkan iklan melalui SDK iklan).</li>
         <li><strong>Getaran (<code>VIBRATE</code>):</strong> Digunakan secara eksklusif untuk memberikan getaran jarak taktil saat mendekati perangkat yang dilacak.</li>
         <li><strong>Penagihan Google Play (<code>BILLING</code>):</strong> Digunakan untuk mengelola pembelian Pro satu kali secara aman melalui sistem penagihan resmi Google Play.</li>
       </ul>
@@ -481,7 +553,15 @@
       <h2>4. Layanan Pihak Ketiga</h2>
       <p>Aplikasi ini hanya terintegrasi dengan layanan Google resmi yang bersertifikasi:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> Menampilkan iklan banner pada versi gratis (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privasi &amp; Persyaratan Google</a>).</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> Digunakan untuk menampilkan iklan banner pada versi gratis (peningkatan ke Pro menonaktifkan penayangan iklan). Untuk menayangkan iklan, meningkatkan relevansi geografis iklan, mengukur kinerja iklan, dan mencegah penipuan, SDK AdMob dapat secara otomatis mengumpulkan dan memproses:
+          <ul>
+            <li>Pengenal iklan (seperti Google Advertising ID)</li>
+            <li>Informasi lokasi perkiraan (diperkirakan dari alamat IP Anda, serta lokasi perkiraan perangkat apabila izin lokasi telah diberikan kepada Aplikasi)</li>
+            <li>Informasi perangkat (model perangkat, versi OS, pengaturan bahasa, dll.)</li>
+            <li>Data interaksi iklan dan diagnostik</li>
+          </ul>
+          Anda dapat menyesuaikan atau membatasi pengaturan ini kapan saja melalui <strong>"Pengaturan Privasi Iklan"</strong> (formulir persetujuan UMP) di layar pengaturan Aplikasi, atau melalui pengaturan perangkat Anda (pengelolaan izin aplikasi dan pengaturan iklan Google). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privasi &amp; Persyaratan Google</a>)
+        </li>
         <li><strong>Penagihan Dalam Aplikasi Google Play:</strong> Memproses pembelian lisensi Pro dengan aman tanpa membagikan rincian pembayaran kepada kami (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>).</li>
       </ul>
 
@@ -493,7 +573,7 @@
     <!-- Hindi Version -->
     <div id="content-hi" class="lang-content">
       <h2>1. परिचय</h2>
-      <p><strong>T9Star</strong> द्वारा विकसित <strong>PingRadar</strong> ("हम", "हमारा" या "ऐप") का उपयोग करने के लिए धन्यवाद। हम आपकी गोपनीयता को अत्यंत गंभीरता से लेते हैं। PingRadar को आपके खोए हुए Bluetooth उपकरणों को खोजने में मदद करने के लिए एक स्वतंत्र, क्लाइंट-साइड उपयोगिता टूल के रूप में डिज़ाइन किया गया है। <strong>हम स्वयं कोई भी व्यक्तिगत जानकारी एकत्र, प्रसारित या बेचते नहीं हैं।</strong> मुफ़्त संस्करण Google AdMob के माध्यम से विज्ञापन प्रदर्शित करता है, जो अनुभाग 4 में वर्णित अनुसार विज्ञापन पहचानकर्ता को संसाधित कर सकता है।</p>
+      <p><strong>T9Star</strong> द्वारा विकसित <strong>PingRadar</strong> ("हम", "हमारा" या "ऐप") का उपयोग करने के लिए धन्यवाद। हम आपकी गोपनीयता को अत्यंत गंभीरता से लेते हैं। PingRadar को आपके खोए हुए Bluetooth उपकरणों को खोजने में मदद करने के लिए एक स्वतंत्र, क्लाइंट-साइड उपयोगिता टूल के रूप में डिज़ाइन किया गया है। <strong>हम स्वयं कोई भी व्यक्तिगत जानकारी एकत्र, संग्रहीत या बेचते नहीं हैं।</strong> हालांकि, मुफ़्त संस्करण Google AdMob के माध्यम से विज्ञापन प्रदर्शित करता है, जो अनुभाग 4 में वर्णित अनुसार विज्ञापन पहचानकर्ता, अनुमानित स्थान (approximate location) और संबंधित तकनीकी डेटा को संसाधित कर सकता है।</p>
 
       <h2>2. Bluetooth सिग्नल और डिवाइस पर प्रोसेसिंग</h2>
       <p>PingRadar आस-पास के Bluetooth Low Energy (BLE) प्रसारणों को स्कैन करता है और आपके डिवाइस पर पूरी तरह से रीयल-टाइम में Received Signal Strength Indication (RSSI) को मापता है:</p>
@@ -507,7 +587,7 @@
       <p>ऐप केवल डिवाइस रडार और हैप्टिक फीडबैक प्रदान करने के लिए आवश्यक अनुमतियों का ही अनुरोध करता है:</p>
       <ul>
         <li><strong>Bluetooth स्कैन और कनेक्ट (<code>BLUETOOTH_SCAN</code>, <code>BLUETOOTH_CONNECT</code>):</strong> Android 12+ पर आस-पास के Bluetooth एक्सेसरीज़ (उदा. AirPods, स्मार्टवॉच) का पता लगाने और उनकी प्रसारित सिग्नल शक्ति प्रदर्शित करने के लिए आवश्यक है।</li>
-        <li><strong>स्थान अनुमति (<code>ACCESS_FINE_LOCATION</code>):</strong> आवश्यक है क्योंकि Android ऑपरेटिंग सिस्टम Bluetooth डिवाइस खोज (BLE बीकन और क्लासिक Bluetooth स्कैनिंग) को स्थान से संबंधित के रूप में वर्गीकृत करता है। इसके बिना, Android आस-पास के कई उपकरणों को फ़िल्टर कर देता है। PingRadar कभी भी आपकी GPS स्थिति को पढ़ता, उपयोग या संग्रहीत नहीं करता है।</li>
+        <li><strong>स्थान अनुमति (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> आवश्यक है क्योंकि Android ऑपरेटिंग सिस्टम Bluetooth डिवाइस खोज (BLE बीकन और क्लासिक Bluetooth रेडियो स्कैनिंग) को स्थान से संबंधित के रूप में वर्गीकृत करता है। इसके बिना, Android आस-पास के कई उपकरणों को फ़िल्टर कर देता है। PingRadar की स्वयं की स्कैनिंग सुविधाएँ कभी भी आपके GPS निर्देशांक या स्थान इतिहास को रिकॉर्ड, संग्रहीत या किसी डेवलपर सर्वर पर प्रेषित नहीं करती हैं। हालांकि, मुफ़्त संस्करण में, यदि आप ऐप को स्थान अनुमति प्रदान करते हैं, तो विज्ञापनों की भौगोलिक प्रासंगिकता बेहतर बनाने के लिए Google Mobile Ads SDK (AdMob) अनुमानित स्थान (coarse / approximate location) डेटा एकत्र और उपयोग कर सकता है (विवरण के लिए अनुभाग 4 देखें; Pro संस्करण में विज्ञापन SDK द्वारा विज्ञापन नहीं दिखाए जाते हैं)।</li>
         <li><strong>कंपन (<code>VIBRATE</code>):</strong> ट्रैक किए जा रहे डिवाइस के पास पहुंचने पर स्पर्शनीय निकटता पल्स देने के लिए विशेष रूप से उपयोग किया जाता है।</li>
         <li><strong>Google Play बिलिंग (<code>BILLING</code>):</strong> Google Play के आधिकारिक बिलिंग सिस्टम के माध्यम से वैकल्पिक वन-टाइम Pro खरीदारी को सुरक्षित रूप से प्रबंधित करने के लिए उपयोग किया जाता है।</li>
       </ul>
@@ -515,7 +595,15 @@
       <h2>4. तृतीय-पक्ष सेवाएँ</h2>
       <p>ऐप पूरी तरह से आधिकारिक, प्रमाणित Google सेवाओं के साथ एकीकृत है:</p>
       <ul>
-        <li><strong>Google AdMob:</strong> मुफ़्त संस्करण में बैनर विज्ञापन प्रदर्शित करता है (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google गोपनीयता और शर्तें</a>)।</li>
+        <li><strong>Google AdMob (Google Mobile Ads SDK):</strong> मुफ़्त संस्करण में बैनर विज्ञापन प्रदर्शित करने के लिए उपयोग किया जाता है (Pro संस्करण में विज्ञापन सेवा बंद रहती है)। विज्ञापन दिखाने, उनकी भौगोलिक प्रासंगिकता बढ़ाने, विज्ञापन प्रदर्शन मापने और धोखाधड़ी रोकने के लिए AdMob SDK स्वचालित रूप से निम्नलिखित डेटा एकत्र और संसाधित कर सकता है:
+          <ul>
+            <li>विज्ञापन पहचानकर्ता (जैसे Google Advertising ID)</li>
+            <li>अनुमानित स्थान जानकारी (आपके IP पते से अनुमानित, तथा ऐप को स्थान अनुमति दिए जाने पर डिवाइस का अनुमानित स्थान)</li>
+            <li>डिवाइस जानकारी (डिवाइस मॉडल, OS संस्करण, भाषा सेटिंग्स आदि)</li>
+            <li>विज्ञापन सहभागिता और निदान डेटा</li>
+          </ul>
+          आप ऐप की सेटिंग स्क्रीन में <strong>"विज्ञापन गोपनीयता सेटिंग्स"</strong> (UMP सहमति फ़ॉर्म) या अपने डिवाइस की सेटिंग्स (ऐप अनुमति प्रबंधन और Google विज्ञापन सेटिंग्स) के माध्यम से इन सेटिंग्स को कभी भी बदल या सीमित कर सकते हैं। (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google गोपनीयता और शर्तें</a>)
+        </li>
         <li><strong>Google Play इन-ऐप बिलिंग:</strong> हमारे साथ भुगतान विवरण साझा किए बिना सुरक्षित रूप से Pro लाइसेंस खरीदारी को संसाधित करता है (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google गोपनीयता नीति</a>)।</li>
       </ul>
 

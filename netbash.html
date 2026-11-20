@@ -151,14 +151,14 @@
 
     <section>
       <h2>2. 収集する情報とその利用目的</h2>
-      <p>本アプリ自体が、ユーザーの氏名、メールアドレス、電話番号、位置情報などの個人情報を直接収集、保存、または送信することはありません。ただし、アプリの機能提供、利便性向上、および広告配信のために、以下のサードパーティ製SDKを通じて自動的にデータを取得・処理する場合があります。</p>
+      <p>本アプリ自体は端末のGPS・位置情報権限（<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>）を要求せず、当開発者がユーザーの氏名、メールアドレス、電話番号、精密な位置情報などの個人情報を直接収集、保存、追跡、または送信することはありません。ただし、アプリの機能提供、利便性向上、および無料版の広告配信のために、以下のサードパーティ製SDKを通じて自動的にデータを取得・処理する場合があります。</p>
       
       <ul>
         <li>
-          <strong>広告配信（Google AdMob SDK）</strong>
+          <strong>広告配信（Google Mobile Ads SDK / Google AdMob）</strong>
           <ul>
-            <li><strong>収集される情報:</strong> 広告ID（GAID/IDFA）、デバイスモデル、OSバージョン、通信キャリア、位置情報に基づく匿名の統計データ。</li>
-            <li><strong>利用目的:</strong> アプリ内での広告（動画リワード広告、バナー等）のパーソナライズ配信、広告効果の測定、および広告制限（同じ広告の過度な表示防止）。</li>
+            <li><strong>収集される情報:</strong> 広告識別子（Google Advertising ID / AAID）、IPアドレスおよびそれに基づくおおよその位置情報（approximate location）、デバイス情報（端末モデル、OSバージョン、通信キャリア等）、アプリ操作・診断データ。</li>
+            <li><strong>利用目的:</strong> 広告（動画リワード広告、バナー等）の配信、広告の地理的な関連性の向上、広告効果の測定、不正防止、および広告表示頻度の最適化（同じ広告の過度な表示防止）。</li>
           </ul>
         </li>
         <li>
@@ -238,14 +238,14 @@
 
     <section>
       <h2>2. Information Collected and Purpose of Use</h2>
-      <p>The App itself does not directly collect, store, or transmit personal data such as names, email addresses, phone numbers, or precise location information. However, to provide core features, process purchases, and display advertisements, we may automatically process non-personal data through the following third-party SDKs:</p>
+      <p>The App itself does NOT request device GPS/location permissions (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>), and we do not directly collect, store, track, or transmit personal data such as names, email addresses, phone numbers, or precise location information. However, to provide core features, process purchases, and display advertisements in the free version, we may automatically process non-personal data through the following third-party SDKs:</p>
       
       <ul>
         <li>
-          <strong>Advertising (Google AdMob SDK)</strong>
+          <strong>Advertising (Google Mobile Ads SDK / Google AdMob)</strong>
           <ul>
-            <li><strong>Data Processed:</strong> Advertising ID (GAID/IDFA), device model, OS version, carrier, and anonymous usage telemetry.</li>
-            <li><strong>Purpose:</strong> To deliver and personalize advertisements (rewarded ads, banners), measure ad performance, and prevent duplicate ad delivery.</li>
+            <li><strong>Data Processed:</strong> Advertising identifiers (Google Advertising ID / AAID), IP addresses and approximate location derived therefrom, device information (device model, OS version, carrier, etc.), and app interaction/diagnostic data.</li>
+            <li><strong>Purpose:</strong> To deliver advertisements (rewarded ads, banners, etc.), improve the geographical relevance of ads, measure ad performance, prevent fraud, and optimize ad frequency (prevent duplicate ad delivery).</li>
           </ul>
         </li>
         <li>

@@ -135,7 +135,7 @@
                 <p>jp.tpp.t9s（以下、「当開発者」といいます）は、モバイルアプリケーション「Singularity Spin」（以下、「本アプリ」といいます）におけるユーザーの情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
 
                 <h3>1. 収集する情報および収集方法</h3>
-                <p>本アプリでは、以下のサードパーティ製SDKを利用しており、それぞれの提供元が自動的にユーザーの情報を収集する場合があります。収集される情報には、個人を特定する情報は含まれません。</p>
+                <p>本アプリは端末のGPS・位置情報権限（<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>）を要求せず、当開発者が精密な位置情報を収集・追跡することはありません。本アプリでは、以下のサードパーティ製SDKを利用しており、それぞれの提供元が自動的にユーザーの情報を収集する場合があります。</p>
                 <ul>
                     <li>
                         <strong>Google Play Games Services</strong><br>
@@ -143,9 +143,9 @@
                         収集データ: 匿名ユーザーID、ゲームの進行状況、スコア、実績データ
                     </li>
                     <li>
-                        <strong>Google AdMob</strong><br>
-                        収集目的: アプリ内広告の配信および最適化<br>
-                        収集データ: 広告識別子（AdID）、端末モデル、OSバージョン、IPアドレス等の非個人情報
+                        <strong>Google AdMob（Google Mobile Ads SDK）</strong><br>
+                        収集目的: アプリ内広告の配信、広告の地理的な関連性の向上、広告効果測定および不正防止<br>
+                        収集データ: 広告識別子（Google Advertising ID / AAID）、IPアドレスおよびそれに基づくおおよその位置情報（approximate location）、デバイス情報（端末モデル、OSバージョン、通信キャリア等）、アプリ操作・診断データ
                     </li>
                 </ul>
 
@@ -191,7 +191,7 @@
                 <p>jp.tpp.t9s (hereinafter referred to as "the Developer") establishes this Privacy Policy regarding the handling of users' information in the mobile application "Singularity Spin" (hereinafter referred to as "the App").</p>
 
                 <h3>1. Information Collected and Collection Method</h3>
-                <p>The App utilizes third-party SDKs, which may automatically collect information from users. The collected information does not contain any personally identifiable information.</p>
+                <p>The App does NOT request device GPS/location permissions (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>), and the Developer does not collect or track precise location data. The App utilizes third-party SDKs, which may automatically collect technical and non-personal information from users:</p>
                 <ul>
                     <li>
                         <strong>Google Play Games Services</strong><br>
@@ -199,9 +199,9 @@
                         Data Collected: Anonymous User ID, game progress, score, and achievement data.
                     </li>
                     <li>
-                        <strong>Google AdMob</strong><br>
-                        Purpose: Delivery and optimization of in-app advertisements.<br>
-                        Data Collected: Advertising Identifier (AdID), device model, OS version, IP address, and other non-personal information.
+                        <strong>Google AdMob (Google Mobile Ads SDK)</strong><br>
+                        Purpose: Delivery of in-app advertisements, improving the geographical relevance of ads, ad performance measurement, and fraud prevention.<br>
+                        Data Collected: Advertising Identifier (Google Advertising ID / AAID), IP address and approximate location derived therefrom, device information (device model, OS version, carrier, etc.), and app interaction/diagnostic data.
                     </li>
                 </ul>
 

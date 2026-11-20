@@ -137,22 +137,22 @@
 
     <section>
       <h2>収集する情報について</h2>
-      <p>当開発者は、本アプリを通じてユーザーの個人情報（氏名・メールアドレス・電話番号等）を直接収集することは一切ありません。</p>
-      <p>ただし、本アプリが利用するサードパーティサービスが以下の情報を自動的に収集する場合があります。</p>
+      <p>本アプリは端末のGPS・位置情報権限（<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>）を要求せず、当開発者がユーザーの個人情報（氏名・メールアドレス・電話番号・精密な位置情報等）を直接収集・追跡することは一切ありません。</p>
+      <p>ただし、無料版の広告配信および課金処理のため、本アプリが利用するサードパーティサービスが以下の情報を自動的に収集・処理する場合があります。</p>
       <div class="card">
         <h3>📱 デバイス情報・センサー</h3>
         <p>本アプリは端末の加速度センサー（Accelerometer）を、砂の重力方向を制御する機能のためにのみ使用します。センサーのデータは端末内でのみ処理され、外部に送信されることはありません。</p>
       </div>
       <div class="card">
-        <h3>📊 広告（Google AdMob）</h3>
-        <p>本アプリは無料版において、Google LLC が提供する広告サービス「Google AdMob」を利用しています。AdMob は、より関連性の高い広告を表示するために、以下の情報を収集・使用する場合があります。</p>
+        <h3>📊 広告（Google Mobile Ads SDK / Google AdMob）</h3>
+        <p>本アプリは無料版において、Google LLC が提供する広告サービス「Google AdMob」を利用しています。AdMob SDK は、広告の配信、広告の地理的な関連性の向上、広告効果の測定、および不正防止のために、以下の情報を自動的に収集・使用する場合があります：</p>
         <ul>
-          <li>広告ID（端末固有の広告識別子）</li>
-          <li>IPアドレス（おおよその位置情報）</li>
-          <li>アプリの使用状況に関する統計情報</li>
-          <li>デバイスの種類・OSバージョンなど</li>
+          <li>広告識別子（Google Advertising ID / AAID）</li>
+          <li>IPアドレスおよびそれに基づくおおよその位置情報（approximate location）</li>
+          <li>アプリ操作および診断データ（クラッシュ情報・パフォーマンス等）</li>
+          <li>デバイス情報（端末モデル、OSバージョン、通信キャリア等）</li>
         </ul>
-        <p>AdMob のプライバシーポリシー：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+        <p>Google プライバシーポリシー：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
         <p>プレミアム版にアップグレードすると広告は完全に表示されなくなります。</p>
       </div>
       <div class="card">
@@ -220,20 +220,20 @@
 
     <section>
       <h2>Information We Collect</h2>
-      <p>The Developer does not directly collect any personal information (such as name, email address, or phone number) through this App.</p>
-      <p>However, third-party services integrated into the App may automatically collect certain data as described below.</p>
+      <p>The App does NOT request device GPS/location permissions (<code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>), and the Developer does not directly collect or track any personal information (such as name, email address, phone number, or precise location) through this App.</p>
+      <p>However, third-party services integrated into the App (such as advertising in the free version and in-app billing) may automatically collect and process certain data as described below.</p>
       <div class="card">
         <h3>📱 Device Sensors</h3>
         <p>The App uses the device's Accelerometer sensor solely to control the direction of gravity in the sand simulation feature. Sensor data is processed entirely on-device and is never transmitted externally.</p>
       </div>
       <div class="card">
-        <h3>📊 Advertising (Google AdMob)</h3>
-        <p>The free version of this App uses Google AdMob, an advertising service provided by Google LLC. AdMob may collect and use the following data to serve relevant advertisements:</p>
+        <h3>📊 Advertising (Google Mobile Ads SDK / Google AdMob)</h3>
+        <p>The free version of this App uses Google AdMob, an advertising service provided by Google LLC. To deliver advertisements, improve the geographical relevance of ads, measure ad performance, and prevent fraud, the AdMob SDK may automatically collect and use the following data:</p>
         <ul>
-          <li>Advertising ID (a device-specific, resettable identifier)</li>
-          <li>IP address (approximate location)</li>
-          <li>App usage statistics</li>
-          <li>Device type and OS version</li>
+          <li>Advertising ID (Google Advertising ID / AAID)</li>
+          <li>IP address and approximate location derived therefrom</li>
+          <li>App interaction and diagnostic data</li>
+          <li>Device information (device model, OS version, carrier, etc.)</li>
         </ul>
         <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
         <p>Upgrading to the premium version removes all advertisements.</p>
