@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - DocAnvil</title>
+  <style>
+    :root {
+      --primary: #E11D48;
+      --primary-hover: #FB7185;
+      --amber: #F59E0B;
+      --bg: #0B1120;
+      --card-bg: #111827;
+      --surface-btn: #1A2333;
+      --border: #1E293B;
+      --border-accent: rgba(225, 29, 72, 0.35);
+      --content-text: #F8FAFC;
+      --content-muted: #94A3B8;
+      --badge-bg: rgba(225, 29, 72, 0.12);
+      --badge-border: rgba(225, 29, 72, 0.35);
+      --badge-amber-bg: rgba(245, 158, 11, 0.12);
+      --badge-amber-border: rgba(245, 158, 11, 0.35);
+      --highlight-bg: rgba(245, 158, 11, 0.08);
+      --highlight-border: rgba(245, 158, 11, 0.35);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--content-text);
+      background-color: var(--bg);
+      padding: 1.5rem 1rem 3.5rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75);
+      border: 1px solid var(--border);
+    }
+    .nav {
+      margin-bottom: 1.75rem;
+    }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--amber);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav a:hover {
+      color: #FBBF24;
+      text-decoration: underline;
+    }
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .title-group {
+      flex: 1;
+      min-width: 260px;
+    }
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.22rem 0.7rem;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: #FDA4AF;
+      border: 1px solid var(--badge-border);
+      letter-spacing: 0.02em;
+    }
+    .badge-amber {
+      background: var(--badge-amber-bg);
+      color: #FCD34D;
+      border: 1px solid var(--badge-amber-border);
+    }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.3;
+      margin-bottom: 0.45rem;
+    }
+    .app-meta {
+      font-size: 0.88rem;
+      color: var(--content-muted);
+    }
+    .lang-switcher-wrapper {
+      margin-bottom: 2rem;
+    }
+    .lang-switcher-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--content-muted);
+      margin-bottom: 0.55rem;
+      font-weight: 600;
+    }
+    .lang-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .lang-btn {
+      background: var(--surface-btn);
+      color: var(--content-muted);
+      border: 1px solid var(--border);
+      padding: 0.42rem 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .lang-btn:hover {
+      background: #232E42;
+      color: var(--content-text);
+      border-color: var(--border-accent);
+    }
+    .lang-btn.active {
+      background: linear-gradient(135deg, rgba(225, 29, 72, 0.24) 0%, rgba(245, 158, 11, 0.22) 100%);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      box-shadow: 0 0 14px rgba(225, 29, 72, 0.3);
+    }
+    .lang-content {
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+    .lang-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 1.26rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 2rem 0 0.85rem;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    p, ul {
+      margin-bottom: 1.05rem;
+      color: var(--content-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+    ul {
+      padding-left: 1.35rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+    code {
+      background: rgba(245, 158, 11, 0.1);
+      color: #FCD34D;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.86em;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .highlight-card {
+      background: var(--highlight-bg);
+      border: 1px solid var(--highlight-border);
+      border-radius: 10px;
+      padding: 1.2rem 1.35rem;
+      margin: 1.5rem 0;
+    }
+    .highlight-card h3 {
+      font-size: 1.02rem;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+    .highlight-card p {
+      margin-bottom: 0;
+      color: #CBD5E1;
+    }
+    a {
+      color: var(--primary-hover);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--content-muted);
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.75rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="https://t9star.github.io/Privacy-Policy/">&larr; All Apps / 全アプリ一覧</a>
+    </div>
+
+    <div class="header">
+      <div class="title-group">
+        <div class="badge-bar">
+          <span class="badge">Privacy Policy</span>
+          <span class="badge badge-amber">100% On-Device PDF</span>
+          <span class="badge">Zero Ads &bull; Zero Tracking</span>
+        </div>
+        <h1>DocAnvil</h1>
+        <div class="app-meta">Package: <code>jp.tpp.t9s.docanvil</code> &bull; Effective Date: 2026-11-24</div>
+      </div>
+    </div>
+
+    <!-- Language Switcher Tabs (13 Languages) -->
+    <div class="lang-switcher-wrapper">
+      <div class="lang-switcher-title">Select Language / 表示言語の選択</div>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="en">English</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        <button type="button" class="lang-btn" data-lang="zh-CN">简体中文</button>
+        <button type="button" class="lang-btn" data-lang="zh-TW">繁體中文</button>
+        <button type="button" class="lang-btn" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="es">Español</button>
+        <button type="button" class="lang-btn" data-lang="pt">Português</button>
+        <button type="button" class="lang-btn" data-lang="fr">Français</button>
+        <button type="button" class="lang-btn" data-lang="de">Deutsch</button>
+        <button type="button" class="lang-btn" data-lang="id">Bahasa Indonesia</button>
+        <button type="button" class="lang-btn" data-lang="hi">हिन्दी</button>
+        <button type="button" class="lang-btn" data-lang="fil">Filipino</button>
+        <button type="button" class="lang-btn" data-lang="vi">Tiếng Việt</button>
+      </div>
+    </div>
+
+    <!-- 1. English (Default) -->
+    <div id="content-en" class="lang-content active">
+      <h2>1. Overview &amp; 100% On-Device Processing</h2>
+      <p>
+        <strong>DocAnvil</strong> is an offline-first PDF utility application designed to keep your sensitive documents completely private. All PDF operations—including compression, merging, splitting/rotating, image-to-PDF conversion, handwritten electronic signatures, and AES-256 password encryption and decryption—are performed locally on your device.
+      </p>
+      <div class="highlight-card">
+        <h3>Strict Local Execution Guarantee</h3>
+        <p>Your document contents, passwords, and handwritten signatures are never transmitted, uploaded, or stored on developer servers or any external cloud servers.</p>
+      </div>
+
+      <h2>2. Information Collection &amp; Advertising</h2>
+      <p>DocAnvil is built with a zero-collection architecture:</p>
+      <ul>
+        <li><strong>Zero Advertisements:</strong> DocAnvil contains zero third-party advertising SDKs or ad networks.</li>
+        <li><strong>Zero Analytics or Tracking:</strong> The app includes zero analytics, crash-tracking, or behavioral telemetry SDKs.</li>
+        <li><strong>No Personal Data Collection:</strong> We do not collect, access, store, or share your personal files, names, email addresses, or document contents.</li>
+      </ul>
+
+      <h2>3. In-App Purchases (Google Play Billing)</h2>
+      <p>
+        DocAnvil offers an optional one-time Pro unlock (<code>docanvil_pro_unlock</code>). All purchases and license restorations are processed securely through Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Your payment methods, credit card numbers, and billing details are handled solely by Google Play and are never shared with or accessible to the developer.
+      </p>
+
+      <h2>4. Device Permissions &amp; System Pickers</h2>
+      <p>
+        DocAnvil adheres to the principle of least privilege. Instead of requesting broad storage read permissions across your entire device, DocAnvil relies on Android's built-in <strong>Storage Access Framework (Document Picker)</strong> and <strong>Photo Picker</strong> so the app can only access the specific files or images you explicitly select.
+      </p>
+
+      <h2>5. Data Retention &amp; Deletion</h2>
+      <p>
+        Any output PDFs and saved handwritten signatures remain solely in your device's private app storage (or the export location you choose). You remain in full control of your data and may delete files or signatures at any time within the app, or remove all local app data completely by uninstalling DocAnvil.
+      </p>
+
+      <h2>6. Developer Contact</h2>
+      <p>If you have any questions regarding this Privacy Policy, please contact the developer:</p>
+      <p>
+        <strong>Developer:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Effective Date:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 2. Japanese (日本語) -->
+    <div id="content-ja" class="lang-content">
+      <h2>1. 概要と100%オンデバイス（端末内完結）処理</h2>
+      <p>
+        <strong>DocAnvil</strong> は、お客様の機密書類を完全にプライベートに保つために設計されたオフライン完結型のPDFユーティリティアプリです。PDFの圧縮、結合、分割・回転、画像からのPDF変換、手書き電子署名、およびAES-256パスワード暗号化・復号を含むすべての処理は、お使いの端末内のみでローカルに実行されます。
+      </p>
+      <div class="highlight-card">
+        <h3>完全ローカル処理の保証</h3>
+        <p>書類の内容、暗号化パスワード、および手書き署名データが、開発者または外部のサーバーへ送信・アップロード・保存されることは一切ありません。</p>
+      </div>
+
+      <h2>2. 情報収集と広告の非搭載</h2>
+      <p>DocAnvil は個人情報を一切収集しない設計となっています：</p>
+      <ul>
+        <li><strong>広告ゼロ：</strong> サードパーティ製の広告SDKや広告ネットワークは一切含まれていません。</li>
+        <li><strong>解析・トラッキングゼロ：</strong> 利用状況の解析SDKや行動トラッキング用ライブラリは一切搭載していません。</li>
+        <li><strong>個人情報の非収集：</strong> お客様のファイル、氏名、メールアドレス、書類の中身を収集・閲覧・保存・共有することはありません。</li>
+      </ul>
+
+      <h2>3. アプリ内課金（Google Play Billing）</h2>
+      <p>
+        DocAnvil では買い切り型のProアンロック（<code>docanvil_pro_unlock</code>）を提供しています。購入処理およびライセンス復元はすべて公式の Google Play Billing（<code>com.android.vending.BILLING</code>）を通じて安全に処理されます。
+      </p>
+      <p>
+        お支払い方法やクレジットカード情報などの決済データは Google Play のみで管理され、開発者に共有されたり開発者が取得したりすることは一切ありません。
+      </p>
+
+      <h2>4. 端末権限とシステムピッカーの利用</h2>
+      <p>
+        DocAnvil は最小権限の原則を遵守しています。端末全体の広範なストレージ読み取り権限を要求することなく、Android標準の <strong>Storage Access Framework（ドキュメントピッカー）</strong> および <strong>Photo Picker（フォトピッカー）</strong> を使用し、ユーザーが明示的に選択したファイルや画像のみにアクセスします。
+      </p>
+
+      <h2>5. データの保持と削除</h2>
+      <p>
+        生成されたPDFファイルや保存した手書き署名は、お客様の端末内のアプリ専用プライベート領域（またはお客様が指定した保存先）にのみ保持されます。アプリ内からいつでも削除できるほか、DocAnvil をアンインストールすることで端末内のすべてのローカルデータを完全に消去できます。
+      </p>
+
+      <h2>6. 開発者連絡先</h2>
+      <p>本プライバシーポリシーに関するお問い合わせは、以下の連絡先までご連絡ください：</p>
+      <p>
+        <strong>開発者：</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>メールアドレス：</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>施行日：</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 3. Simplified Chinese (简体中文) -->
+    <div id="content-zh-CN" class="lang-content">
+      <h2>1. 概述与 100% 本地设备处理</h2>
+      <p>
+        <strong>DocAnvil</strong> 是一款离线优先的 PDF 工具应用，旨在全面保护您敏感文档的隐私。所有 PDF 操作——包括压缩、合并、拆分/旋转、图片转 PDF、手写电子签名以及 AES-256 密码加密与解密——均在您的设备本地完成。
+      </p>
+      <div class="highlight-card">
+        <h3>严格本地执行承诺</h3>
+        <p>您的文档内容、密码以及手写签名绝不会被传输、上传或存储到开发者服务器或任何外部云服务器。</p>
+      </div>
+
+      <h2>2. 信息收集与广告政策</h2>
+      <p>DocAnvil 采用零数据收集架构：</p>
+      <ul>
+        <li><strong>零广告：</strong> DocAnvil 不包含任何第三方广告 SDK 或广告网络。</li>
+        <li><strong>零分析与追踪：</strong> 本应用不包含任何数据分析、崩溃追踪或行为遥测 SDK。</li>
+        <li><strong>不收集个人数据：</strong> 我们不会收集、访问、存储或共享您的个人文件、姓名、电子邮箱或文档内容。</li>
+      </ul>
+
+      <h2>3. 应用内购买（Google Play Billing）</h2>
+      <p>
+        DocAnvil 提供一次性买断的 Pro 解锁功能（<code>docanvil_pro_unlock</code>）。所有购买和授权恢复均通过 Google Play 结算系统（<code>com.android.vending.BILLING</code>）安全处理。
+      </p>
+      <p>
+        您的付款方式、银行卡号及账单详情仅由 Google Play 单独处理，绝不会与开发者共享或向开发者公开。
+      </p>
+
+      <h2>4. 设备权限与系统选择器</h2>
+      <p>
+        DocAnvil 遵循最小权限原则。本应用不请求广泛的设备存储读取权限，而是使用 Android 内置的 <strong>存储访问框架（文档选择器）</strong> 和 <strong>照片选择器（Photo Picker）</strong>，仅访问您明确选择的文件或图像。
+      </p>
+
+      <h2>5. 数据保留与删除</h2>
+      <p>
+        生成的 PDF 文件和保存的手写签名仅保留在您设备的私有应用存储空间中（或您选择的导出位置）。您可以随时在应用内删除这些文件或签名，也可以通过卸载 DocAnvil 来彻底清除所有本地应用数据。
+      </p>
+
+      <h2>6. 开发者联系方式</h2>
+      <p>如果您对本隐私政策有任何疑问，请联系开发者：</p>
+      <p>
+        <strong>开发者：</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>电子邮箱：</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>生效日期：</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 4. Traditional Chinese (繁體中文) -->
+    <div id="content-zh-TW" class="lang-content">
+      <h2>1. 概述與 100% 裝置端本地處理</h2>
+      <p>
+        <strong>DocAnvil</strong> 是一款離線優先的 PDF 工具應用程式，致力於全面保護您機密文件的隱私。所有 PDF 操作——包括壓縮、合併、分割/旋轉、圖片轉 PDF、手寫電子簽名以及 AES-256 密碼加密與解密——皆完全在您的裝置本地執行。
+      </p>
+      <div class="highlight-card">
+        <h3>嚴格本地執行保證</h3>
+        <p>您的文件內容、密碼及手寫簽名絕不會被傳輸、上傳或儲存至開發者伺服器或任何外部雲端伺服器。</p>
+      </div>
+
+      <h2>2. 資訊收集與廣告政策</h2>
+      <p>DocAnvil 採用零資料收集架構：</p>
+      <ul>
+        <li><strong>零廣告：</strong> DocAnvil 不含任何第三方廣告 SDK 或廣告聯播網。</li>
+        <li><strong>零分析與追蹤：</strong> 本應用程式不包含任何分析、當機追蹤或行為遙測 SDK。</li>
+        <li><strong>不收集個人資料：</strong> 我們不會收集、存取、儲存或分享您的個人檔案、姓名、電子郵件地址或文件內容。</li>
+      </ul>
+
+      <h2>3. 應用程式內購買（Google Play Billing）</h2>
+      <p>
+        DocAnvil 提供一次性買斷的 Pro 解鎖項目（<code>docanvil_pro_unlock</code>）。所有購買與授權恢復皆透過 Google Play 帳務系統（<code>com.android.vending.BILLING</code>）安全處理。
+      </p>
+      <p>
+        您的付款方式、信用卡號與帳務資訊僅由 Google Play 單獨處理，絕不會分享給開發者或由開發者存取。
+      </p>
+
+      <h2>4. 裝置權限與系統選擇器</h2>
+      <p>
+        DocAnvil 遵循最小權限原則。本應用程式不會要求廣泛的裝置儲存空間讀取權限，而是使用 Android 內建的 <strong>儲存空間存取架構（文件選擇器）</strong> 與 <strong>相片選擇器（Photo Picker）</strong>，僅存取您明確選取的檔案或圖片。
+      </p>
+
+      <h2>5. 資料保留與刪除</h2>
+      <p>
+        輸出的 PDF 與儲存的手寫簽名僅保留於您裝置的私有應用程式儲存空間中（或您指定的匯出位置）。您可隨時在應用程式內刪除檔案或簽名，或透過解除安裝 DocAnvil 來徹底移除所有本地應用程式資料。
+      </p>
+
+      <h2>6. 開發者聯絡方式</h2>
+      <p>若您對本隱私權政策有任何疑問，請聯絡開發者：</p>
+      <p>
+        <strong>開發者：</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>電子郵件：</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>生效日期：</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 5. Korean (한국어) -->
+    <div id="content-ko" class="lang-content">
+      <h2>1. 개요 및 100% 온디바이스(기기 내) 처리</h2>
+      <p>
+        <strong>DocAnvil</strong>은 민감한 문서의 프라이버시를 완벽하게 보호하도록 설계된 오프라인 우선 PDF 유틸리티 앱입니다. PDF 압축, 병합, 분할/회전, 이미지의 PDF 변환, 손글씨 전자 서명, AES-256 비밀번호 암호화 및 복호화를 포함한 모든 PDF 작업은 사용자의 기기 내에서만 로컬로 처리됩니다.
+      </p>
+      <div class="highlight-card">
+        <h3>철저한 로컬 실행 보장</h3>
+        <p>사용자의 문서 내용, 비밀번호 및 전자 서명은 개발자 서버나 어떠한 외부 클라우드 서버로도 전송, 업로드 또는 저장되지 않습니다.</p>
+      </div>
+
+      <h2>2. 정보 수집 및 광고 정책</h2>
+      <p>DocAnvil은 어떠한 데이터도 수집하지 않는 구조로 제작되었습니다:</p>
+      <ul>
+        <li><strong>광고 제로:</strong> DocAnvil에는 제3자 광고 SDK나 광고 네트워크가 전혀 포함되어 있지 않습니다.</li>
+        <li><strong>분석 및 추적 제로:</strong> 앱 내에 분석, 크래시 추적 또는 사용자 행동 텔레메트리 SDK가 전혀 없습니다.</li>
+        <li><strong>개인정보 비수집:</strong> 당사는 사용자의 개인 파일, 이름, 이메일 주소 또는 문서 내용을 수집, 열람, 저장하거나 공유하지 않습니다.</li>
+      </ul>
+
+      <h2>3. 인앱 결제 (Google Play Billing)</h2>
+      <p>
+        DocAnvil은 일회성 Pro 잠금 해제(<code>docanvil_pro_unlock</code>)를 제공합니다. 모든 구매 및 라이선스 복원은 Google Play 결제 시스템(<code>com.android.vending.BILLING</code>)을 통해 안전하게 처리됩니다.
+      </p>
+      <p>
+        결제 수단, 신용카드 정보 및 청구 세부 정보는 오직 Google Play에서만 처리되며 개발자와 공유되거나 개발자가 접근할 수 없습니다.
+      </p>
+
+      <h2>4. 기기 권한 및 시스템 선택기</h2>
+      <p>
+        DocAnvil은 최소 권한 원칙을 준수합니다. 기기 전체에 대한 광범위한 저장소 읽기 권한을 요청하는 대신, Android 기본 제공 <strong>저장소 액세스 프레임워크(문서 선택기)</strong> 및 <strong>사진 선택기(Photo Picker)</strong>를 사용하여 사용자가 명시적으로 선택한 특정 파일이나 이미지만 접근합니다.
+      </p>
+
+      <h2>5. 데이터 보관 및 삭제</h2>
+      <p>
+        생성된 PDF 결과물과 저장된 손글씨 서명은 기기의 비공개 앱 저장소(또는 사용자가 지정한 내보내기 위치)에만 보관됩니다. 사용자는 앱 내에서 언제든지 파일이나 서명을 삭제할 수 있으며, DocAnvil을 삭제(언인스톨)하면 모든 로컬 앱 데이터가 완전히 제거됩니다.
+      </p>
+
+      <h2>6. 개발자 연락처</h2>
+      <p>본 개인정보 처리방침에 대해 궁금한 점이 있으시면 아래로 문의해 주세요:</p>
+      <p>
+        <strong>개발자:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>이메일:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>시행일:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 6. Spanish (Español) -->
+    <div id="content-es" class="lang-content">
+      <h2>1. Descripción general y procesamiento 100 % en el dispositivo</h2>
+      <p>
+        <strong>DocAnvil</strong> es una aplicación de utilidades PDF diseñada para funcionar sin conexión y mantener tus documentos confidenciales totalmente privados. Todas las operaciones de PDF —incluidas la compresión, combinación, división/rotación, conversión de imágenes a PDF, firmas electrónicas manuscritas y el cifrado/descifrado con contraseña AES-256— se realizan localmente en tu dispositivo.
+      </p>
+      <div class="highlight-card">
+        <h3>Garantía de ejecución estrictamente local</h3>
+        <p>El contenido de tus documentos, tus contraseñas y tus firmas nunca se transmiten, suben ni almacenan en servidores del desarrollador ni en servidores externos.</p>
+      </div>
+
+      <h2>2. Recopilación de información y publicidad</h2>
+      <p>DocAnvil se basa en una arquitectura de recopilación cero:</p>
+      <ul>
+        <li><strong>Cero publicidad:</strong> DocAnvil no incluye SDK de publicidad de terceros ni redes publicitarias.</li>
+        <li><strong>Cero análisis o rastreo:</strong> La aplicación no integra SDK de análisis, seguimiento ni telemetría de comportamiento.</li>
+        <li><strong>Sin recopilación de datos personales:</strong> No recopilamos, accedemos, almacenamos ni compartimos tus archivos personales, nombres ni el contenido de tus documentos.</li>
+      </ul>
+
+      <h2>3. Compras dentro de la aplicación (Google Play Billing)</h2>
+      <p>
+        DocAnvil ofrece un desbloqueo Pro de pago único (<code>docanvil_pro_unlock</code>). Todas las compras y restauraciones de licencia se procesan de forma segura a través de Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Tus métodos de pago y datos de facturación son gestionados exclusivamente por Google Play y nunca se comparten con el desarrollador.
+      </p>
+
+      <h2>4. Permisos del dispositivo y selectores del sistema</h2>
+      <p>
+        DocAnvil sigue el principio de mínimo privilegio. En lugar de solicitar permisos amplios de lectura de almacenamiento, utiliza el <strong>Storage Access Framework (Selector de documentos)</strong> y el <strong>Selector de fotos (Photo Picker)</strong> integrados en Android para acceder únicamente a los archivos o imágenes que selecciones explícitamente.
+      </p>
+
+      <h2>5. Retención y eliminación de datos</h2>
+      <p>
+        Los PDF generados y las firmas guardadas permanecen únicamente en el almacenamiento privado de la aplicación en tu dispositivo (o en la ubicación de exportación que elijas) hasta que los elimines desde la propia aplicación o desinstales DocAnvil.
+      </p>
+
+      <h2>6. Contacto del desarrollador</h2>
+      <p>Si tienes alguna pregunta sobre esta Política de Privacidad, ponte en contacto con el desarrollador:</p>
+      <p>
+        <strong>Desarrollador:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>Correo electrónico:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Fecha de entrada en vigor:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 7. Portuguese (Português) -->
+    <div id="content-pt" class="lang-content">
+      <h2>1. Visão geral e processamento 100% no dispositivo</h2>
+      <p>
+        <strong>DocAnvil</strong> é um aplicativo utilitário de PDF focado em uso offline, criado para manter seus documentos confidenciais totalmente privados. Todas as operações de PDF — incluindo compactação, junção, divisão/rotação, conversão de imagem para PDF, assinaturas eletrônicas manuscritas e criptografia/descriptografia com senha AES-256 — são executadas localmente no seu dispositivo.
+      </p>
+      <div class="highlight-card">
+        <h3>Garantia de execução estritamente local</h3>
+        <p>O conteúdo dos seus documentos, senhas e assinaturas nunca é transmitido, enviado ou armazenado nos servidores do desenvolvedor ou em servidores externos.</p>
+      </div>
+
+      <h2>2. Coleta de informações e publicidade</h2>
+      <p>O DocAnvil foi projetado com uma arquitetura de coleta zero:</p>
+      <ul>
+        <li><strong>Zero anúncios:</strong> O DocAnvil não contém SDKs de publicidade de terceiros nem redes de anúncios.</li>
+        <li><strong>Zero análises ou rastreamento:</strong> O aplicativo não inclui SDKs de análise, rastreamento ou telemetria comportamental.</li>
+        <li><strong>Nenhuma coleta de dados pessoais:</strong> Não coletamos, acessamos, armazenamos ou compartilhamos seus arquivos pessoais, nomes ou conteúdo de documentos.</li>
+      </ul>
+
+      <h2>3. Compras no aplicativo (Google Play Billing)</h2>
+      <p>
+        O DocAnvil oferece um desbloqueio Pro único (<code>docanvil_pro_unlock</code>). Todas as compras e restaurações de licença são processadas com segurança pelo Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Seus detalhes de pagamento são tratados exclusivamente pelo Google Play e nunca são compartilhados com o desenvolvedor.
+      </p>
+
+      <h2>4. Permissões do dispositivo e seletores do sistema</h2>
+      <p>
+        O DocAnvil segue o princípio do menor privilégio. Sem solicitar permissões amplas de leitura de armazenamento, o app utiliza o <strong>Storage Access Framework (Seletor de Documentos)</strong> e o <strong>Photo Picker</strong> nativos do Android para acessar apenas os arquivos ou imagens que você selecionar explicitamente.
+      </p>
+
+      <h2>5. Retenção e exclusão de dados</h2>
+      <p>
+        Os PDFs gerados e as assinaturas salvas permanecem apenas no armazenamento privado do aplicativo no seu dispositivo até que você os exclua no próprio aplicativo ou desinstale o DocAnvil.
+      </p>
+
+      <h2>6. Contato do desenvolvedor</h2>
+      <p>Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato com o desenvolvedor:</p>
+      <p>
+        <strong>Desenvolvedor:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>E-mail:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Data de vigência:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 8. French (Français) -->
+    <div id="content-fr" class="lang-content">
+      <h2>1. Aperçu et traitement 100 % sur l'appareil</h2>
+      <p>
+        <strong>DocAnvil</strong> est une application utilitaire PDF conçue pour fonctionner hors ligne et préserver la confidentialité absolue de vos documents sensibles. Toutes les opérations PDF — compression, fusion, découpage/rotation, conversion d'images en PDF, signatures électroniques manuscrites, ainsi que le chiffrement et déchiffrement par mot de passe AES-256 — sont effectuées localement sur votre appareil.
+      </p>
+      <div class="highlight-card">
+        <h3>Garantie d'exécution strictement locale</h3>
+        <p>Le contenu de vos documents, vos mots de passe et vos signatures ne sont jamais transmis, téléversés ni stockés sur les serveurs du développeur ou sur tout serveur externe.</p>
+      </div>
+
+      <h2>2. Collecte d'informations et publicité</h2>
+      <p>DocAnvil repose sur une architecture sans aucune collecte de données :</p>
+      <ul>
+        <li><strong>Zéro publicité :</strong> DocAnvil ne contient aucun SDK publicitaire tiers ni réseau publicitaire.</li>
+        <li><strong>Zéro analyse ni suivi :</strong> L'application n'intègre aucun SDK d'analyse, de suivi ou de télémétrie comportementale.</li>
+        <li><strong>Aucune collecte de données personnelles :</strong> Nous ne collectons, ne consultons, ne stockons ni ne partageons vos fichiers personnels, vos noms ou le contenu de vos documents.</li>
+      </ul>
+
+      <h2>3. Achats intégrés (Google Play Billing)</h2>
+      <p>
+        DocAnvil propose un déverrouillage Pro unique (<code>docanvil_pro_unlock</code>). Tous les achats et restaurations de licence sont traités de manière sécurisée via Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Vos informations de paiement sont gérées exclusivement par Google Play et ne sont jamais communiquées au développeur.
+      </p>
+
+      <h2>4. Autorisations de l'appareil et sélecteurs système</h2>
+      <p>
+        DocAnvil applique le principe du moindre privilège. Sans demander d'autorisation étendue de lecture du stockage, l'application s'appuie sur le <strong>Storage Access Framework (Sélecteur de documents)</strong> et le <strong>Photo Picker</strong> intégrés d'Android afin d'accéder uniquement aux fichiers ou images que vous sélectionnez explicitement.
+      </p>
+
+      <h2>5. Conservation et suppression des données</h2>
+      <p>
+        Les PDF générés et les signatures enregistrées restent uniquement dans le stockage privé de l'application sur votre appareil jusqu'à ce que vous les supprimiez dans l'application ou que vous désinstalliez DocAnvil.
+      </p>
+
+      <h2>6. Contact du développeur</h2>
+      <p>Pour toute question concernant cette politique de confidentialité, veuillez contacter le développeur :</p>
+      <p>
+        <strong>Développeur :</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>E-mail :</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Date d'entrée en vigueur :</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 9. German (Deutsch) -->
+    <div id="content-de" class="lang-content">
+      <h2>1. Überblick &amp; 100 % Verarbeitung auf dem Gerät</h2>
+      <p>
+        <strong>DocAnvil</strong> ist eine Offline-first-PDF-App, die Ihre vertraulichen Dokumente vollständig privat hält. Alle PDF-Vorgänge — einschließlich Komprimierung, Zusammenführen, Teilen/Drehen, Bild-zu-PDF-Konvertierung, handschriftlicher elektronischer Signaturen sowie AES-256-Passwortverschlüsselung und -entschlüsselung — werden ausschließlich lokal auf Ihrem Gerät ausgeführt.
+      </p>
+      <div class="highlight-card">
+        <h3>Garantie für rein lokale Ausführung</h3>
+        <p>Dokumentinhalte, Passwörter und Signaturen werden niemals an Server des Entwicklers oder an externe Server übertragen oder hochgeladen.</p>
+      </div>
+
+      <h2>2. Datenerhebung &amp; Werbung</h2>
+      <p>DocAnvil basiert auf einer Null-Datenerfassungs-Architektur:</p>
+      <ul>
+        <li><strong>Keine Werbung:</strong> DocAnvil enthält keinerlei Werbe-SDKs oder Werbenetzwerke von Drittanbietern.</li>
+        <li><strong>Keine Analyse oder Tracking:</strong> Die App enthält keine Analyse-, Absturzverfolgungs- oder Telemetrie-SDKs.</li>
+        <li><strong>Keine Erhebung personenbezogener Daten:</strong> Wir erheben, speichern oder teilen weder Ihre persönlichen Dateien noch Namen oder Dokumentinhalte.</li>
+      </ul>
+
+      <h2>3. In-App-Käufe (Google Play Billing)</h2>
+      <p>
+        DocAnvil bietet eine einmalige Pro-Freischaltung (<code>docanvil_pro_unlock</code>). Alle Käufe und Lizenzwiederherstellungen werden sicher über Google Play Billing (<code>com.android.vending.BILLING</code>) abgewickelt.
+      </p>
+      <p>
+        Ihre Zahlungsdaten werden ausschließlich von Google Play verarbeitet und niemals an den Entwickler weitergegeben.
+      </p>
+
+      <h2>4. Geräteberechtigungen &amp; Systemauswahl</h2>
+      <p>
+        DocAnvil folgt dem Prinzip der minimalen Berechtigungen. Anstatt umfassende Speicher-Leseberechtigungen anzufordern, nutzt DocAnvil das in Android integrierte <strong>Storage Access Framework (Dokumentenauswahl)</strong> und den <strong>Photo Picker</strong>, sodass nur auf die von Ihnen ausdrücklich ausgewählten Dateien oder Bilder zugegriffen wird.
+      </p>
+
+      <h2>5. Datenspeicherung &amp; Löschung</h2>
+      <p>
+        Ausgegebene PDF-Dateien und gespeicherte Signaturen verbleiben ausschließlich im privaten App-Speicher Ihres Geräts, bis Sie sie innerhalb der App löschen oder DocAnvil deinstallieren.
+      </p>
+
+      <h2>6. Entwicklerkontakt</h2>
+      <p>Bei Fragen zu dieser Datenschutzerklärung wenden Sie sich bitte an den Entwickler:</p>
+      <p>
+        <strong>Entwickler:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>E-Mail:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Datum des Inkrafttretens:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 10. Indonesian (Bahasa Indonesia) -->
+    <div id="content-id" class="lang-content">
+      <h2>1. Ikhtisar &amp; Pemrosesan 100% di Perangkat</h2>
+      <p>
+        <strong>DocAnvil</strong> adalah aplikasi utilitas PDF offline-first yang dirancang untuk menjaga privasi dokumen sensitif Anda sepenuhnya. Semua operasi PDF — termasuk kompresi, penggabungan, pemisahan/rotasi, konversi gambar ke PDF, tanda tangan elektronik tulisan tangan, serta enkripsi dan dekripsi kata sandi AES-256 — dijalankan secara lokal di perangkat Anda.
+      </p>
+      <div class="highlight-card">
+        <h3>Jaminan Eksekusi Lokal Ketat</h3>
+        <p>Isi dokumen, kata sandi, dan tanda tangan Anda tidak pernah dikirim, diunggah, atau disimpan ke server pengembang maupun server eksternal mana pun.</p>
+      </div>
+
+      <h2>2. Pengumpulan Informasi &amp; Iklan</h2>
+      <p>DocAnvil dibangun dengan arsitektur tanpa pengumpulan data:</p>
+      <ul>
+        <li><strong>Bebas Iklan:</strong> DocAnvil tidak mengandung SDK iklan pihak ketiga maupun jaringan iklan apa pun.</li>
+        <li><strong>Tanpa Analitik atau Pelacakan:</strong> Aplikasi ini tidak menyertakan SDK analitik atau pelacakan perilaku.</li>
+        <li><strong>Tidak Ada Pengumpulan Data Pribadi:</strong> Kami tidak mengumpulkan, mengakses, menyimpan, atau membagikan file pribadi, nama, atau isi dokumen Anda.</li>
+      </ul>
+
+      <h2>3. Pembelian Dalam Aplikasi (Google Play Billing)</h2>
+      <p>
+        DocAnvil menawarkan pembukaan kunci Pro satu kali (<code>docanvil_pro_unlock</code>). Semua pembelian dan pemulihan lisensi diproses dengan aman melalui Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Detail pembayaran Anda ditangani sepenuhnya oleh Google Play dan tidak pernah dibagikan kepada pengembang.
+      </p>
+
+      <h2>4. Izin Perangkat &amp; Pemilih Sistem</h2>
+      <p>
+        DocAnvil mematuhi prinsip hak akses minimum. Tanpa meminta izin baca penyimpanan secara luas, DocAnvil menggunakan <strong>Storage Access Framework (Pemilih Dokumen)</strong> dan <strong>Photo Picker</strong> bawaan Android sehingga aplikasi hanya dapat mengakses file atau gambar yang Anda pilih secara eksplisit.
+      </p>
+
+      <h2>5. Penyimpanan &amp; Penghapusan Data</h2>
+      <p>
+        PDF hasil dan tanda tangan tersimpan hanya berada di penyimpanan pribadi aplikasi di perangkat Anda sampai Anda menghapusnya di dalam aplikasi atau mencopot pemasangan DocAnvil.
+      </p>
+
+      <h2>6. Kontak Pengembang</h2>
+      <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, silakan hubungi pengembang:</p>
+      <p>
+        <strong>Pengembang:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Tanggal Berlaku:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 11. Hindi (हिन्दी) -->
+    <div id="content-hi" class="lang-content">
+      <h2>1. अवलोकन और 100% ऑन-डिवाइस प्रोसेसिंग</h2>
+      <p>
+        <strong>DocAnvil</strong> एक ऑफ़लाइन-प्रथम PDF उपयोगिता ऐप है जिसे आपके संवेदनशील दस्तावेज़ों को पूरी तरह निजी रखने के लिए डिज़ाइन किया गया है। सभी PDF कार्य — जिनमें संपीड़न (कम्प्रेशन), मर्ज करना, विभाजन/घुमाना, छवि से PDF रूपांतरण, हस्तलिखित इलेक्ट्रॉनिक हस्ताक्षर, और AES-256 पासवर्ड एन्क्रिप्शन व डिक्रिप्शन शामिल हैं — आपके डिवाइस पर स्थानीय रूप से किए जाते हैं।
+      </p>
+      <div class="highlight-card">
+        <h3>पूर्ण स्थानीय निष्पादन की गारंटी</h3>
+        <p>आपके दस्तावेज़ की सामग्री, पासवर्ड और हस्ताक्षर कभी भी डेवलपर या किसी बाहरी सर्वर पर भेजे या अपलोड नहीं किए जाते हैं।</p>
+      </div>
+
+      <h2>2. जानकारी संग्रह और विज्ञापन</h2>
+      <p>DocAnvil शून्य-संग्रह वास्तुकला पर निर्मित है:</p>
+      <ul>
+        <li><strong>शून्य विज्ञापन:</strong> DocAnvil में कोई भी तृतीय-पक्ष विज्ञापन SDK शामिल नहीं है।</li>
+        <li><strong>शून्य एनालिटिक्स या ट्रैकिंग:</strong> ऐप में कोई भी एनालिटिक्स या ट्रैकिंग SDK नहीं है।</li>
+        <li><strong>कोई व्यक्तिगत डेटा संग्रह नहीं:</strong> हम आपकी व्यक्तिगत फ़ाइलें, नाम या दस्तावेज़ सामग्री एकत्र, संग्रहीत या साझा नहीं करते हैं।</li>
+      </ul>
+
+      <h2>3. इन-ऐप खरीदारी (Google Play Billing)</h2>
+      <p>
+        DocAnvil एकमुश्त Pro अनलॉक (<code>docanvil_pro_unlock</code>) प्रदान करता है। सभी खरीदारियाँ Google Play Billing (<code>com.android.vending.BILLING</code>) के माध्यम से सुरक्षित रूप से संसाधित की जाती हैं।
+      </p>
+      <p>
+        आपके भुगतान विवरण केवल Google Play द्वारा प्रबंधित किए जाते हैं और डेवलपर के साथ कभी साझा नहीं किए जाते।
+      </p>
+
+      <h2>4. डिवाइस अनुमतियाँ और सिस्टम पिकर</h2>
+      <p>
+        DocAnvil व्यापक स्टोरेज पढ़ने की अनुमति मांगे बिना Android के अंतर्निर्मित <strong>Storage Access Framework (दस्तावेज़ पिकर)</strong> और <strong>Photo Picker</strong> का उपयोग करता है, ताकि ऐप केवल उन्हीं फ़ाइलों या छवियों तक पहुँच सके जिन्हें आप स्पष्ट रूप से चुनते हैं।
+      </p>
+
+      <h2>5. डेटा प्रतिधारण और विलोपन</h2>
+      <p>
+        आउटपुट PDF और सहेजे गए हस्ताक्षर केवल आपके डिवाइस के निजी ऐप स्टोरेज में तब तक रहते हैं जब तक आप उन्हें ऐप के भीतर हटा नहीं देते या DocAnvil को अनइंस्टॉल नहीं कर देते।
+      </p>
+
+      <h2>6. डेवलपर संपर्क</h2>
+      <p>यदि इस गोपनीयता नीति के बारे में आपके कोई प्रश्न हैं, तो कृपया डेवलपर से संपर्क करें:</p>
+      <p>
+        <strong>डेवलपर:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>ईमेल:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>प्रभावी तिथि:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 12. Filipino (Filipino) -->
+    <div id="content-fil" class="lang-content">
+      <h2>1. Pangkalahatang-ideya at 100% On-Device Processing</h2>
+      <p>
+        Ang <strong>DocAnvil</strong> ay isang offline-first na PDF utility app na idinisenyo upang panatilihing ganap na pribado ang iyong mga sensitibong dokumento. Lahat ng operasyon sa PDF — kabilang ang pag-compress, pag-merge, pag-split/pag-rotate, pag-convert ng larawan sa PDF, sulat-kamay na electronic signature, at AES-256 password encryption at decryption — ay lokal na ginagawa sa iyong device.
+      </p>
+      <div class="highlight-card">
+        <h3>Garantiya ng Mahigpit na Lokal na Pagproseso</h3>
+        <p>Ang nilalaman ng iyong mga dokumento, password, at lagda ay hindi kailanman ipinapadala o ina-upload sa mga server ng developer o anumang panlabas na server.</p>
+      </div>
+
+      <h2>2. Pangongolekta ng Impormasyon at Pag-aanunsyo</h2>
+      <p>Binuo ang DocAnvil na may zero-collection na arkitektura:</p>
+      <ul>
+        <li><strong>Walang Ad:</strong> Walang anumang third-party advertising SDK ang DocAnvil.</li>
+        <li><strong>Walang Analytics o Tracking:</strong> Walang anumang analytics o tracking SDK ang app.</li>
+        <li><strong>Walang Pangongolekta ng Personal na Data:</strong> Hindi kami nangongolekta, nag-a-access, nag-iimbak, o nagbabahagi ng iyong mga personal na file, pangalan, o nilalaman ng dokumento.</li>
+      </ul>
+
+      <h2>3. Mga In-App Purchase (Google Play Billing)</h2>
+      <p>
+        Nag-aalok ang DocAnvil ng isang beses na Pro unlock (<code>docanvil_pro_unlock</code>). Ligtas na pinoproseso ang lahat ng pagbili sa pamamagitan ng Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Ang iyong mga detalye sa pagbabayad ay pinangangasiwaan lamang ng Google Play at hindi kailanman ibinabahagi sa developer.
+      </p>
+
+      <h2>4. Mga Pahintulot sa Device at System Picker</h2>
+      <p>
+        Gumagamit ang DocAnvil ng built-in na <strong>Storage Access Framework (Document Picker)</strong> at <strong>Photo Picker</strong> ng Android nang hindi humihingi ng malawak na pahintulot sa pagbabasa ng storage, kaya tanging ang mga file o larawan lamang na malinaw mong pinili ang maa-access.
+      </p>
+
+      <h2>5. Pagpapanatili at Pagbura ng Data</h2>
+      <p>
+        Ang mga nabuong PDF at naka-save na lagda ay nananatili lamang sa pribadong storage ng app sa iyong device hanggang sa burahin mo ang mga ito sa loob ng app o i-uninstall ang DocAnvil.
+      </p>
+
+      <h2>6. Makipag-ugnayan sa Developer</h2>
+      <p>Kung mayroon kang mga katanungan tungkol sa Patakaran sa Privacy na ito, mangyaring makipag-ugnayan sa developer:</p>
+      <p>
+        <strong>Developer:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Petsa ng Pagkakabisa:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <!-- 13. Vietnamese (Tiếng Việt) -->
+    <div id="content-vi" class="lang-content">
+      <h2>1. Tổng quan &amp; Xử lý 100% trên thiết bị</h2>
+      <p>
+        <strong>DocAnvil</strong> là ứng dụng tiện ích PDF ưu tiên ngoại tuyến, được thiết kế để giữ cho các tài liệu nhạy cảm của bạn hoàn toàn riêng tư. Mọi thao tác PDF — bao gồm nén, ghép, tách/xoay trang, chuyển đổi hình ảnh sang PDF, chữ ký điện tử viết tay, cũng như mã hóa và giải mã mật khẩu AES-256 — đều được thực hiện cục bộ trên thiết bị của bạn.
+      </p>
+      <div class="highlight-card">
+        <h3>Cam kết xử lý hoàn toàn cục bộ</h3>
+        <p>Nội dung tài liệu, mật khẩu và chữ ký của bạn không bao giờ được truyền hoặc tải lên máy chủ của nhà phát triển hay bất kỳ máy chủ bên ngoài nào.</p>
+      </div>
+
+      <h2>2. Thu thập thông tin &amp; Quảng cáo</h2>
+      <p>DocAnvil được xây dựng theo kiến trúc không thu thập dữ liệu:</p>
+      <ul>
+        <li><strong>Không quảng cáo:</strong> DocAnvil hoàn toàn không chứa SDK quảng cáo của bên thứ ba.</li>
+        <li><strong>Không phân tích hay theo dõi:</strong> Ứng dụng không chứa bất kỳ SDK phân tích hoặc theo dõi hành vi nào.</li>
+        <li><strong>Không thu thập dữ liệu cá nhân:</strong> Chúng tôi không thu thập, truy cập, lưu trữ hay chia sẻ tệp cá nhân, tên hoặc nội dung tài liệu của bạn.</li>
+      </ul>
+
+      <h2>3. Mua hàng trong ứng dụng (Google Play Billing)</h2>
+      <p>
+        DocAnvil cung cấp gói mở khóa Pro mua một lần (<code>docanvil_pro_unlock</code>). Mọi giao dịch mua và khôi phục bản quyền đều được xử lý an toàn qua Google Play Billing (<code>com.android.vending.BILLING</code>).
+      </p>
+      <p>
+        Thông tin thanh toán của bạn do Google Play xử lý độc lập và không bao giờ được chia sẻ với nhà phát triển.
+      </p>
+
+      <h2>4. Quyền thiết bị &amp; Bộ chọn hệ thống</h2>
+      <p>
+        DocAnvil sử dụng <strong>Storage Access Framework (Bộ chọn tài liệu)</strong> và <strong>Photo Picker</strong> tích hợp sẵn của Android mà không yêu cầu quyền đọc bộ nhớ rộng rãi, đảm bảo ứng dụng chỉ truy cập đúng các tệp hoặc ảnh bạn chủ động chọn.
+      </p>
+
+      <h2>5. Lưu trữ &amp; Xóa dữ liệu</h2>
+      <p>
+        Các tệp PDF đầu ra và chữ ký đã lưu chỉ nằm trong bộ nhớ ứng dụng riêng tư trên thiết bị của bạn cho đến khi bạn xóa chúng trong ứng dụng hoặc gỡ cài đặt DocAnvil.
+      </p>
+
+      <h2>6. Liên hệ nhà phát triển</h2>
+      <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách Quyền riêng tư này, vui lòng liên hệ với nhà phát triển:</p>
+      <p>
+        <strong>Nhà phát triển:</strong> T9Star (<code>jp.tpp.t9s.docanvil</code>)<br>
+        <strong>Email:</strong> <a href="mailto:poopoofrog9@gmail.com">poopoofrog9@gmail.com</a><br>
+        <strong>Ngày có hiệu lực:</strong> 2026-11-24
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 T9Star. All rights reserved. &bull; DocAnvil (jp.tpp.t9s.docanvil)
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      var safeLang = lang || 'en';
+      try {
+        localStorage.setItem('docanvil_pref_lang', safeLang);
+      } catch (e) {}
+      try {
+        sessionStorage.setItem('docanvil_pref_lang', safeLang);
+      } catch (e) {}
+
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+
+      var target = document.getElementById('content-' + safeLang);
+      if (!target) {
+        safeLang = 'en';
+        target = document.getElementById('content-en');
+      }
+      if (target) {
+        target.classList.add('active');
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-lang') === safeLang) {
+          btn.classList.add('active');
+        }
+      });
+
+      document.documentElement.lang = safeLang;
+    }
+
+    function init() {
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var selected = btn.getAttribute('data-lang') || 'en';
+          switchLang(selected);
+        });
+      });
+
+      var saved = 'en';
+      try {
+        saved = localStorage.getItem('docanvil_pref_lang') || '';
+      } catch (e) {
+        saved = '';
+      }
+      if (!saved) {
+        try {
+          saved = sessionStorage.getItem('docanvil_pref_lang') || 'en';
+        } catch (e) {
+          saved = 'en';
+        }
+      }
+      if (!saved) {
+        saved = 'en';
+      }
+      switchLang(saved);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
